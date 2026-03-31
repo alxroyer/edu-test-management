@@ -2,6 +2,13 @@
 :doctype: article
 // Enable section auto-numbering.
 :sectnums:
+// Enable the `toc::[]` macro for later use.
+:toc: macro
+
+
+// No TOC title.
+:toc-title:
+toc::[]
 
 
 == Objet du dépôt

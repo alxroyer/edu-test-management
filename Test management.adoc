@@ -1,0 +1,78 @@
+= Tests & Test Management
+:doctype: article
+// Enable section auto-numbering.
+:sectnums:
+// Enable the `toc::[]` macro for later use.
+:toc: macro
+
+
+image:images/geralt-test-4092025_1920_cropped.jpg[align="center"]
+
+Alexis ROYER - https://www.linkedin.com/in/alexis-royer/
+
+2025-2026
+
+---
+
+Ce document constitue un cours sur les activités de test,
+pour des applications logicielles ou des systèmes.
+
+---
+
+Source : https://github.com/alxroyer/edu-test-management
+
+---
+
+Cours mis à disposition sous licence Creative Common.
+
+Voir xref:license[xrefstyle=full].
+
+
+:toc-title: Sommaire
+toc::[]
+
+
+== L'activité de test
+
+
+== Tests automatiques
+
+
+== Tests manuels
+
+
+== Management des tests
+
+
+[id="appendix"]
+== Annexes
+
+[id="license"]
+=== Licence
+
+Cours mis à disposition sous licence CC BY-NC-SA 4.0.
+
+image:https://mirrors.creativecommons.org/presskit/icons/cc.svg[CC, float="left"]
+image:https://mirrors.creativecommons.org/presskit/icons/by.svg[BY, float="left"]
+image:https://mirrors.creativecommons.org/presskit/icons/nc.svg[NC, float="left"]
+image:https://mirrors.creativecommons.org/presskit/icons/sa.svg[SA, float="break"]
+
+link:LICENSE.txt[] :
+
+---
+
+include::LICENSE.txt[]
+
+---
+
+
+[id="resources"]
+=== Ressources
+
+Images :
+
+* https://www.pexels.com/fr-fr/
+* https://fr.freepik.com/
+* https://pixabay.com/fr/
+* https://dashboardicons.com/ (logos)
+* https://www.logo.wine/ (logos)

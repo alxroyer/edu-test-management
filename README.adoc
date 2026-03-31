@@ -1,5 +1,6 @@
 = Tests & Test Management
 :doctype: article
+// Enable section auto-numbering.
 :sectnums:
 
 

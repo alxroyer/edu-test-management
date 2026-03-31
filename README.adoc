@@ -1,0 +1,85 @@
+= Tests & Test Management
+:doctype: article
+:sectnums:
+
+
+== Objet du dépôt
+
+Ce dépôt contient un cours sur le thème des tests et du management des tests.
+
+Accès au cours :
+
+* link:Test%20management.adoc[Version AsciiDoc]
+* link:Test%20management.pdf[Version PDF]
+
+Accès aux slides :
+
+* link:Test%20management%20-%20slides.adoc[Version AsciiDoc]
+* link:Test%20management%20-%20slides.pdf[Version PDF]
+
+
+== Licence
+
+Cours mis à disposition sous licence CC BY-NC-SA 4.0.
+
+image:https://mirrors.creativecommons.org/presskit/icons/cc.svg[CC, float="left"]
+image:https://mirrors.creativecommons.org/presskit/icons/by.svg[BY, float="left"]
+image:https://mirrors.creativecommons.org/presskit/icons/nc.svg[NC, float="left"]
+image:https://mirrors.creativecommons.org/presskit/icons/sa.svg[SA, float="break"]
+
+Voir le link:LICENSE.txt[contrat de licence].
+
+
+== AsciiDoc
+
+Ce cours est écrit en AsciiDoc.
+
+Cf. https://github.com/alxroyer/edu-sw-dev-env
+pour des justifications sur le choix de AsciiDoc.
+
+
+=== Edition et visualisation dans VS Code
+
+Pour le cours :
+
+* Installer l'extension link:https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode[AsciiDoc] par asciidoctor.
+* Ouvrir le fichier `Test management.adoc`.
+* Clic droit sur l'onglet du fichier > "Open Preview"
+
+Pour les slides, à partir de VS Code :
+
+* Installer l'extension link:https://marketplace.visualstudio.com/items?itemName=flobilosaurus.vscode-asciidoc-slides[AsciiDoc Slides] par flobilosaurus.
+* Ouvrir le fichier `Test management - slides.adoc`.
+* F1 > "AsciiDoc Slides: Show Slides Preview Beside"
+
+
+=== Générer les documents PDF
+
+Pour le cours, à partir de VS Code :
+
+* Ouvrir le fichier `Test management.adoc`.
+* F1 > "AsciiDoc: Export document as PDF".
+* Sélectionner le fichier cible `Test management.pdf`.
+
+Pour les slides, à partir de VS Code :
+
+* Ouvrir le fichier `Test management - slides.adoc`.
+* F1 > "AsciiDoc Slides: Open Slides in Browser".
+* Modifier l'URL : supprimer tout le contenu après le port,
+  et coller `?print-pdf` en lieu et place.
+* File > Print > "Save to PDF"
+
+
+== Ressources
+
+Ressources intéressantes pour la syntaxe AsciiDoc :
+
+* https://docs.asciidoctor.org/asciidoc/latest/
+
+Images :
+
+* https://www.pexels.com/fr-fr/
+* https://fr.freepik.com/
+* https://pixabay.com/fr/
+* https://dashboardicons.com/ (logos)
+* https://www.logo.wine/ (logos)

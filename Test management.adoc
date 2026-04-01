@@ -6,7 +6,7 @@
 :toc: macro
 
 
-image:images/geralt-test-4092025_1920_cropped.jpg[align="center"]
+image::images/geralt-test-4092025_1920_cropped.jpg[align="center"]
 
 Alexis ROYER - https://www.linkedin.com/in/alexis-royer/
 
@@ -52,10 +52,10 @@ toc::[]
 
 Cours mis à disposition sous licence CC BY-NC-SA 4.0.
 
-image:https://mirrors.creativecommons.org/presskit/icons/cc.svg[CC, float="left"]
-image:https://mirrors.creativecommons.org/presskit/icons/by.svg[BY, float="left"]
-image:https://mirrors.creativecommons.org/presskit/icons/nc.svg[NC, float="left"]
-image:https://mirrors.creativecommons.org/presskit/icons/sa.svg[SA, float="break"]
+image::https://mirrors.creativecommons.org/presskit/icons/cc.svg[CC, float="left"]
+image::https://mirrors.creativecommons.org/presskit/icons/by.svg[BY, float="left"]
+image::https://mirrors.creativecommons.org/presskit/icons/nc.svg[NC, float="left"]
+image::https://mirrors.creativecommons.org/presskit/icons/sa.svg[SA, float="break"]
 
 link:LICENSE.txt[] :
 

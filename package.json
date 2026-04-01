@@ -1,0 +1,26 @@
+{
+  "name": "edu-test-management.git",
+  "version": "0.1.0",
+  "description": "Lesson on test management",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alxroyer/edu-test-management.git"
+  },
+  "author": "Alexis ROYER",
+  "license": "CC-BY-NC-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/alxroyer/edu-test-management/issues"
+  },
+  "homepage": "https://github.com/alxroyer/edu-test-management#readme",
+  "devDependencies": {
+    "@asciidoctor/reveal.js": "^5.2.0",
+    "asciidoctor": "^3.0.4"
+  }
+}

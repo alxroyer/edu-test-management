@@ -30,10 +30,10 @@ Accès aux slides :
 
 Cours mis à disposition sous licence CC BY-NC-SA 4.0.
 
-image:https://mirrors.creativecommons.org/presskit/icons/cc.svg[CC, float="left"]
-image:https://mirrors.creativecommons.org/presskit/icons/by.svg[BY, float="left"]
-image:https://mirrors.creativecommons.org/presskit/icons/nc.svg[NC, float="left"]
-image:https://mirrors.creativecommons.org/presskit/icons/sa.svg[SA, float="break"]
+image::https://mirrors.creativecommons.org/presskit/icons/cc.svg[CC, float="left"]
+image::https://mirrors.creativecommons.org/presskit/icons/by.svg[BY, float="left"]
+image::https://mirrors.creativecommons.org/presskit/icons/nc.svg[NC, float="left"]
+image::https://mirrors.creativecommons.org/presskit/icons/sa.svg[SA, float="break"]
 
 Voir le link:LICENSE.txt[contrat de licence].
 
@@ -61,20 +61,27 @@ Pour les slides, à partir de VS Code :
 * F1 > "AsciiDoc Slides: Show Slides Preview Beside"
 
 
-=== Générer les documents PDF
 
-Pour le cours, à partir de VS Code :
+=== Générer les sorties HTML et PDF
 
-* Ouvrir le fichier `Test management.adoc`.
+Pour l'export PDF du cours :
+
+* Ouvrir le fichier `Test management.adoc` dans VS Code.
 * F1 > "AsciiDoc: Export document as PDF".
 * Sélectionner le fichier cible `Test management.pdf`.
 
-Pour les slides, à partir de VS Code :
+Pour la production HTML des slides,
+à partir de répertoire principal du dépôt :
 
-* Ouvrir le fichier `Test management - slides.adoc`.
-* F1 > "AsciiDoc Slides: Open Slides in Browser".
-* Modifier l'URL : supprimer tout le contenu après le port,
-  et coller `?print-pdf` en lieu et place.
+[source, bash]
+$ npm ci
+$ npx asciidoctor-revealjs "Test management - slides.adoc"
+
+Pour l'export PDF des slides :
+
+* Ouvrir le fichier `Test management - slides.html` généré précédemment
+  dans un navigateur.
+* Ajouter `?print-pdf` après l'extension `.html` dans l'URL.
 * File > Print > "Save to PDF"
 
 
@@ -83,6 +90,7 @@ Pour les slides, à partir de VS Code :
 Ressources intéressantes pour la syntaxe AsciiDoc :
 
 * https://docs.asciidoctor.org/asciidoc/latest/
+* https://docs.asciidoctor.org/reveal.js-converter/latest/
 
 Images :
 

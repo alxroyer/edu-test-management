@@ -1,0 +1,196 @@
+= Tests & Test Management
+:customcss: css/slides.css
+
+image::images/geralt-test-4092025_1920_cropped.jpg[role=banner]
+
+Alexis ROYER - https://www.linkedin.com/in/alexis-royer/
+
+2025-2026
+
+
+[state=topic]
+== Sommaire
+
+1. L'activité de test
+2. Tests manuels
+3. Tests automatiques
+4. Management des tests
+
+
+[state=topic]
+== 1. L'activité de test
+
+
+== Cycle en V et activités de test
+
+TODO: Schéma cycle en V avec traçabilité sur les activités de test.
+
+
+=== Normes
+
+ISO 9126:: Critères de qualité d'un logiciel
+ISO 12207:: Processus du cycle de vie du logiciel
+    * Intégration
+    * Vérification
+    * Audit
+    * Qualification
+
+
+== Système et sous-systèmes
+
+TODO: Schéma décomposition en sous-systèmes.
+
+Notion de SUT
+
+Vérification des exigences => boîte noire
+
+Intégration des sous-systèmes => boîte blanche
+
+Test unitaires ? => boîte noire ou blanche ?
+
+
+== L'esprit du testeur
+
+QA (= Quality Assurance)
+
+_"Dernier rempart"_
+
+// Memo: `^` characters stand for _center_.
+[cols="^1,^1"]
+|===
+| Dev                         | Testeur
+
+| Construit                   | Dissecte
+| Intégration bottom-up       | Approche top-down (exigences)
+| Fait en sorte que ça marche | Recherche les défauts
+| Boîte blanche               | Boîte noire
+| Vitesse                     | Rigueur
+|===
+
+
+[#slide-test-docs.columns]
+== Les documents de test
+
+[.column]
+--
+Plan de tests::
+    * Titre et objectifs de test
+    * Action et résultats attendus
+FCA::
+    * Matrice de synthèse
+    * Support => acceptation
+--
+
+[.column]
+--
+Résultats de tests::
+    * Version testée
+    * Tests du plan
+    * Résultats observés (preuves)
+    * OK / KO
+    * Issues
+--
+
+
+=== FCA
+
+TODO: Exemple de vue type FCA
+
+NOTE: Indicateur de résultat
+
+
+== Requirement Management
+
+TODO
+
+
+== Issue Management
+
+TODO
+
+
+[state=topic]
+== 2. Tests manuels
+
+
+=== Intérêt des tests manuels
+
+TODO
+
+
+=== Activité
+
+TODO: flowchart mermaid
+
+
+[state=topic]
+== 3. Tests automatiques
+
+
+=== Besoin d'automatisation
+
+Prérequis agilité itérative (time-boxé)
+
+Branche d'intégration stable / livrable
+
+Intégration Continue
+
+
+=== Activité
+
+TODO: flowchart mermaid
+
+TODO: Référence vers flowchart manuel pour mémo (comparaison)
+
+
+=== Architecture
+
+TODO
+
+
+=== Outils
+
+TODO
+
+
+=== Couverture de code
+
+TODO
+
+
+[state=topic]
+== 4. Management des tests
+
+
+=== Jeux de données
+
+TODO
+
+
+=== Timing activités de test
+
+TODO
+
+
+=== Cycle en V v/s Agilité
+
+TODO
+
+
+=== Priorisation des tests
+
+TODO
+
+
+=== Exhaustivité v/s gestion de risque
+
+TODO
+
+
+[state=topic]
+== Annexes
+
+
+=== Ressources
+
+TODO

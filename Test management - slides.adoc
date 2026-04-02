@@ -47,7 +47,17 @@ Intégration sous-systèmes & interfaces => boîte blanche
 
 Test unitaires :
 boîte blanche
-(DO 178 => boîte noire)
+
+
+=== DO 178
+
+Cas particulier, norme avionique
+
+Code = sous-système
+
+Conception détaillée = spécification code
+
+Classe / fonction = boîte noire
 
 
 == Système et sous-systèmes

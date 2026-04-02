@@ -1,5 +1,9 @@
 = TP : Test des endpoints de PokeAPI avec Postman/Newman et Jest
 :doctype: article
+//:sectnums:  // No section auto-numbering.
+:toc: preamble
+:toc-title: Sommaire
+:icons: font
 
 
 // Preamble.

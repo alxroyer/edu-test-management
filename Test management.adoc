@@ -1,10 +1,16 @@
 = Tests & Test Management
 :doctype: article
-// Enable section auto-numbering.
+// Enable section auto-numbering (see https://docs.asciidoctor.org/asciidoc/latest/sections/numbers/#turn-on-section-numbers).
 :sectnums:
-// Enable the `toc::[]` macro for later use.
-:toc: macro
+// Generate TOC after the preamble (see https://docs.asciidoctor.org/asciidoc/latest/toc/position/#beneath-preamble).
+:toc: preamble
+// TOC title (see https://docs.asciidoctor.org/asciidoc/latest/toc/title/).
+:toc-title: Sommaire
+// Makes admonitions display nicely (see https://docs.asciidoctor.org/asciidoc/latest/blocks/admonitions/#enable-admonition-icons).
+:icons: font
 
+
+// Preamble.
 
 image::images/geralt-test-4092025_1920_cropped.jpg[align="center"]
 
@@ -28,8 +34,9 @@ Cours mis à disposition sous licence Creative Common.
 Voir xref:license[xrefstyle=full].
 
 
-:toc-title: Sommaire
-toc::[]
+// Footnote declarations (see https://docs.asciidoctor.org/asciidoc/latest/macros/footnote/#externalizing-a-footnote).
+
+// No footnotes.
 
 
 == L'activité de test

@@ -1,4 +1,7 @@
 = Tests & Test Management
+//:sectnums:  // No section auto-numbering.
+:icons: font
+// Asciidoctor reveal.js custom CSS (see https://docs.asciidoctor.org/reveal.js-converter/latest/converter/custom-styles/).
 :customcss: css/slides.css
 
 image::images/geralt-test-4092025_1920_cropped.jpg[role=banner]

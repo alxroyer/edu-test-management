@@ -27,6 +27,7 @@ Durée : 15 min
 * Ressources :
 
 ** Documentation officielle de PokéAPI
+** Contrat OpenApi : https://github.com/PokeAPI/pokeapi/blob/master/openapi.yml
 ** Exemple d'URL : https://pokeapi.co/api/v2/pokemon/1 (Pikachu).
 
 
@@ -48,6 +49,7 @@ Durée : 30 min
   * Exemple de test Postman :
 
 [source, javascript]
+....
 pm.test("Status code is 200", () => {
     pm.response.to.have.status(200);
 });
@@ -55,6 +57,7 @@ pm.test("Response has a name", () => {
     const jsonData = pm.response.json();
     pm.expect(jsonData.name).to.be.a("string");
 });
+....
 
 [start=4]
 . Exportez la collection au format JSON.
@@ -107,6 +110,7 @@ npm install axios jest --save-dev
   * Exemple de test Jest :
 
 [source, javascript]
+....
 const axios = require("axios");
 
 test("GET /pokemon/1 returns Pikachu", async () => {
@@ -115,6 +119,7 @@ test("GET /pokemon/1 returns Pikachu", async () => {
     expect(response.data.name).toBe("bulbasaur");
     expect(response.data.types).toBeInstanceOf(Array);
 });
+....
 
 [start=3]
 . Exécutez les tests :

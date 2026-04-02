@@ -84,9 +84,9 @@ image::schemas/system-breakdown-reqmgt.drawio.png[]
 //       mais on ne fait pas apparaître dans les slides.
 Couverture des tests
 
-IMPORTANT: Difficulté de garantir l'exhaustivité
+CAUTION: Difficulté de garantir l'exhaustivité
 
-TIP: Tracer les justifications
+TIP: Tracer les justifications de la tracabilité établie
 
 
 === Tests spécifiants

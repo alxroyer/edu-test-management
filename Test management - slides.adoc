@@ -145,7 +145,14 @@ Issue management
 
 == Issue Management
 
-TODO
+IMPORTANT: 2ème support important pour les tests
+           (idem exigences)
+
+Change management / CCB
+
+Défauts du SUT (explication des KO)
+
+TIP: Known issues & tests auto
 
 
 [state=topic]

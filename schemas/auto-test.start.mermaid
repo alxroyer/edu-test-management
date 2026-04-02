@@ -1,0 +1,32 @@
+flowchart LR
+
+style ReqMgt color: #FF9933, stroke: #FF9933, stroke-width: 2px, fill: #FFF5EB
+subgraph ReqMgt["Requirement Management"]
+    Requirements
+end
+
+style Development color: #004C99, stroke: #004C99, stroke-width: 2px, fill: #DAE8FC
+Requirements --> Deliver
+subgraph Development
+    Deliver
+end
+
+style Test color: #336600, stroke: #336600, stroke-width: 2px, fill: #D5E8D4
+Requirements --> Plan
+Deliver --> Write
+subgraph Test
+    Plan
+    --> Write["Write & debug"]
+    --> CI
+    --> Analyze["Analyze results"]
+    --> Report
+    style Write font-style: italic, font-weight: bold, stroke-width: 4px
+    style CI font-style: italic, font-weight: bold, stroke-width: 4px
+    style Analyze font-style: italic, font-weight: bold, stroke-width: 4px
+end
+Analyze --> Bug
+
+style IssueMgt color: #FF0000, stroke: #FF0000, stroke-width: 2px, fill: #FFF0F0
+subgraph IssueMgt["Issue Management"]
+    Bug
+end

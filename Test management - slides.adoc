@@ -212,7 +212,11 @@ Validation expression du besoin
 
 == Activité initiale
 
+[#flow-manual-test-start]
 image::schemas/manual-test.start.png[]
+
+// Does not work in revealjs mode.
+//<<flow-auto-test-start, Tests auto>>
 
 
 == Vérification des corrections
@@ -235,14 +239,18 @@ Prérequis agilité itérative (time-boxé)
 
 Branche d'intégration stable / livrable
 
-Intégration Continue
+Intégration Continue / non-régressions
 
 
 === Activité
 
-TODO: flowchart mermaid
+[#flow-auto-test-start]
+image::schemas/auto-test.start.png[]
 
-TODO: Référence vers flowchart manuel pour mémo (comparaison)
+// Does not work in revealjs mode.
+//<<flow-manual-test-start, Tests manuels>>
+
+CAUTION: Known issues?
 
 
 === Architecture

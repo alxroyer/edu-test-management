@@ -23,7 +23,7 @@ Alexis ROYER - https://www.linkedin.com/in/alexis-royer/
 
 == Cycle en V et activités de test
 
-TODO: Schéma cycle en V avec traçabilité sur les activités de test.
+image::schemas/waterfall-test-activities.drawio.png[]
 
 
 === Normes

@@ -4,109 +4,109 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-1" value="System A" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=top;shape=mxgraph.arrows2.arrow;dy=0;dx=38;notch=15;strokeWidth=3;strokeColor=#004C99;fontColor=#004C99;fontSize=20;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-1" value="System A" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=top;shape=mxgraph.arrows2.arrow;dy=0;dx=38;notch=15;strokeWidth=3;strokeColor=#004C99;fontColor=#004C99;fontSize=20;fontStyle=1;fillColor=#DAE8FC;" parent="1" vertex="1">
           <mxGeometry x="80" y="40" width="970" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-2" value="&lt;b&gt;Specification&lt;/b&gt;&lt;br&gt;- Interface Actor1 / A&lt;div&gt;- Interface Actor2 / A&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#004C99;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-2" value="&lt;b&gt;Specification&lt;/b&gt;&lt;br&gt;- Interface Actor1 / A&lt;div&gt;- Interface Actor2 / A&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#004C99;" parent="1" vertex="1">
           <mxGeometry x="120" y="80" width="160" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-3" value="&lt;b&gt;Design&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(51, 102, 0);&quot;&gt;- Subsystem A1&lt;br&gt;- Subsystem A2&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(51, 102, 0);&quot;&gt;- Interface A1 / A2&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#004C99;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-3" value="&lt;b&gt;Design&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(51, 102, 0);&quot;&gt;- Subsystem A1&lt;br&gt;- Subsystem A2&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(51, 102, 0);&quot;&gt;- Interface A1 / A2&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#004C99;" parent="1" vertex="1">
           <mxGeometry x="280" y="80" width="160" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-4" value="&lt;b&gt;Integration&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#004C99;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-4" value="&lt;b&gt;Integration&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#004C99;" parent="1" vertex="1">
           <mxGeometry x="680" y="80" width="160" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-5" value="&lt;b&gt;Verification&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#004C99;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-5" value="&lt;b&gt;Verification&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#004C99;" parent="1" vertex="1">
           <mxGeometry x="840" y="80" width="160" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-6" value="Subsystem A1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=top;shape=mxgraph.arrows2.arrow;dy=0;dx=38;notch=15;strokeWidth=3;strokeColor=#336600;fontColor=#336600;fontSize=20;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-6" value="Subsystem A1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=top;shape=mxgraph.arrows2.arrow;dy=0;dx=38;notch=15;strokeWidth=3;strokeColor=#336600;fontColor=#336600;fontSize=20;fontStyle=1;fillColor=#D5E8D4;" parent="1" vertex="1">
           <mxGeometry x="120" y="200" width="880" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-7" value="&lt;b&gt;Specification&lt;/b&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 76, 153);&quot;&gt;- Interface Actor1 / A&lt;/font&gt;&lt;/div&gt;&lt;div&gt;- Interface A1 / A2&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#336600;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-7" value="&lt;b&gt;Specification&lt;/b&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 76, 153);&quot;&gt;- Interface Actor1 / A&lt;/font&gt;&lt;/div&gt;&lt;div&gt;- Interface A1 / A2&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#336600;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="160" y="240" width="160" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-8" value="&lt;b&gt;Design&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(255, 153, 51);&quot;&gt;- SW A1.1&lt;br&gt;- SW A1.2&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(255, 153, 51);&quot;&gt;- Interface A1.1 / A1.2&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#336600;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-8" value="&lt;b&gt;Design&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(255, 153, 51);&quot;&gt;- SW A1.1&lt;br&gt;- SW A1.2&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(255, 153, 51);&quot;&gt;- Interface A1.1 / A1.2&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#336600;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="320" y="240" width="160" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-9" value="&lt;b&gt;Integration&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#336600;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-9" value="&lt;b&gt;Integration&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#336600;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="640" y="240" width="160" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-10" value="&lt;b&gt;Verification&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#336600;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-10" value="&lt;b&gt;Verification&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#336600;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="800" y="240" width="160" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-11" value="SW A1.1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=top;shape=mxgraph.arrows2.arrow;dy=0;dx=38;notch=15;strokeWidth=3;strokeColor=#FF9933;fontColor=#FF9933;fontSize=20;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-11" value="SW A1.1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=top;shape=mxgraph.arrows2.arrow;dy=0;dx=38;notch=15;strokeWidth=3;strokeColor=#FF9933;fontColor=#FF9933;fontSize=20;fontStyle=1;fillColor=#FFF5EB;" parent="1" vertex="1">
           <mxGeometry x="160" y="360" width="800" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-12" value="&lt;b&gt;Specification&lt;/b&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 76, 153);&quot;&gt;- Interface Actor1 / A&lt;/font&gt;&lt;/div&gt;&lt;div&gt;- Interface A1.1 / A1.2&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF9933;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-12" value="&lt;b&gt;Specification&lt;/b&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 76, 153);&quot;&gt;- Interface Actor1 / A&lt;/font&gt;&lt;/div&gt;&lt;div&gt;- Interface A1.1 / A1.2&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF9933;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="200" y="400" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-13" value="&lt;b&gt;Design&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF9933;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-13" value="&lt;b&gt;Design&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF9933;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="360" y="400" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-14" value="&lt;b&gt;Integration&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF9933;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-14" value="&lt;b&gt;Integration&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF9933;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="600" y="400" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-15" value="&lt;b&gt;Verification&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF9933;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-15" value="&lt;b&gt;Verification&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF9933;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="760" y="400" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-16" value="SW A1.2" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=top;shape=mxgraph.arrows2.arrow;dy=0;dx=38;notch=15;strokeWidth=3;strokeColor=#FF9933;fontColor=#FF9933;fontSize=20;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-16" value="SW A1.2" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=top;shape=mxgraph.arrows2.arrow;dy=0;dx=38;notch=15;strokeWidth=3;strokeColor=#FF9933;fontColor=#FF9933;fontSize=20;fontStyle=1;fillColor=#FFF5EB;" parent="1" vertex="1">
           <mxGeometry x="160" y="500" width="800" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-17" value="&lt;b&gt;Specification&lt;/b&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(255, 153, 51), rgb(169, 81, 0));&quot;&gt;- Interface A1.1 / A1.2&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(51, 102, 0), rgb(169, 81, 0));&quot;&gt;- Interface A1 / A2&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF9933;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-17" value="&lt;b&gt;Specification&lt;/b&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(255, 153, 51), rgb(169, 81, 0));&quot;&gt;- Interface A1.1 / A1.2&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(51, 102, 0), rgb(169, 81, 0));&quot;&gt;- Interface A1 / A2&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF9933;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="200" y="540" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-18" value="&lt;b&gt;Design&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF9933;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-18" value="&lt;b&gt;Design&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF9933;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="360" y="540" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-19" value="&lt;b&gt;Integration&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF9933;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-19" value="&lt;b&gt;Integration&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF9933;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="600" y="540" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-20" value="&lt;b&gt;Verification&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF9933;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-20" value="&lt;b&gt;Verification&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF9933;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="760" y="540" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-21" value="Subsystem A2" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=top;shape=mxgraph.arrows2.arrow;dy=0;dx=38;notch=15;strokeWidth=3;strokeColor=#336600;fontColor=#336600;fontSize=20;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-21" value="Subsystem A2" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=top;shape=mxgraph.arrows2.arrow;dy=0;dx=38;notch=15;strokeWidth=3;strokeColor=#336600;fontColor=#336600;fontSize=20;fontStyle=1;fillColor=#D5E8D4;" parent="1" vertex="1">
           <mxGeometry x="120" y="640" width="880" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-22" value="&lt;b&gt;Specification&lt;/b&gt;&lt;div&gt;- Interface A1 / A2&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 76, 153);&quot;&gt;- Interface Actor2 / A&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#336600;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-22" value="&lt;b&gt;Specification&lt;/b&gt;&lt;div&gt;- Interface A1 / A2&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 76, 153);&quot;&gt;- Interface Actor2 / A&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#336600;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="160" y="680" width="160" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-23" value="&lt;b&gt;Design&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;- SW A2.1&lt;br&gt;- SW A2.2&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;- Interface A2.1 / A2.2&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#336600;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-23" value="&lt;b&gt;Design&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;- SW A2.1&lt;br&gt;- SW A2.2&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;- Interface A2.1 / A2.2&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#336600;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="320" y="680" width="160" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-24" value="&lt;b&gt;Integration&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#336600;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-24" value="&lt;b&gt;Integration&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#336600;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="640" y="680" width="160" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-25" value="&lt;b&gt;Verification&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#336600;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-25" value="&lt;b&gt;Verification&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#336600;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="800" y="680" width="160" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-26" value="SW A2.2" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=top;shape=mxgraph.arrows2.arrow;dy=0;dx=38;notch=15;strokeWidth=3;strokeColor=#FF0000;fontColor=#FF0000;fontSize=20;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-26" value="SW A2.2" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=top;shape=mxgraph.arrows2.arrow;dy=0;dx=38;notch=15;strokeWidth=3;strokeColor=#FF0000;fontColor=#FF0000;fontSize=20;fontStyle=1;fillColor=#FFF0F0;" parent="1" vertex="1">
           <mxGeometry x="160" y="940" width="800" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-27" value="&lt;b&gt;Specification&lt;/b&gt;&lt;div&gt;- Interface A2.1 / A2.2&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;&quot;&gt;&lt;font style=&quot;color: rgb(0, 76, 153);&quot;&gt;- Interface Actor2 / A&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF0000;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-27" value="&lt;b&gt;Specification&lt;/b&gt;&lt;div&gt;- Interface A2.1 / A2.2&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;&quot;&gt;&lt;font style=&quot;color: rgb(0, 76, 153);&quot;&gt;- Interface Actor2 / A&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF0000;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="200" y="980" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-28" value="&lt;b&gt;Design&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF0000;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-28" value="&lt;b&gt;Design&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF0000;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="360" y="980" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-29" value="&lt;b&gt;Integration&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF0000;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-29" value="&lt;b&gt;Integration&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF0000;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="600" y="980" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-30" value="&lt;b&gt;Verification&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF0000;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-30" value="&lt;b&gt;Verification&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF0000;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="760" y="980" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-31" value="SW A2.1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=top;shape=mxgraph.arrows2.arrow;dy=0;dx=38;notch=15;strokeWidth=3;strokeColor=#FF0000;fontColor=#FF0000;fontSize=20;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-31" value="SW A2.1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=top;shape=mxgraph.arrows2.arrow;dy=0;dx=38;notch=15;strokeWidth=3;strokeColor=#FF0000;fontColor=#FF0000;fontSize=20;fontStyle=1;fillColor=#FFF0F0;" parent="1" vertex="1">
           <mxGeometry x="160" y="800" width="800" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-32" value="&lt;b&gt;Specification&lt;/b&gt;&lt;div&gt;&lt;span style=&quot;&quot;&gt;&lt;font style=&quot;color: rgb(51, 102, 0);&quot;&gt;- Interface A1 / A2&lt;/font&gt;&lt;/span&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;- Interface A2.1 / A2.2&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF0000;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-32" value="&lt;b&gt;Specification&lt;/b&gt;&lt;div&gt;&lt;span style=&quot;&quot;&gt;&lt;font style=&quot;color: rgb(51, 102, 0);&quot;&gt;- Interface A1 / A2&lt;/font&gt;&lt;/span&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;- Interface A2.1 / A2.2&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF0000;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="200" y="840" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-33" value="&lt;b&gt;Design&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF0000;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-33" value="&lt;b&gt;Design&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF0000;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="360" y="840" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-34" value="&lt;b&gt;Integration&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF0000;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-34" value="&lt;b&gt;Integration&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF0000;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="600" y="840" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tYG3dCa2W_ihXTzST3uM-35" value="&lt;b&gt;Verification&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF0000;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="tYG3dCa2W_ihXTzST3uM-35" value="&lt;b&gt;Verification&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#FF0000;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="760" y="840" width="160" height="80" as="geometry" />
         </mxCell>
       </root>

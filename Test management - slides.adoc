@@ -233,7 +233,7 @@ image::schemas/manual-test.change.png[]
 == 3. Tests automatiques
 
 
-=== Besoin d'automatisation
+== Besoin d'automatisation
 
 Prérequis agilité itérative (time-boxé)
 
@@ -242,7 +242,7 @@ Branche d'intégration stable / livrable
 Intégration Continue / non-régressions
 
 
-=== Activité
+== Activité
 
 [#flow-auto-test-start]
 image::schemas/auto-test.start.png[]
@@ -253,17 +253,17 @@ image::schemas/auto-test.start.png[]
 CAUTION: Known issues?
 
 
-=== Architecture
+== Architecture
 
 TODO
 
 
-=== Outils
+== Outils
 
 TODO
 
 
-=== Couverture de code
+== Couverture de code
 
 TODO
 
@@ -272,27 +272,27 @@ TODO
 == 4. Management des tests
 
 
-=== Jeux de données
+== Jeux de données
 
 TODO
 
 
-=== Timing activités de test
+== Timing activités de test
 
 TODO
 
 
-=== Cycle en V v/s Agilité
+== Cycle en V v/s Agilité
 
 TODO
 
 
-=== Priorisation des tests
+== Priorisation des tests
 
 TODO
 
 
-=== Exhaustivité v/s gestion de risque
+== Exhaustivité v/s gestion de risque
 
 TODO
 

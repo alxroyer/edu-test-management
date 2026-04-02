@@ -191,14 +191,28 @@ _"Dernier rempart"_
 == 2. Tests manuels
 
 
-=== Intérêt des tests manuels
+== Intérêt des tests manuels
 
-TODO
+Tests auto privilégiés +
+_méthodes agiles, intégration continue_
+
+TIP: Là où l'humain apporte une plus-value +
+Validation expression du besoin
 
 
-=== Activité
+== Activité initiale
 
-TODO: flowchart mermaid
+image::schemas/manual-test.start.png[]
+
+
+== Vérification des corrections
+
+image::schemas/manual-test.fix.png[]
+
+
+== Changements de périmètre
+
+image::schemas/manual-test.change.png[]
 
 
 [state=topic]

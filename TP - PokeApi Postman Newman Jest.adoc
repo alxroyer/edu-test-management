@@ -1,12 +1,29 @@
-= TP : Test des endpoints de PokéAPI avec Postman/Newman et Jest
+= TP : Test des endpoints de PokeAPI avec Postman/Newman et Jest
 :doctype: article
 
+
+// Preamble.
+
+Ce TP propose une découverte des outils Postman et Newman, ainsi que Jest,
+pour les tests d'API REST.
+
 Source : https://chat.mistral.ai/, sous réserve de confirmation des informations.
+
+TODO : Séparer en 2 TP : 1) Postman + Newman et 2) Jest.
+
+
+// Footnote declarations.
+
+:fn-legacy-peer-deps: pass:c,q[footnote:legacy-peer-deps[ \
+  L'option `--legacy-peer-deps` peut être nécessaire \
+  avec les commandes `npm install` \
+  en cas d'alertes de sécurité sur les installations de packages. \
+]]
 
 
 == Objectifs
 
-* Découvrir l'API PokéAPI et ses endpoints.
+* Découvrir l'API PokeAPI et ses endpoints.
 * Créer une collection Postman pour tester manuellement les endpoints.
 * Automatiser les tests avec Newman.
 * Écrire des tests unitaires avec Jest pour valider les réponses de l'API.
@@ -14,21 +31,22 @@ Source : https://chat.mistral.ai/, sous réserve de confirmation des information
 
 == Prérequis
 
-* Un compte Postman (gratuit).
+* Un compte Postman (gratuit) : https://www.postman.com/
 * Node.js installé (pour Newman et Jest).
 * Un éditeur de code (VS Code, Sublime Text, etc.).
 
 
-== 1. Découverte de PokéAPI
+== 1. Découverte de PokeAPI
 
 Durée : 15 min
 
-* Consigne : Explorez la documentation de PokéAPI et identifiez 3 endpoints intéressants (ex: /pokemon/{id}, /berry/{id}, /type/{id}).
+* Consigne : Explorez la documentation de PokeAPI et identifiez 3 endpoints intéressants (ex: /pokemon/{id}, /berry/{id}, /type/{id}).
 * Ressources :
 
-** Documentation officielle de PokéAPI
+** Documentation officielle de PokeAPI : https://pokeapi.co/docs/v2
+** Exemple d'URL : https://pokeapi.co/api/v2/pokemon/1 (Bulbizarre)
+** Dépôt github : https://github.com/PokeAPI/pokeapi/
 ** Contrat OpenApi : https://github.com/PokeAPI/pokeapi/blob/master/openapi.yml
-** Exemple d'URL : https://pokeapi.co/api/v2/pokemon/1 (Pikachu).
 
 
 == 2. Création d'une collection Postman
@@ -37,8 +55,10 @@ Durée : 30 min
 
 Étapes :
 
-1. Créez une nouvelle collection dans Postman nommée "PokéAPI Tests".
+1. Créez une nouvelle collection dans Postman nommée "PokeAPI Tests".
+
 2. Ajoutez 3 requêtes (GET) pour les endpoints choisis.
+
 3. Pour chaque requête :
 
   * Ajoutez des tests pour vérifier :
@@ -47,9 +67,9 @@ Durée : 30 min
     ** La présence de champs spécifiques dans la réponse (ex: name, id, types).
 
   * Exemple de test Postman :
-
++
 [source, javascript]
-....
+----
 pm.test("Status code is 200", () => {
     pm.response.to.have.status(200);
 });
@@ -57,10 +77,10 @@ pm.test("Response has a name", () => {
     const jsonData = pm.response.json();
     pm.expect(jsonData.name).to.be.a("string");
 });
-....
+----
 
-[start=4]
-. Exportez la collection au format JSON.
+4. Exportez la collection au format JSON.
+   Enregistrez le fichier sous le nom `PokeAPI_Tests.postman_collection.json`.
 
 
 == 3. Automatisation avec Newman
@@ -70,24 +90,29 @@ Durée : 30 min
 Étapes :
 
 1. Installez Newman globalement :
-
++
 [source, bash]
-npm install -g newman
+----
+npm install --save-dev newman newman-reporter-html
+----
++
+TIP: Voir l'option `--legacy-peer-deps` au besoin. {fn-legacy-peer-deps}
 
-[start=2]
-. Exécutez la collection depuis la ligne de commande :
-
+2. Exécutez la collection depuis la ligne de commande :
++
 [source, bash]
-newman run PokéAPI_Tests.postman_collection.json
+----
+newman run PokeAPI_Tests.postman_collection.json
+----
 
-[start=3]
-. Générez un rapport HTML avec newman-reporter-html :
-
+3. Générez un rapport HTML avec newman-reporter-html :
++
 [source, bash]
-newman run PokéAPI_Tests.postman_collection.json -r html --reporter-html-export report.html
+----
+newman run PokeAPI_Tests.postman_collection.json -r html --reporter-html-export report.html
+----
 
-[start=4]
-. Ouvrez le rapport report.html pour visualiser les résultats.
+4. Ouvrez le rapport report.html pour visualiser les résultats.
 
 
 == 4. Tests unitaires avec Jest
@@ -97,35 +122,39 @@ Durée : 45 min
 Étapes :
 
 1. Initialisez un projet Node.js :
-
++
 [source, bash]
+----
 npm init -y
-npm install axios jest --save-dev
+npm install --save-dev axios jest
+----
++
+TIP: Voir l'option `--legacy-peer-deps` au besoin. {fn-legacy-peer-deps}
 
-[start=2]
-. Créez un fichier pokeapi.test.js et écrivez des tests pour valider :
+2. Créez un fichier pokeapi.test.js et écrivez des tests pour valider :
 
   * Le statut HTTP.
   * La structure des données retournées.
   * Exemple de test Jest :
-
++
 [source, javascript]
-....
+----
 const axios = require("axios");
 
-test("GET /pokemon/1 returns Pikachu", async () => {
+test("GET /pokemon/1 returns Bulbasaur", async () => {
     const response = await axios.get("https://pokeapi.co/api/v2/pokemon/1");
     expect(response.status).toBe(200);
     expect(response.data.name).toBe("bulbasaur");
     expect(response.data.types).toBeInstanceOf(Array);
 });
-....
+----
 
-[start=3]
-. Exécutez les tests :
-
+3. Exécutez les tests :
++
 [source, bash]
+----
 npx jest
+----
 
 
 == 5. Intégration continue (Bonus)
@@ -134,24 +163,35 @@ Durée : 30 min
 
 Étapes :
 
-1. Créez un fichier .github/workflows/tests.yml pour exécuter Newman et Jest via GitHub Actions.
-2. Exemple de workflow :
+1. Crééz un dépôt npm sous github, contenant les éléments constitués lors des étapes précédentes :
 
+  * S'assurer de l'installation des packages `newman`, `axios` et `jest`
+    en mode `--save-dev`.
+  * Ajouter les fichiers `PokeAPI_Tests.postman_collection.json`
+    et `pokeapi.test.js` constitués précédemment.
+
+2. Créez un fichier `.github/workflows/tests.yml` pour exécuter Newman et Jest via GitHub Actions.
+
+3. Exemple de workflow :
++
 [source, yaml]
-name: PokéAPI Tests
+----
+name: PokeAPI Tests
 on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: "20"
       - run: npm install
+      - run: newman run PokeAPI_Tests.postman_collection.json
       - run: npx jest
-      - run: npm install -g newman
-      - run: newman run PokéAPI_Tests.postman_collection.json
+----
++
+TIP: Voir l'option `--legacy-peer-deps` au besoin. {fn-legacy-peer-deps}
 
 
 == 6. Livrables attendus

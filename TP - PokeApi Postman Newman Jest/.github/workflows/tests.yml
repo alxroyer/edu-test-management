@@ -1,0 +1,13 @@
+name: PokeAPI Tests
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install --legacy-peer-deps
+      - run: newman run PokeAPI_Tests.postman_collection.json
+      - run: npx jest

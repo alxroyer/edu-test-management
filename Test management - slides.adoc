@@ -36,17 +36,28 @@ ISO 12207:: Processus du cycle de vie du logiciel
     * Qualification
 
 
+== Boîte noire / boîte blanche
+
+Vérification exigences => boîte noire
+
+Intégration sous-systèmes & interfaces => boîte blanche
+
+Test unitaires :
+boîte blanche
+(DO 178 => boîte noire)
+
+
 == Système et sous-systèmes
 
-TODO: Schéma décomposition en sous-systèmes.
+image::schemas/system-breakdown.drawio.png[]
 
-Notion de SUT
+NOTE: SUT = System / Software Under Test
 
-Vérification des exigences => boîte noire
 
-Intégration des sous-systèmes => boîte blanche
+[#slide-system-breakdown-waterfall-tiling]
+== Tuilage de cycles en V
 
-Test unitaires ? => boîte noire ou blanche ?
+image::schemas/system-breakdown-activities.drawio.png[]
 
 
 == L'esprit du testeur

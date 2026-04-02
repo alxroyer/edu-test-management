@@ -14,3 +14,7 @@
 /* #slide-test-docs */
     /* Reduce `p` font size a bit so that the two columns remain in the page. */
     #slide-test-docs p { font-size: 90%; }
+
+/* #slide-system-breakdown-waterfall-tiling */
+    /* Reduce img size. */
+    #slide-system-breakdown-waterfall-tiling img { width: 50%; height: 50%; }

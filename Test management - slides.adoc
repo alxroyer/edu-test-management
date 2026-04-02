@@ -60,56 +60,6 @@ NOTE: SUT = System / Software Under Test
 image::schemas/system-breakdown-activities.drawio.png[]
 
 
-== L'esprit du testeur
-
-QA (= Quality Assurance)
-
-_"Dernier rempart"_
-
-// Memo: `^` characters stand for _center_.
-[cols="^1,^1"]
-|===
-| Dev                         | Testeur
-
-| Construit                   | Dissecte
-| Intégration bottom-up       | Approche top-down (exigences)
-| Fait en sorte que ça marche | Recherche les défauts
-| Boîte blanche               | Boîte noire
-| Vitesse                     | Rigueur
-|===
-
-
-[#slide-test-docs.columns]
-== Les documents de test
-
-[.column]
---
-Plan de tests::
-    * Titre et objectifs de test
-    * Action et résultats attendus
-FCA::
-    * Matrice de synthèse
-    * Support => acceptation
---
-
-[.column]
---
-Résultats de tests::
-    * Version testée
-    * Tests du plan
-    * Résultats observés (preuves)
-    * OK / KO
-    * Issues
---
-
-
-=== FCA
-
-TODO: Exemple de vue type FCA
-
-NOTE: Indicateur de résultat
-
-
 == Requirement Management
 
 image::schemas/system-breakdown-reqmgt.drawio.png[]
@@ -153,6 +103,56 @@ Change management / CCB
 Défauts du SUT (explication des KO)
 
 TIP: Known issues & tests auto
+
+
+[#slide-test-docs.columns]
+== Les documents de test
+
+[.column]
+--
+Plan de tests::
+    * Titre et objectifs de test
+    * Action et résultats attendus
+FCA::
+    * Matrice de synthèse
+    * Support => acceptation
+--
+
+[.column]
+--
+Résultats de tests::
+    * Version testée
+    * Tests du plan
+    * Résultats observés (preuves)
+    * OK / KO
+    * Issues
+--
+
+
+=== FCA
+
+TODO: Exemple de vue type FCA
+
+NOTE: Indicateur de résultat
+
+
+== L'esprit du testeur
+
+QA (= Quality Assurance)
+
+_"Dernier rempart"_
+
+// Memo: `^` characters stand for _center_.
+[cols="^1,^1"]
+|===
+| Dev                         | Testeur
+
+| Construit                   | Dissecte
+| Intégration bottom-up       | Approche top-down (exigences)
+| Fait en sorte que ça marche | Recherche les défauts
+| Boîte blanche               | Boîte noire
+| Vitesse                     | Rigueur
+|===
 
 
 [state=topic]

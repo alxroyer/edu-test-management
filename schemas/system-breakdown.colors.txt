@@ -1,0 +1,5 @@
+blue:   004C99 / DAE8FC
+green:  336600 / D5E8D4
+orange: FF9933 / FFF5EB
+red:    FF0000 / FFF0F0
+

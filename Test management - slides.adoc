@@ -112,7 +112,35 @@ NOTE: Indicateur de résultat
 
 == Requirement Management
 
-TODO
+image::schemas/system-breakdown-reqmgt.drawio.png[]
+
+
+=== Complétude
+
+// Mémo: Idem raffinements de spécifications,
+//       mais on ne fait pas apparaître dans les slides.
+Couverture des tests
+
+IMPORTANT: Difficulté de garantir l'exhaustivité
+
+TIP: Tracer les justifications
+
+
+=== Tests spécifiants
+
+Quand on n'a pas de spécifications...
+
+
+=== Changements d'exigences
+
+Versioning des spécifications
+
+Analyses d'impact
+
+Agilité ?
+=> _latest_ / "crête de vague"
+
+Issue management
 
 
 == Issue Management

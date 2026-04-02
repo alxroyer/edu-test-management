@@ -134,9 +134,38 @@ Résultats de tests::
 
 === FCA
 
-TODO: Exemple de vue type FCA
+|===
+| Req id | Req title | Test id | Test title | Test result | Issue
 
-NOTE: Indicateur de résultat
+// Memo: `.2+` spans cells one row below.
+.2+| REQ_010
+.2+| Startup
+| TEST_100
+| Startup data
+| ✅ OK
+|
+
+| TEST_110
+| Startup sequence
+| ✅ OK
+|
+
+| REQ_020
+| Shutdown
+| TEST_200
+| Shutdown sequence
+| ❌ NOK
+| #42: Major: The SW freezes on shutdown.
+
+| ...
+|
+|
+|
+|
+|
+|===
+
+TIP: Indicateur de résultat
 
 
 == L'esprit du testeur

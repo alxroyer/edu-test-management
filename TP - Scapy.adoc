@@ -1,0 +1,144 @@
+= TP : Sérialisation/Désérialisation de messages avec Scapy et le protocole Rendezvous
+
+Source : https://chat.mistral.ai/, sous réserve de confirmation des informations.
+
+
+== Objectifs
+
+* Comprendre le fonctionnement du protocole libp2p Rendezvous.
+* Implémenter la sérialisation et désérialisation de messages en Python avec Scapy.
+* Manipuler des paquets réseau personnalisés.
+
+== 1. Présentation du protocole Rendezvous
+
+Le protocole Rendezvous de libp2p permet à des pairs de s’enregistrer et de découvrir d’autres pairs via un point de rencontre (rendezvous point). Les messages principaux sont :
+
+REGISTER:: Enregistrement d’un pair sous un namespace, avec un TTL (Time To Live) optionnel.
+DISCOVER:: Découverte des pairs enregistrés sous un namespace.
+UNREGISTER:: Désenregistrement d’un pair.
+
+Le protocole utilise un identifiant de protocole : /rendezvous/1.0.0 et un format binaire pour les messages. Par défaut, le TTL est de 2 heures si non spécifiédocs.libp2p.io+2.
+
+
+== 2. Structure des messages
+
+Un message Rendezvous est généralement structuré comme suit (simplifié) :
+
+* Type de message (1 octet) : REGISTER (0x01), DISCOVER (0x02), UNREGISTER (0x03).
+* Namespace (longueur variable, préfixé par sa taille).
+* TTL (4 octets, optionnel).
+* Peer ID (longueur variable, préfixé par sa taille).
+
+Exemple de structure pour un message REGISTER :
+
+[source]
+----
+[Type:1] [Namespace_len:1] [Namespace:var] [TTL:4] [PeerID_len:1] [PeerID:var]
+----
+
+
+== 3. Implémentation avec Scapy
+
+=== Mise en place de l'environnement
+
+Installer Scapy dans un environnement venv :
+
+[source, bash]
+which python
+python -m venv .venv
+source .venv/bin/activate
+which python
+python -m pip install scapy
+python -m scapy
+
+
+=== 3.1. Import
+
+[source, python]
+----
+from scapy.all import *
+from scapy.layers.inet import IP, UDP
+from scapy.packet import Packet, bind_layers
+from scapy.fields import ByteField, StrField, IntField, FieldLenField
+----
+
+
+=== 3.2. Définition des couches Scapy
+
+On définit une classe pour chaque type de message, en héritant de Packet :
+
+[source, python]
+----
+class RendezvousMessage(Packet):
+    name = "RendezvousMessage"
+    fields_desc = [
+        ByteField("type", 0),
+        FieldLenField("ns_len", None, length_of="namespace", fmt="B"),
+        StrField("namespace", ""),
+        IntField("ttl", 7200),  # 2h en secondes
+        FieldLenField("peerid_len", None, length_of="peerid", fmt="B"),
+        StrField("peerid", ""),
+    ]
+
+    def mysummary(self):
+        return f"Rendezvous {self.type_name()} {self.namespace} (TTL={self.ttl})"
+
+    def type_name(self):
+        types = {1: "REGISTER", 2: "DISCOVER", 3: "UNREGISTER"}
+        return types.get(self.type, "UNKNOWN")
+----
+
+
+=== 3.3. Sérialisation et désérialisation
+
+Sérialisation:: Créer un paquet et utiliser raw() pour obtenir les octets.
+Désérialisation:: Utiliser la classe pour parser les octets reçus.
+
+Exemple :
+
+[source, python]
+----
+# Sérialisation
+msg = RendezvousMessage(type=1, namespace="test", ttl=3600, peerid="QmPeerID")
+raw_msg = raw(msg)
+
+# Désérialisation
+parsed_msg = RendezvousMessage(raw_msg)
+print(parsed_msg.mysummary())
+----
+
+
+=== 3.4. Envoi et réception (simulation)
+
+[source, python]
+----
+# Simulation d'envoi
+p = IP(dst="127.0.0.1")/UDP(dport=1234)/RendezvousMessage(type=1, namespace="test", ttl=3600, peerid="QmPeerID")
+p.show()
+
+# Simulation de réception
+data = raw(p[RendezvousMessage])
+msg = RendezvousMessage(data)
+print(f"Message reçu : {msg.type_name()} pour {msg.namespace}")
+----
+
+
+== 4. Exercices proposés
+
+1. Création de messages : Implémentez la création et l’affichage de messages REGISTER, DISCOVER et UNREGISTER.
+2. Validation : Ajoutez une méthode pour valider la structure d’un message (ex : TTL ≤ 72h).
+3. Simulation réseau : Utilisez Scapy pour envoyer un message REGISTER à un pair local et désérialisez-le à la réception.
+4. Extension : Ajoutez un champ optionnel (ex : signature) et mettez à jour la sérialisation/désérialisation.
+
+
+== 5. Ressources utiles
+
+* Site officiel Scapy : https://scapy.net/
+* Documentation Scapy : https://scapy.readthedocs.io/en/latest/usage.html
+* Spécification Rendezvous : https://docs.libp2p.io/concepts/discovery-routing/rendezvous/
+* Exemple d’implémentation Python : https://py-libp2p.readthedocs.io/en/stable/examples.rendezvous.html
+
+
+== 6. Conclusion
+
+Ce TP permet de manipuler Scapy pour sérialiser et désérialiser des messages d’un protocole propriétaire, en s’appuyant sur les concepts de couches, de champs et de manipulation de paquets. Vous pouvez maintenant étendre cette implémentation pour gérer des cas plus complexes ou intégrer ce protocole dans une application réseau réelle.

@@ -74,10 +74,10 @@ class RendezvousMessage(Packet):
     fields_desc = [
         ByteField("type", 0),
         FieldLenField("ns_len", None, length_of="namespace", fmt="B"),
-        StrField("namespace", ""),
+        StrLenField("namespace", "", length_from=lambda p: p.ns_len),
         IntField("ttl", 7200),  # 2h en secondes
         FieldLenField("peerid_len", None, length_of="peerid", fmt="B"),
-        StrField("peerid", ""),
+        StrLenField("peerid", "", length_from=lambda p: p.peerid_len),
     ]
 
     def mysummary(self):

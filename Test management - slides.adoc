@@ -253,9 +253,75 @@ image::schemas/auto-test.start.png[]
 CAUTION: Known issues?
 
 
-== Architecture
+== Architecture - compétence développement
 
-TODO
+Code test ~= Code appli
+
+Langage : JS, Python, Gherkin
+
+TIP: Typage
+
+
+== Architecture - framework
+
+* Textes humainement lisibles ?
+* Faciliter les investigations
+* Interactions SUT
+
+
+=== Textes humainement lisibles ?
+
+Production documentaire plan de test
+
+TIP: Proximité texte / code de test
+
+
+=== Faciliter les investigations
+
+* Tracebacks
+* Assertions
+* Logging
+
+** Couleur / indentation
+** Stratégie (intégrations)
+** Human readable
+
+* Post-mortem
+
+
+=== Interactions SUT
+
+TIP: Pattern _wait-for / query_
+
+* Aux interfaces du SUT
+* Eviter les `sleep()` arbitraires de X secondes
+* Préférer une gestion d'événements => _wait-for_
+* Wait for what? => _query_ (OO Design)
+
+
+== Architecture - Performances
+
+TIP: Target 10 minutes max pour les non-régressions
+
+Effet psychologique au détriment de la qualité
+
+
+== Architecture - Stabilité
+
+TIP: Refuser les instabilités
+
+* Perte de temps au quotidien
+* Risque qualité
+
+Analyses post-mortem / collecter les traces
+
+
+== Architecture - Known issues
+
+TIP: Statut auto // type de campagne
+
+* Non-régression : OK avec contournement
+* Vérification : KO, rapport
 
 
 == Outils

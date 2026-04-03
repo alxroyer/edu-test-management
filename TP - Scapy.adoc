@@ -134,7 +134,11 @@ print(f"Message reçu : {msg.type_name()} pour {msg.namespace}")
 == 5. Ressources utiles
 
 * Site officiel Scapy : https://scapy.net/
-* Documentation Scapy : https://scapy.readthedocs.io/en/latest/usage.html
+* Documentation Scapy :
+
+** https://scapy.readthedocs.io/en/latest/usage.html
+** https://scapy.readthedocs.io/en/latest/build_dissect.html
+
 * Spécification libp2p Rendezvous :
 
 ** https://docs.libp2p.io/concepts/discovery-routing/rendezvous/

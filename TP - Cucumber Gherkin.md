@@ -3,6 +3,10 @@
 Source : https://chat.mistral.ai/, sous réserve de confirmation des informations.
 Reprise de [TP - reddit.com Selenium.md](TP%20-%20reddit.com%20Selenium.md) avec Cucumber/Gherkin.
 
+Peu utilisable en l'état.
+Préférer le tutoriel proposé sur cucumber.io :
+https://cucumber.io/docs/guides/10-minute-tutorial
+
 ### **Fichier Feature : détection_contenu_haineux.feature**
 ```gherkin
 # language: fr

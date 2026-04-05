@@ -1,30 +1,42 @@
-= TP : Sérialisation/Désérialisation de messages avec Scapy et le protocole Rendezvous
-
-Source : https://chat.mistral.ai/, sous réserve de confirmation des informations.
-
-
-== Objectifs
-
-* Comprendre le fonctionnement du protocole libp2p Rendezvous.
-* Implémenter la sérialisation et désérialisation de messages en Python avec Scapy.
-* Manipuler des paquets réseau personnalisés.
-
-== 1. Présentation du protocole Rendezvous
-
-Le protocole Rendezvous de libp2p permet à des pairs de s'enregistrer et de découvrir d'autres pairs via un point de rencontre (rendezvous point). Les messages principaux sont :
-
-REGISTER:: Enregistrement d'un pair sous un namespace, avec un TTL (Time To Live) optionnel.
-DISCOVER:: Découverte des pairs enregistrés sous un namespace.
-UNREGISTER:: Désenregistrement d'un pair.
-
-Le protocole utilise un identifiant de protocole : /rendezvous/1.0.0 et un format binaire pour les messages. Par défaut, le TTL est de 2 heures si non spécifiédocs.libp2p.io+2.
+= Sérialisation / désérialisation de protocoles propriétaires avec Scapy
+:doctype: article
+:sectnums:
+:toc: preamble
+:toc-title: Sommaire
+:icons: font
 
 
-== 2. Structure des messages
+Objectifs :
+manipuler Scapy pour sérialiser et désérialiser des messages d'un protocole propriétaire,
+en s'appuyant sur les concepts de couches, de champs et de manipulation de paquets.
+
+
+== Protocole d'exemple : libp2p Rendezvous
+
+On prend comme protocole d'exemple pour ce TP le protocole Rendezvous de libp2p.
+
+Ce protocole permet à des pairs de s'enregistrer et de découvrir d'autres pairs
+via un point de rencontre (rendezvous point).
+
+Les messages principaux sont :
+
+REGISTER::
+    Enregistrement d'un pair sous un namespace,
+    avec un TTL (Time To Live) optionnel.
+DISCOVER::
+    Découverte des pairs enregistrés sous un namespace.
+UNREGISTER::
+    Désenregistrement d'un pair.
+
+Le protocole utilise un identifiant de protocole : /rendezvous/1.0.0
+et un format binaire pour les messages.
+
+
+== Structure des messages
 
 Un message Rendezvous est généralement structuré comme suit (simplifié) :
 
-* Type de message (1 octet) : REGISTER (0x01), DISCOVER (0x02), UNREGISTER (0x03).
+* Type de message (1 octet).
 * Namespace (longueur variable, préfixé par sa taille).
 * TTL (4 octets, optionnel).
 * Peer ID (longueur variable, préfixé par sa taille).
@@ -37,25 +49,37 @@ Exemple de structure pour un message REGISTER :
 ----
 
 
-== 3. Implémentation avec Scapy
+== Implémentation avec Scapy
 
 === Mise en place de l'environnement
 
-Installer Scapy dans un environnement venv :
+Créer un répertoire de travail.
+Dans une console bash :
 
 [source, bash]
-which python
+----
+mkdir tp-scapy
+cd tp-scapy
+----
+
+Installer Scapy dans un environnement venv.
+
+[source, bash]
+----
 python -m venv .venv
 source .venv/bin/activate
-which python
 python -m pip install scapy
-python -m scapy
+----
 
 
-=== 3.1. Import
+=== Imports
+
+Initialiser un fichier `libp2p_rendezvous.py`.
 
 [source, python]
 ----
+#!/usr/bin/env python
+
 from scapy.all import *
 from scapy.layers.inet import IP, UDP
 from scapy.packet import Packet, bind_layers
@@ -63,77 +87,220 @@ from scapy.fields import ByteField, StrField, IntField, FieldLenField
 ----
 
 
-=== 3.2. Définition des couches Scapy
+=== Définition des couches Scapy
 
-On définit une classe pour chaque type de message, en héritant de Packet :
+On définit une classe pour chaque type de message
+(ou _packet_ en terminologie Scapy),
+en héritant de la classe de base `Packet`.
 
 [source, python]
 ----
 class RendezvousMessage(Packet):
-    name = "RendezvousMessage"
     fields_desc = [
-        ByteField("type", 0),
-        FieldLenField("ns_len", None, length_of="namespace", fmt="B"),
-        StrLenField("namespace", "", length_from=lambda p: p.ns_len),
-        IntField("ttl", 7200),  # 2h en secondes
-        FieldLenField("peerid_len", None, length_of="peerid", fmt="B"),
-        StrLenField("peerid", "", length_from=lambda p: p.peerid_len),
+        ByteField("type", default=0),
+        FieldLenField("ns_len", fmt="B", length_of="namespace", default=None),
+        StrLenField("namespace", length_from=lambda p: p.ns_len, default=b''),
+        IntField("ttl", default=2*3600),  # 2h en secondes
+        FieldLenField("peerid_len", fmt="B", length_of="peerid", default=None),
+        StrLenField("peerid", length_from=lambda p: p.peerid_len, default=b''),
     ]
-
-    def mysummary(self):
-        return f"Rendezvous {self.type_name()} {self.namespace} (TTL={self.ttl})"
-
-    def type_name(self):
-        types = {1: "REGISTER", 2: "DISCOVER", 3: "UNREGISTER"}
-        return types.get(self.type, "UNKNOWN")
 ----
 
+Explications :
 
-=== 3.3. Sérialisation et désérialisation
+* Pour créer une classe de message (comme `RendezvousMessage`),
+  il suffit d'hériter de la classe `Packet`.
 
-Sérialisation:: Créer un paquet et utiliser raw() pour obtenir les octets.
-Désérialisation:: Utiliser la classe pour parser les octets reçus.
+* La définition des champs se fait au travers de la liste `fields_desc`
+  (variable de classe).
+
+* `ByteField` décrit un champ de type _byte_, i.e. 1 octet.
+
+* `IntField` décrit un champ de type _int_,
+  i.e. 4 octets en terminologie Scapy (héritée de `struct`),
+  format BIG ENDIAN par défaut.
+
+* Les champs `FieldLenField` et `StrLenField` permettent de décrire des couples de champs liés :
+
+** Le champ `FieldLenField` constitue une valeur entière
+   décrivant la longueur du champ `StrLenField` associé.
+
+*** Le paramètre `fmt="B"` indique la taille du champ.
+    En l'occurrence `B` pour _byte_ en terminologie `struct`.
+*** Le paramètre `length_of` décrit le nom du champ dont la longueur est contrôlée.
+*** La valeur par défaut `None` permet d'assurer le calcul automatique de la valeur en sérialisation.
+
+** Le champ `StrLenField` constitue une valeur de type buffer
+   (`Str` i.e. buffer, héritage de python 2),
+   dont la longueur est contrôlée par le champ `FieldLenField` associé.
+
+*** Le paramètre `length_of` donne une fonction (fonction _lambda_ en l'occurrence)
+    permettant de calculer la taille des données à lire
+    à partir du paquet courant `p`.
+*** Utile en désérialisation.
+
+
+=== Sérialisation et désérialisation
+
+Sérialisation::
+    A partir d'un objet de message, utiliser la méthode `.build()`
+    pour obtenir le buffer sérialisé.
+Désérialisation::
+    Utiliser la classe pour parser un buffer reçu.
 
 Exemple :
 
 [source, python]
 ----
-# Sérialisation
-msg = RendezvousMessage(type=1, namespace="test", ttl=3600, peerid="QmPeerID")
-raw_msg = raw(msg)
+print("Sérialisation et désérialisation")
+print("================================")
 
-# Désérialisation
-parsed_msg = RendezvousMessage(raw_msg)
-print(parsed_msg.mysummary())
+# Création de message.
+p = RendezvousMessage(type=1, namespace="test", peerid="QmPeerID")
+print("Message créé :")
+p.show()
+
+# Sérialisation.
+b: bytes = p.build()
+print(f"Buffer sérialisé : {b.hex()!r}")
+print("")
+
+# Désérialisation.
+p = RendezvousMessage(b)
+print("Message désérialisé :")
+p.show()
 ----
 
+Exécuter le fichier `libp2p_rendezvous.py` à partir de la console bash :
 
-=== 3.4. Envoi et réception (simulation)
+[source, bash]
+----
+python libp2p_rendezvous.py
+----
+
+Observations :
+
+* Création de message :
+
+** Les champs auto-calculés apparaissent comme `None` tant qu'il n'y a pas eu de sérialisation.
+
+* Sérialisation :
+
+** Les champs auto-calculés ont fait l'objet d'un calcul,
+   et se retrouvent correctement sérialisés dans le buffer
+   (pas évident à voir sous cette forme...)
+
+* Désérialisation :
+
+** Tous les champs sont correctement parsés avec leur valeur.
+
+
+=== Raffinement du champ `RendezvousMessage.type`
+
+Ajouter avant la classe `RendezvousMessage`
+la définition d'un enuméré explicitant les valeurs de types de messages.
 
 [source, python]
 ----
-# Simulation d'envoi
-p = IP(dst="127.0.0.1")/UDP(dport=1234)/RendezvousMessage(type=1, namespace="test", ttl=3600, peerid="QmPeerID")
-p.show()
+import enum
 
-# Simulation de réception
-data = raw(p[RendezvousMessage])
-msg = RendezvousMessage(data)
-print(f"Message reçu : {msg.type_name()} pour {msg.namespace}")
+class MessageType(enum.Enum):
+    REGISTER = 0
+    REGISTER_RESPONSE = 1
+    UNREGISTER = 2
+    DISCOVER = 3
+    DISCOVER_RESPONSE = 4
+----
+
+Puis ajuster la définition du champ `type` comme suit :
+
+[source, python]
+----
+        ByteEnumField("type", enum=MessageType, default=0),
 ----
 
 
-== 4. Exercices proposés
+=== Empilements protocolaires
 
-1. Création de messages : Implémentez la création et l'affichage de messages REGISTER, DISCOVER et UNREGISTER.
-2. Validation : Ajoutez une méthode pour valider la structure d'un message (ex : TTL ≤ 72h).
-3. Simulation réseau : Utilisez Scapy pour envoyer un message REGISTER à un pair local et désérialisez-le à la réception.
-4. Extension : Ajoutez un champ optionnel (ex : signature) et mettez à jour la sérialisation/désérialisation.
+Sans que cela corresponde à la définition du protocole Rendezvous,
+admettons pour l'exemple que le protocole Rendezvous puisse être véhiculé sur UDP
+avec un port destination de 1234.
+
+[source, python]
+----
+import random
+
+print("Empilements protocolaires")
+print("=========================")
+
+# Création de message.
+p = (
+    Ether()
+    / IP(dst="127.0.0.1")
+    / UDP(sport=random.randint(1025, 0xffff))  # Port source aléatoire.
+    / RendezvousMessage(type=1, namespace="test", ttl=3600, peerid="QmPeerID")
+)
+print("Message Ethernet créé :")
+p.show()
+print("Message UDP :")
+p[UDP].show()
+
+# Sérialisation.
+b: bytes = p.build()
+print(f"Buffer Ethernet sérialisé : {b.hex()!r}")
+
+# Désérialisation.
+p = Ether(b)
+print(f"Message Ethernet désérialisé :")
+p.show()
+----
+
+Explications :
+
+* Scapy surcharge l'opérateur `/`
+  de sorte à permettre l'empilement des couches protocolaires.
+
+* Pour récupérer un pointeur sur une sous-couche protocolaire donnée,
+  Scapy surcharge l'opérateur `[]` avec une classe de couche de protocolaire en argument.
+
+* A noter que, lors de la construction du message,
+  Scapy renseigne automatiquement les champs de la couche N-1
+  permettant de spécifier la nature de la couche protocolaire de niveau N :
+
+** Ether.type = 0x0800 => IPv4
+** IP.proto = 0x11 (17) => UDP
+
+* Lors de la désérialisation du message,
+  il suffit de désérialiser le message au niveau de la couche protocolaire la plus basse.
+  Scapy reconnaît la couche suivante à désérialiser grâce aux mêmes champs que décrits précédemment.
+
+En l'état, la désérialisation n'arrive pas à analyser la payload UDP
+en tant que message `RendezvousMessage`.
+
+Ajouter la ligne suivante après la définition de la classe `RendezvousMessage`.
+
+[source, python]
+----
+bind_layers(UDP, RendezvousMessage, dport=1234)
+----
+
+Relancer le programme.
+
+Explications :
+
+* La fonction `bind_layers()` permet d'associer deux couches protocolaires consécutives avec le(s) critère(s) de correpondance.
+  Ici les couches UDP et notre protocole Rendezvous.
+* En général, le critère de correspondance est l'association d'un champ _type_ de la couche N-1 avec une valeur spécifique.
+  Ici, le port de destination UDP associé à la valeur 1234.
+* Cette information est utilisée dans les deux sens :
+  en sérialisation et en désérialisation comme décrit précédemment pour les protocoles standards.
 
 
-== 5. Ressources utiles
+[#section-ressources-utiles]
+== Ressources utiles
 
 * Site officiel Scapy : https://scapy.net/
+
 * Documentation Scapy :
 
 ** https://scapy.readthedocs.io/en/latest/usage.html
@@ -145,8 +312,3 @@ print(f"Message reçu : {msg.type_name()} pour {msg.namespace}")
 ** https://github.com/libp2p/specs/tree/master/rendezvous
 
 * Exemple d'implémentation Python : https://py-libp2p.readthedocs.io/en/stable/examples.rendezvous.html
-
-
-== 6. Conclusion
-
-Ce TP permet de manipuler Scapy pour sérialiser et désérialiser des messages d'un protocole propriétaire, en s'appuyant sur les concepts de couches, de champs et de manipulation de paquets. Vous pouvez maintenant étendre cette implémentation pour gérer des cas plus complexes ou intégrer ce protocole dans une application réseau réelle.

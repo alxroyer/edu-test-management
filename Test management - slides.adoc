@@ -314,7 +314,62 @@ TIP: Statut auto // type de campagne
 
 == Outils
 
-TODO
+* Langages de test
+* Librairies / outils réseau
+* Tests unitaires
+* Tests d'API
+* Tests fonctionnels
+* Tests de performance
+
+
+=== Langages de test
+
+* Javascript
+* Python
+* Gherkin
+
+
+=== Librairies / outils réseau
+
+* curl
+* iperf
+* Scapy
+
+
+=== Tests unitaires
+
+* JUnit (Java)
+* TestNG (Java)
+* NUnit (.Net)
+* PHPUnit (PHP)
+* Mocha (JS)
+* PyUnit / unittest (Python)
+* PyTest (Python)
+
+
+=== Tests d'API
+
+* Spring Boot Test
+* RestAssured
+* SoapUI
+* Postman
+
+
+=== Tests fonctionnels
+
+* Selenium
+* Cypress
+* Appium
+* Cucumber
+
+
+=== Tests de performance
+
+* JMeter
+* LoadRunner
+* Gatling
+* Locust
+* NeoLoad
 
 
 == Couverture de code

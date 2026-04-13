@@ -127,7 +127,7 @@ Plan de tests::
     * Action et résultats attendus
 FCA::
     * Matrice de synthèse
-    * Support => acceptation
+    * Acceptation
 --
 
 [.column]

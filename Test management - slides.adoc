@@ -252,12 +252,12 @@ TIP: Typage
 
 == Architecture - framework
 
-* Textes humainement lisibles ?
+* Textes humainement lisibles
 * Faciliter les investigations
 * Interactions SUT
 
 
-=== Textes humainement lisibles ?
+=== Textes humainement lisibles
 
 Production documentaire plan de test
 

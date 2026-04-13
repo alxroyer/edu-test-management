@@ -385,7 +385,7 @@ TIP: Statut auto // type de campagne
 
 == Jeux de données
 
-TODO
+CAUTION: Applications web (données datées)
 
 
 == Timing activités de test

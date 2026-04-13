@@ -374,7 +374,9 @@ TIP: Statut auto // type de campagne
 
 == Couverture de code
 
-TODO
+* Représentativité des tests
+* Code mort v/s code défensif
+* Attendu contractuel
 
 
 [state=topic]

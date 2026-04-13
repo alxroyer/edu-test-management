@@ -388,9 +388,35 @@ TIP: Statut auto // type de campagne
 CAUTION: Applications web (données datées)
 
 
+[.columns]
 == Timing activités de test
 
-TODO
+[.column]
+--
+**Tests avant**
+
+NOTE: _Test Driven Development_
+
+* Confort devs
+* Tests à l'aveugle, à reprendre
+--
+
+[.column]
+--
+**Tests pendant**
+
+TIP: Timing intéressant
+
+* Devs et tests s'alimentent
+--
+
+[.column]
+--
+**Tests après**
+
+* Integ. devs sans outils
+* Détection erreurs tardives
+--
 
 
 == Cycle en V v/s Agilité

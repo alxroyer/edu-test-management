@@ -67,7 +67,6 @@ image::schemas/system-breakdown.drawio.png[]
 NOTE: SUT = System / Software Under Test
 
 
-[#slide-system-breakdown-waterfall-tiling]
 == Tuilage de cycles en V
 
 image::schemas/system-breakdown-activities.drawio.png[]
@@ -118,7 +117,7 @@ Défauts du SUT (explication des KO)
 TIP: Known issues & tests auto
 
 
-[#slide-test-docs.columns]
+[.columns]
 == Les documents de test
 
 [.column]
@@ -212,11 +211,7 @@ Validation expression du besoin
 
 == Activité initiale
 
-[#flow-manual-test-start]
 image::schemas/manual-test.start.png[]
-
-// Does not work in revealjs mode.
-//<<flow-auto-test-start, Tests auto>>
 
 
 == Vérification des corrections
@@ -244,11 +239,7 @@ Intégration Continue / non-régressions
 
 == Activité
 
-[#flow-auto-test-start]
 image::schemas/auto-test.start.png[]
-
-// Does not work in revealjs mode.
-//<<flow-manual-test-start, Tests manuels>>
 
 CAUTION: Known issues?
 

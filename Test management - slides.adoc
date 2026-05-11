@@ -328,12 +328,22 @@ TIP: Statut auto // type de campagne
 * Python
 * Gherkin
 
+[sidebar]
+--
+👷🛠️ TP : link:TP%20-%20Cucumber%20Gherkin.md[Cucumber & Gherkin]
+--
+
 
 === Librairies / outils réseau
 
 * curl
 * iperf
 * Scapy
+
+[sidebar]
+--
+👷🛠️ TP : link:TP%20-%20Scapy.adoc[Sérialisation / désérialisation de protocoles propriétaires avec Scapy]
+--
 
 
 === Tests unitaires
@@ -354,6 +364,11 @@ TIP: Statut auto // type de campagne
 * SoapUI
 * Postman
 
+[sidebar]
+--
+👷🛠️ TP : link:TP%20-%20Postman%20Newman%20Jest.adoc[Test d'API avec Postman, Newman et Jest]
+--
+
 
 === Tests fonctionnels
 
@@ -361,6 +376,11 @@ TIP: Statut auto // type de campagne
 * Cypress
 * Appium
 * Cucumber
+
+[sidebar]
+--
+👷🛠️ TP : link:TP%20-%20Selenium.md[Test d'IHM avec Selenium]
+--
 
 
 === Tests de performance

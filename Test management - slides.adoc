@@ -487,9 +487,13 @@ Application logicielle simple
 --
 
 
-== Priorisation des tests
+== Priorisation constitution des tests
 
-TODO
+Dans quel ordre constituer les tests ?
+
+Cycle en V ? Méthodes agiles ?
+
+TIP: Dépendance stratégie d'intégration
 
 
 == Exhaustivité v/s gestion de risque

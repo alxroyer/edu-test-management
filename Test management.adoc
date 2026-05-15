@@ -31,7 +31,7 @@ Source : https://github.com/alxroyer/edu-test-management
 
 Cours mis à disposition sous licence Creative Common.
 
-Voir xref:license[xrefstyle=full].
+Voir xref:section-license[xrefstyle=full].
 
 
 // Footnote declarations (see https://docs.asciidoctor.org/asciidoc/latest/macros/footnote/#externalizing-a-footnote).
@@ -74,7 +74,7 @@ La description du cycle de vie des tests ci-après
 correspond en premier lieu à un contexte de tests manuels.
 
 Ce cycle de vie évolue quelque peu à la marge en tests automatiques
-(cf. <<section-lifecycle-test-automation>>).
+(cf. xref:section-lifecycle-test-automation[xrefstyle=full]).
 
 
 ==== Constitution des tests
@@ -157,10 +157,10 @@ TODO
 TODO
 
 
-[id="appendix"]
+[#section-appendix]
 == Annexes
 
-[id="license"]
+[#section-license]
 === Licence
 
 Cours mis à disposition sous licence CC BY-NC-SA 4.0.
@@ -179,7 +179,7 @@ include::LICENSE.txt[]
 ---
 
 
-[id="resources"]
+[#section-resources]
 === Ressources
 
 Images :

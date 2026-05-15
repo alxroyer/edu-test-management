@@ -41,14 +41,22 @@ Voir xref:license[xrefstyle=full].
 
 == L'activité de test
 
-
-== Tests automatiques
+TODO
 
 
 == Tests manuels
 
+TODO
+
+
+== Tests automatiques
+
+TODO
+
 
 == Management des tests
+
+TODO
 
 
 [id="appendix"]

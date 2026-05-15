@@ -113,7 +113,7 @@ Change management / CCB
 
 Défauts du SUT (explication des KO)
 
-TIP: Known issues & tests auto
+TIP: Problèmes connus & tests auto
 
 
 == Cycle de vie des tests
@@ -247,10 +247,10 @@ Validation expression du besoin
 
 image::schemas/auto-test.start.png[]
 
-CAUTION: Known issues?
+CAUTION: Problèmes connus ?
 
 
-== Architecture - compétence développement
+== Architecture - Compétence développement
 
 Code test ~= Code appli
 
@@ -259,7 +259,7 @@ Langage : JS, Python, Gherkin
 TIP: Typage
 
 
-== Architecture - framework
+== Architecture - Framework
 
 * Textes humainement lisibles
 * Faciliter les investigations
@@ -313,7 +313,7 @@ TIP: Refuser les instabilités
 Analyses post-mortem / collecter les traces
 
 
-== Architecture - Known issues
+== Architecture - Problèmes connus
 
 TIP: Statut auto // type de campagne
 

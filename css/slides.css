@@ -16,14 +16,6 @@
     /* Ensure space before and after each admonition. */
     div.admonitionblock { margin-top: 1em; margin-bottom: 1em; }
 
-/* #slide-test-docs */
-    /* Reduce `p` font size a bit so that the two columns remain in the page. */
-    #slide-test-docs p { font-size: 90%; }
-
-/* #slide-system-breakdown-waterfall-tiling */
-    /* Reduce img size. */
-    #slide-system-breakdown-waterfall-tiling img { width: 50%; height: 50%; }
-
 /* #slide-test-timing */
     /* Reduce `p` font size a bit so that the two columns and admonitions remain in the page. */
     #slide-test-timing td { font-size: 85%; }

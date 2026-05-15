@@ -41,9 +41,81 @@ Voir xref:section-license[xrefstyle=full].
 
 == L'activité de test
 
+Ce premier chapitre est dédié à la description de l'activité de test.
+
+
 === Cycle en V et activités de test
 
-TODO
+Le schéma du cycle en V
+constitue un bon support
+pour illustrer les différentes activités de test.
+
+image::schemas/waterfall-test-activities.drawio.png[]
+
+Dans un développement linéaire tel que le symbolise le cycle en V,
+la première partie du V descend de l'expression de besoin jusqu'à la réalisation :
+
+Expression de besoin::
+Le client exprime son besoin,
+ou s'il ne l'exprime pas directement,
+on l'interviewe pour cerner l'objectif du projet.
+
+Spécifications::
+Raffinement de l'expression de besoin sous forme d'exigences.
++
+Les exigences décrivent un contrat technique de fonctionnement _boîte noire_
+du système ou du logiciel à réaliser.
+
+Conception / design & interfaces::
+Conception du système ou logiciel à réaliser.
++
+Celle-ci passe généralement par l'identification de sous-systèmes,
+et d'interfaces interconnectant ces sous-systèmes.
++
+Comme on parle à ce stade du fonctionnement interne du système ou du logiciel,
+on utilse le terme de _boîte blanche_.
+
+Développement::
+Réalisation des sous-systèmes identifiés
+au titre de la conception à l'étape précédente.
++
+[NOTE]
+====
+Dans le cas de systèmes complexes,
+un sous-système peut faire l'objet d'une subdivision en sous-sous-systèmes.
+
+Cf. xref:section-subsystems[xrefstyle=full].
+====
+
+La deuxième partie du V remonte ensuite
+avec des activités de test en face de chacune des opérations
+de spécification, design et développement décrites précédemment.
+
+Test unitaires::
+Tests réalisés aux bornes d'un sous-système
+issu des activités de développement.
+
+Intégration::
+Les activités d'intégration consistent à faire fonctionner ensemble
+les différents sous-systèmes.
++
+Comme ces sous-systèmes communiquent au moyen des interfaces
+identifiées en phase de conception,
+on associe les activités d'intégration au test des interfaces.
+
+Vérification::
+Une fois les sous-systèmes assemblés,
+l'objet de la vérification est de contrôler
+que les exigences des spécifications sont satisfaites
+par le système ou le logiciel développé.
+
+Validation::
+Les activités de validation consistent à vérifier
+que l'expression du besoin client est bien satisfaite.
+
+Qualification::
+Enfin, les activités de qualification
+consistent à vérifier la conformité à des normes et standards.
 
 
 === Niveaux de test
@@ -53,6 +125,7 @@ TODO
 TODO
 
 
+[#section-subsystems]
 ==== Décomposition en sous-systèmes
 
 TODO

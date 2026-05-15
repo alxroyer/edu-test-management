@@ -492,9 +492,6 @@
                 <p>L&#8217;activité de test</p>
               </li>
               <li>
-                <p>Tests manuels</p>
-              </li>
-              <li>
                 <p>Tests automatiques</p>
               </li>
               <li>
@@ -687,6 +684,34 @@
             </table>
           </div>
         </div>
+      </section>
+      <section>
+        <section id="_cycle_de_vie_des_tests">
+          <h2>Cycle de vie des tests</h2>
+          <div class="slide-content">
+            <div class="paragraph">
+              <p><em>(tests manuels)</em></p>
+            </div>
+          </div>
+        </section>
+        <section id="_constitution_des_tests">
+          <h2>Constitution des tests</h2>
+          <div class="slide-content">
+            <div class="imageblock"><img src="schemas/manual-test.start.png" alt="manual test.start"></div>
+          </div>
+        </section>
+        <section id="_vérification_des_corrections">
+          <h2>Vérification des corrections</h2>
+          <div class="slide-content">
+            <div class="imageblock"><img src="schemas/manual-test.fix.png" alt="manual test.fix"></div>
+          </div>
+        </section>
+        <section id="_modifications_des_exigences">
+          <h2>Modifications des exigences</h2>
+          <div class="slide-content">
+            <div class="imageblock"><img src="schemas/manual-test.change.png" alt="manual test.change"></div>
+          </div>
+        </section>
       </section>
       <section>
         <section id="_les_documents_de_test" class="columns">
@@ -915,60 +940,54 @@
           </table>
         </div>
       </section>
-      <section id="_2_tests_manuels" data-state="topic">
-        <h2>2. Tests manuels</h2>
+      <section id="_2_tests_automatiques" data-state="topic">
+        <h2>2. Tests automatiques</h2>
       </section>
-      <section id="_activité_initiale">
-        <h2>Activité initiale</h2>
+      <section id="slide-need-test-automation">
+        <h2>Besoin d&#8217;automatisation</h2>
         <div class="slide-content">
-          <div class="imageblock"><img src="schemas/manual-test.start.png" alt="manual test.start"></div>
-        </div>
-      </section>
-      <section id="_vérification_des_corrections">
-        <h2>Vérification des corrections</h2>
-        <div class="slide-content">
-          <div class="imageblock"><img src="schemas/manual-test.fix.png" alt="manual test.fix"></div>
-        </div>
-      </section>
-      <section id="_changements_de_périmètre">
-        <h2>Changements de périmètre</h2>
-        <div class="slide-content">
-          <div class="imageblock"><img src="schemas/manual-test.change.png" alt="manual test.change"></div>
-        </div>
-      </section>
-      <section id="_intérêt_des_tests_manuels">
-        <h2>Intérêt des tests manuels</h2>
-        <div class="slide-content">
+          <div class="admonitionblock important">
+            <table>
+              <tr>
+                <td class="icon"><i class="fa fa-exclamation-circle" title="Important"></i></td>
+                <td class="content">
+                  <div class="title">Importance d&#8217;automatiser les tests</div>
+                  <div class="paragraph">
+                    <p>Prérequis agilité itérative (time-boxé)</p>
+                  </div>
+                  <div class="paragraph">
+                    <p>Branche d&#8217;intégration stable / livrable</p>
+                  </div>
+                  <div class="paragraph">
+                    <p>Intégration Continue / non-régressions</p>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
           <div class="admonitionblock tip">
             <table>
               <tr>
                 <td class="icon"><i class="fa fa-lightbulb-o" title="Tip"></i></td>
-                <td class="content">Là où l&#8217;humain apporte une plus-value<br>
-                  Validation expression du besoin</td>
+                <td class="content">
+                  <div class="title">Intérêt des tests manuels</div>
+                  <div class="paragraph">
+                    <p><em>Là où l&#8217;humain apporte une plus-value</em></p>
+                  </div>
+                  <div class="paragraph">
+                    <p>Intégrations</p>
+                  </div>
+                  <div class="paragraph">
+                    <p>Validation expression du besoin</p>
+                  </div>
+                </td>
               </tr>
             </table>
           </div>
         </div>
       </section>
-      <section id="_3_tests_automatiques" data-state="topic">
-        <h2>3. Tests automatiques</h2>
-      </section>
-      <section id="_besoin_dautomatisation">
-        <h2>Besoin d&#8217;automatisation</h2>
-        <div class="slide-content">
-          <div class="paragraph">
-            <p>Prérequis agilité itérative (time-boxé)</p>
-          </div>
-          <div class="paragraph">
-            <p>Branche d&#8217;intégration stable / livrable</p>
-          </div>
-          <div class="paragraph">
-            <p>Intégration Continue / non-régressions</p>
-          </div>
-        </div>
-      </section>
-      <section id="_activité">
-        <h2>Activité</h2>
+      <section id="_cycle_de_vie_des_tests_auto">
+        <h2>Cycle de vie des tests auto</h2>
         <div class="slide-content">
           <div class="imageblock"><img src="schemas/auto-test.start.png" alt="auto test.start"></div>
           <div class="admonitionblock caution">
@@ -1371,8 +1390,8 @@
           </div>
         </div>
       </section>
-      <section id="_4_management_des_tests" data-state="topic">
-        <h2>4. Management des tests</h2>
+      <section id="_3_management_des_tests" data-state="topic">
+        <h2>3. Management des tests</h2>
       </section>
       <section id="_jeux_de_données">
         <h2>Jeux de données</h2>

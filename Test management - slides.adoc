@@ -15,9 +15,8 @@ Alexis ROYER - https://www.linkedin.com/in/alexis-royer/
 == Sommaire
 
 1. L'activité de test
-2. Tests manuels
-3. Tests automatiques
-4. Management des tests
+2. Tests automatiques
+3. Management des tests
 
 
 [state=topic]
@@ -117,6 +116,26 @@ Défauts du SUT (explication des KO)
 TIP: Known issues & tests auto
 
 
+== Cycle de vie des tests
+
+_(tests manuels)_
+
+
+=== Constitution des tests
+
+image::schemas/manual-test.start.png[]
+
+
+=== Vérification des corrections
+
+image::schemas/manual-test.fix.png[]
+
+
+=== Modifications des exigences
+
+image::schemas/manual-test.change.png[]
+
+
 [.columns]
 == Les documents de test
 
@@ -197,44 +216,34 @@ _"Dernier rempart"_
 
 
 [state=topic]
-== 2. Tests manuels
+== 2. Tests automatiques
 
 
-== Activité initiale
-
-image::schemas/manual-test.start.png[]
-
-
-== Vérification des corrections
-
-image::schemas/manual-test.fix.png[]
-
-
-== Changements de périmètre
-
-image::schemas/manual-test.change.png[]
-
-
-== Intérêt des tests manuels
-
-TIP: Là où l'humain apporte une plus-value +
-Validation expression du besoin
-
-
-[state=topic]
-== 3. Tests automatiques
-
-
+[#slide-need-test-automation]
 == Besoin d'automatisation
 
+[IMPORTANT]
+.Importance d'automatiser les tests
+====
 Prérequis agilité itérative (time-boxé)
 
 Branche d'intégration stable / livrable
 
 Intégration Continue / non-régressions
+====
+
+[TIP]
+.Intérêt des tests manuels
+====
+_Là où l'humain apporte une plus-value_
+
+Intégrations
+
+Validation expression du besoin
+====
 
 
-== Activité
+== Cycle de vie des tests auto
 
 image::schemas/auto-test.start.png[]
 
@@ -400,7 +409,7 @@ TIP: Statut auto // type de campagne
 
 
 [state=topic]
-== 4. Management des tests
+== 3. Management des tests
 
 
 == Jeux de données

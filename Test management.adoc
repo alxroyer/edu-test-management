@@ -68,6 +68,30 @@ TODO
 TODO
 
 
+=== Cycle de vie des tests
+
+La description du cycle de vie des tests ci-après
+correspond en premier lieu à un contexte de tests manuels.
+
+Ce cycle de vie évolue quelque peu à la marge en tests automatiques
+(cf. <<section-lifecycle-test-automation>>).
+
+
+==== Constitution des tests
+
+TODO
+
+
+==== Vérification des corrections
+
+TODO
+
+
+==== Modifications des exigences
+
+TODO
+
+
 === Documents
 
 TODO
@@ -78,12 +102,30 @@ TODO
 TODO
 
 
-== Tests manuels
+== Tests automatiques
+
+=== Besoin d'automatiser les tests
 
 TODO
 
 
-== Tests automatiques
+[#section-lifecycle-test-automation]
+=== Cycle de vie des tests auto
+
+TODO
+
+
+=== Architecture
+
+TODO
+
+
+=== Outils / frameworks
+
+TODO
+
+
+=== Couverture de code
 
 TODO
 

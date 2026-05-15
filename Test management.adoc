@@ -120,9 +120,34 @@ consistent à vérifier la conformité à des normes et standards.
 
 === Niveaux de test
 
+Les tests peuvent s'exécuter à différents niveaux.
+
+Pour chaque niveau de test, on considère un périmètre de test.
+
+On parle alors de SUT pour _System_ ou _Software Under Test_
+(cf. xref:section-glossary[xrefstyle=full]).
+
+
 ==== Tests boîte noire / boîte blanche
 
-TODO
+Une des premières distinctions utiles
+est la différence entre _boîte noire_ et _boîte blanche_.
+
+Boîte noire::
+Test du SUT sans connaissance de sa conception.
++
+On se borne à utiliser les moyens disponibles pour un utilisateur normal,
+généralement les interfaces externes du SUT.
++
+Objet des tests de vérification des exigences notamment.
+
+Boîte blanche::
+Test du SUT en connaissance de sa conception.
++
+Objet des tests unitaires ou test d'intégration notamment.
++
+Parfois requis pour des injections de fautes,
+notamment dans le cadre des tests des fonctions de sécurité.
 
 
 [#section-subsystems]
@@ -232,6 +257,20 @@ TODO
 
 [#section-appendix]
 == Annexes
+
+[#section-glossary]
+=== Glossaire
+
+[cols="1,4"]
+|===
+| Terme | Description
+
+| SUT |
+_System_ ou _Software Under Test_.
+
+Système ou logiciel à tester.
+|===
+
 
 [#section-license]
 === Licence

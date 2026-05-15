@@ -7,9 +7,10 @@
 
 /* General styles. */
     /* Tables. */
+    /* `.tableblock` class when generated from the `|===` syntax. */
     /* Ensure full path so that the rules below actually override default ones. */
-    .reveal table thead tr th { font-size: 75%; padding-top: 0; padding-bottom: 0; }
-    .reveal table tbody tr td p { font-size: 50%; margin: 0; }
+    .reveal table.tableblock thead tr th { font-size: 75%; padding-top: 0; padding-bottom: 0; }
+    .reveal table.tableblock tbody tr td p { font-size: 50%; margin: 0; }
 
     /* Admonitions. */
     /* Ensure space before and after each admonition. */
@@ -22,3 +23,11 @@
 /* #slide-system-breakdown-waterfall-tiling */
     /* Reduce img size. */
     #slide-system-breakdown-waterfall-tiling img { width: 50%; height: 50%; }
+
+/* #slide-test-timing */
+    /* Reduce `p` font size a bit so that the two columns and admonitions remain in the page. */
+    #slide-test-timing td { font-size: 85%; }
+
+/* #slide-waterfall-vs-agile */
+    /* Reduce `p` font size a bit so that the two columns and admonitions remain in the page. */
+    #slide-waterfall-vs-agile p { font-size: 70%; }

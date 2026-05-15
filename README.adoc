@@ -85,6 +85,56 @@ Pour l'export PDF des slides :
 * File > Print > "Save to PDF"
 
 
+=== Tips
+
+[TIP]
+.Slides et colonnes
+====
+Pour présenter une slide en plusieurs colonnes,
+appliquer la classe `.columns` sur la slide :
+
+----
+[.columns]
+== Slide title
+----
+
+puis la classe `.column` sur les sections à disposer en colonnes :
+
+----
+[.column]
+.Column title
+--
+Section content
+--
+----
+
+Ressources utiles :
+
+* https://docs.asciidoctor.org/reveal.js-converter/latest/converter/syntax/layout/#columns-layout
+====
+
+[TIP]
+.Slides : identifiant + classe
+====
+Avec les syntaxes suivantes,
+l'identifiant ou la classe n'est pas généré dans le HTML :
+----
+[#id, .class]  // Classe ignorée.
+== Slide title
+
+[.class, #id]  // Identifiant ignoré.
+== Slide title
+----
+
+Avec la syntaxe suivante, les deux sont bien générés :
+----
+[#id]
+[.class]
+== Slide title
+----
+====
+
+
 == Ressources
 
 Ressources intéressantes pour la syntaxe AsciiDoc :

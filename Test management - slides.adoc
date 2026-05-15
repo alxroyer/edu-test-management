@@ -408,40 +408,83 @@ TIP: Statut auto // type de campagne
 CAUTION: Applications web (données datées)
 
 
+[#slide-test-timing]
 [.columns]
 == Timing activités de test
 
 [.column]
+.Tests avant
 --
-**Tests avant**
-
 NOTE: _Test Driven Development_
 
-* Confort devs
-* Tests à l'aveugle, à reprendre
+TIP: Confort devs
+
+CAUTION: Tests à l'aveugle, à reprendre
 --
 
 [.column]
+.Tests pendant
 --
-**Tests pendant**
-
 TIP: Timing intéressant
 
-* Devs et tests s'alimentent
+TIP: Devs et tests s'alimentent
 --
 
 [.column]
+.Tests après
 --
-**Tests après**
+CAUTION: Integ. devs sans outils
 
-* Integ. devs sans outils
-* Détection erreurs tardives
+CAUTION: Détection erreurs tardives
 --
 
 
+[#slide-waterfall-vs-agile]
+[.columns]
 == Cycle en V v/s Agilité
 
-TODO
+// Use `====` syntax for all admonitions in this slide
+// to ensure the generation of texts in `<p></p>` items,
+// in order to make it easier to define css rules by the way.
+
+[.column]
+.Cycle en V
+--
+* Baselines fixes
+* Gconf mieux contrôlée
+
+[CAUTION]
+====
+Analyses d'impact
+
+Réactivité
+====
+
+[TIP]
+====
+Integ. sous-systèmes,
+plannings dédiésTIP
+====
+--
+
+[.column]
+.Agilité
+--
+* Time boxé
+* Dev & test ensemble
+* Gconf : _latest_ / "crête de vague"
+
+[CAUTION]
+====
+Gconf,
+maîtrise baseline
+====
+
+[TIP]
+====
+Application logicielle simple
+====
+--
 
 
 == Priorisation des tests

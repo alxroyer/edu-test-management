@@ -132,6 +132,28 @@ TODO
 
 == Management des tests
 
+=== Jeux de données
+
+TODO
+
+
+=== Timing pour la constitution des tests
+
+TODO
+
+
+=== Cycle en V v/s agilité
+
+TODO
+
+
+=== Planification de la constitution des tests
+
+TODO
+
+
+=== Exhaustivité des tests v/s gestion de risque
+
 TODO
 
 

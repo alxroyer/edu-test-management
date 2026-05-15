@@ -496,7 +496,7 @@ Application logicielle simple
 --
 
 
-== Priorisation constitution des tests
+== Planification constitution des tests
 
 Dans quel ordre constituer les tests ?
 

@@ -120,13 +120,12 @@ Enfin, les activités de qualification
 consistent à vérifier la conformité à des normes et standards.
 
 
-=== Niveaux de test
+=== Périmètres de test / SUT
 
-Les tests peuvent s'exécuter à différents niveaux.
+Lorsqu'on mène une activité de test,
+il est important de maîtriser le périmètre de ce que l'on teste.
 
-Pour chaque niveau de test, on considère un périmètre de test.
-
-On parle alors de SUT pour _System_ ou _Software Under Test_
+On parle de SUT pour _System_ ou _Software Under Test_
 (cf. xref:section-glossary[xrefstyle=full]).
 
 

@@ -106,14 +106,16 @@ Issue management
 
 == Issue Management
 
-IMPORTANT: 2ème support important pour les tests
-           (idem exigences)
+[IMPORTANT]
+====
+2ème support important pour les tests
+
+(idem exigences)
+====
+
+Défauts du SUT, des exigences, ...
 
 Change management / CCB
-
-Défauts du SUT (explication des KO)
-
-TIP: Problèmes connus & tests auto
 
 
 == Cycle de vie des tests

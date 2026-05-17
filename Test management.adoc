@@ -224,7 +224,7 @@ dans ces cas de décomposition en sous-systèmes.
 ====
 
 
-=== Gestion des exigences (requirement management)
+=== Gestion des exigences _(requirement management)_
 
 ==== Exigences formelles
 
@@ -232,7 +232,7 @@ Comme évoqué en xref:section-waterfall-view[xrefstyle=full],
 les exigences constituent généralement le premier entrant des activités de test.
 
 Dès lors, l'activité de test intègre pleinement la gestion des exigences
-(_requirement management_) :
+_(requirement management)_ :
 
 * Sur la phase descendante du cycle en V,
   entre les différents niveaux de sous-système,
@@ -241,7 +241,7 @@ Dès lors, l'activité de test intègre pleinement la gestion des exigences
   chaque test permet de couvrir tout ou partie des exigences vérifiées.
 
 [#figure-requirement-management]
-.Gestion des exigences (_requirement management_)
+.Gestion des exigences _(requirement management)_
 image::schemas/system-breakdown-reqmgt.drawio.png[]
 
 [NOTE]
@@ -292,9 +292,42 @@ les tests constituent le support le plus précis
 décrivant les attendus du SUT.
 
 
-=== Gestion des tickets (issue management)
+=== Gestion des tickets _(issue management)_
 
-TODO
+Le deuxième élément d'entrée important pour une activité de test
+est la gestion des tickets _(issue management)_.
+
+Ces tickets permettent de tracer les *défauts* :
+
+* On pense en premier lieu aux problèmes constatés dans le fonctionnement du SUT.
+  Ces tickets d'anomalies, permettent entre autre :
+
+** d'expliquer la raison des tests KO (cf. xref:section-fca[xrefstyle=full]),
+** de suivre l'état des corrections dans le SUT,
+   et de faire la vérification de ces corrections
+   (cf. xref:section-lifecycle-fix-verification[xrefstyle=full]).
+
+* Ils permettent également de tracer les incohérences ou les manques dans la documentation,
+  notamment dans les spécifications d'entrée !
+
+* Et pourquoi pas tracer également les défauts des tests ?
+  Cela peut se produire, par exemple,
+  lorsqu'on sait qu'on a un défaut dans nos tests,
+  mais qu'on n'a pas encore le temps ou les moyens de rectifier la situation.
+
+Ces tickets permettent également de tracer le *travail planifié*.
+On parlera notamment en développement agile de _User Stories_, de _Technical Stories_, ...
+
+Enfin, ces tickets permettent de tracer les *modifications d'exigences*
+(cf. xref:section-lifecycle-req-modification[xrefstyle=full]).
+
+[NOTE]
+====
+Les équipes de test participent régulièrement
+aux réunions de *CCB* _(Change Control Board)_,
+réunions qui suivent et pilotent la prise en compte
+des corrections et modifications à apporter au SUT.
+====
 
 
 === Cycle de vie des tests
@@ -311,6 +344,7 @@ Ce cycle de vie évolue quelque peu à la marge en tests automatiques
 TODO
 
 
+[#section-lifecycle-fix-verification]
 ==== Vérification des corrections
 
 TODO
@@ -323,6 +357,19 @@ TODO
 
 
 === Documents
+
+==== Plan de test
+
+TODO
+
+
+==== Résultat de test
+
+TODO
+
+
+[#section-fca]
+==== FCA _(Functional Configuration Audit)_
 
 TODO
 
@@ -342,7 +389,7 @@ TODO
 [#section-lifecycle-test-automation]
 === Cycle de vie des tests auto
 
-TODO
+TODO (tip: known-issues notamment)
 
 
 === Architecture

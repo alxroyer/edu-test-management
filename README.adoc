@@ -30,10 +30,13 @@ Accès aux slides :
 
 Cours mis à disposition sous licence CC BY-NC-SA 4.0.
 
+[.float-group]
+--
 image::https://mirrors.creativecommons.org/presskit/icons/cc.svg[CC, float="left"]
 image::https://mirrors.creativecommons.org/presskit/icons/by.svg[BY, float="left"]
 image::https://mirrors.creativecommons.org/presskit/icons/nc.svg[NC, float="left"]
-image::https://mirrors.creativecommons.org/presskit/icons/sa.svg[SA, float="break"]
+image::https://mirrors.creativecommons.org/presskit/icons/sa.svg[SA, float="left"]
+--
 
 Voir le link:LICENSE.txt[contrat de licence].
 

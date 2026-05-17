@@ -8,6 +8,14 @@
 :toc-title: Sommaire
 // Makes admonitions display nicely (see https://docs.asciidoctor.org/asciidoc/latest/blocks/admonitions/#enable-admonition-icons).
 :icons: font
+// Specific icon configuration for GitHub (inspired from https://raw.githubusercontent.com/tkfu/asciidoctor-github-include/refs/heads/master/README.adoc).
+ifdef::env-github[]
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
 
 
 // Preamble.
@@ -424,6 +432,9 @@ Système ou logiciel à tester.
 
 Cours mis à disposition sous licence CC BY-NC-SA 4.0.
 
+// CC icons.
+
+ifndef::env-github[]
 [.float-group]
 --
 image::https://mirrors.creativecommons.org/presskit/icons/cc.svg[CC, float="left"]
@@ -431,7 +442,24 @@ image::https://mirrors.creativecommons.org/presskit/icons/by.svg[BY, float="left
 image::https://mirrors.creativecommons.org/presskit/icons/nc.svg[NC, float="left"]
 image::https://mirrors.creativecommons.org/presskit/icons/sa.svg[SA, float="left"]
 --
+endif::[]
 
+// Note: AsciiDoc floating images do not work in GitHub (see https://github.com/github/markup/issues/984).
+// Note: `frame=none, grid=none` does not seem to work either...
+ifdef::env-github[]
+[cols="1,1,1,1", frame=none, grid=none]
+|===
+// Memo: `a` for "AsciiDoc" format, otherwise `image::` is not interpreted.
+a| image::https://mirrors.creativecommons.org/presskit/icons/cc.svg[CC]
+a| image::https://mirrors.creativecommons.org/presskit/icons/by.svg[BY]
+a| image::https://mirrors.creativecommons.org/presskit/icons/nc.svg[NC]
+a| image::https://mirrors.creativecommons.org/presskit/icons/sa.svg[SA]
+|===
+endif::[]
+
+// License text.
+
+ifndef::env-github[]
 link:LICENSE.txt[] :
 
 ---
@@ -439,6 +467,12 @@ link:LICENSE.txt[] :
 include::LICENSE.txt[]
 
 ---
+endif::[]
+
+// Note: `include::` does not work in GitHub.
+ifdef::env-github[]
+Voir le link:LICENSE.txt[contrat de licence].
+endif::[]
 
 
 [#section-resources]

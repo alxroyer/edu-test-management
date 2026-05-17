@@ -50,6 +50,8 @@ Le schéma du cycle en V
 constitue un bon support
 pour illustrer les différentes activités de test.
 
+[#figure-waterfall-test-activities]
+.Cycle en V et activités de test
 image::schemas/waterfall-test-activities.drawio.png[]
 
 Dans un développement linéaire tel que le symbolise le cycle en V,
@@ -153,7 +155,65 @@ notamment dans le cadre des tests des fonctions de sécurité.
 [#section-subsystems]
 ==== Décomposition en sous-systèmes
 
-TODO
+Dans le cas de systèmes complexes,
+on peut être amené à subdiviser des sous-systèmes en sous-sous-systèmes,
+et ainsi de suite.
+
+[#figure-system-breakdown]
+.Systèmes complexes : décomposition en sous-systèmes à plusieurs niveaux
+image::schemas/system-breakdown.drawio.png[]
+
+Chaque système et sous-système est généralement pris en charge par une équipe dédiée.
+Chaque équipe considère donc un périmètre de SUT différent,
+la boîte blanche du SUT de niveau N
+constituant la boîte noire des SUT de niveau N-1.
+
+Sur la branche descendante du cycle en V,
+les activités de spécification et de conception se tuilent,
+du système le plus large jusqu'au sous-système le plus unitaire.
+
+[#figure-system-breakdown-activities]
+.Systèmes complexes : imbrication des cycles en V
+image::schemas/system-breakdown-activities.drawio.png[]
+
+De la même manière, sur la branche remontante du cycle en V,
+les activités de tests se tuilent en sens inverse,
+du sous-système le plus unitaire jusqu'au système le plus large.
+
+On peut ainsi considérer que
+les activités de vérification du sous-système de niveau N-1
+font office de tests unitaires pour le système du niveau N.
+
+Sur l'exemple des deux figures précédentes :
+
+* Phase descendante du cycle en V :
+
+** L'équipe en charge du système `A` (en bleu),
+   lors de ses activités de design (boîte blanche du système `A`),
+   identifie deux sous-systèmes `A1` et `A2`,
+   avec une interface interne `A1 / A2`.
+** L'équipe en charge du sous-système `A1` (en vert)
+   lors de ses activités de spécification,
+   identifie des exigences pour le sous-système `A1`
+   (boîte noire du sous-système `A1`).
+
+* Phase remontante du cycle en V :
+
+** L'équipe en charge du sous-système `A1` (en vert)
+   réalise ses activités de vérification de ses exigences
+   (boîte noire du sous-système `A1`),
+   puis livre le sous-système `A1` à l'équipe du système `A`.
+** L'équipe en charge du système `A` (en bleu)
+   reçoit la livraison des sous-systèmes `A1` et `A2`,
+   et réalise l'intégration de l'interface `A1 / A2`
+   (boîte blanche du système `A`).
+
+[TIP]
+====
+Cf. xref:section-subsystems-test-redundancy[xrefstyle=full]
+pour une discussion sur la redondance possible des tests
+dans ces cas de décomposition en sous-systèmes.
+====
 
 
 === Gestion des exigences (requirement management)
@@ -251,6 +311,29 @@ TODO
 
 
 === Exhaustivité des tests v/s gestion de risque
+
+==== Coût des tests
+
+TODO
+
+
+==== Stratégie de test par les risques
+
+TODO
+
+
+==== Tests unitaires v/s tests fonctionnels
+
+TODO
+
+
+==== Tests manuels v/s tests auto
+
+TODO
+
+
+[#section-subsystems-test-redundancy]
+==== Sous-systèmes et redondance des tests
 
 TODO
 

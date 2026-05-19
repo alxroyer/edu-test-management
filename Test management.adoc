@@ -522,7 +522,35 @@ pour constater le bon fonctionnement ou non du SUT.
 [#section-test-report-document]
 ==== Rapport de test
 
-TODO
+Le rapport de test est un document qui consigne les résultats de test
+pour chaque test identifié dans le plan de test.
+
+Si le plan de test décrit les tests en intention,
+la rapport de test consigne les résultats
+pour une campagne de test sur une *version de SUT donnée*.
+C'est donc une des premières informations consignée dans le rapport.
+
+Il reprend ensuite la structure générale du plan de test,
+en rajoutant pour chaque étape de test une information de *résultats observés*,
+ces résultats observés étant à mettre en regard des résultats attendus :
+
+* En cas de succès,
+  on peut consigner des *preuves de test*,
+  attestant le fait que l'étape de test a bien été déroulée avec succès.
+* En cas de défaut du SUT,
+  on consigne en revanche le problème,
+  notamment avec une référence de *rapport d'anomalie*
+  (cf. xref:section-issue-management[xrefstyle=full]).
+
+Comme on peut rapidement atteindre des centaines de tests dans un rapport de test,
+on a coutume également de présenter dans ce document un *tableau de synthèse*
+avec un test pour chaque ligne,
+et en colonnes :
+
+* l'identifiant du test,
+* le titre court du test,
+* le statut du test : OK ou KO,
+* la référence du rapport d'anomalie en cas de KO.
 
 
 [#section-fca]

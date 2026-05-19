@@ -489,7 +489,34 @@ sur toute la chaîne de reprise des travaux.
 [#section-test-plan-document]
 ==== Plan de test
 
-TODO
+Le plan de test est un document qui identifie des tests à jouer.
+
+Comme introduit en xref:section-lifecycle-test-setup[xrefstyle=full],
+il est usuel de constituer le plan de test en deux étapes :
+
+* un *plan de test préliminaire* dans un premier temps,
+* puis un *plan de test détaillé*.
+
+Dans le plan de test préliminaire, chaque test vient généralement avec :
+
+* un *identifiant* :
+  indispensable pour la gestion des exigences
+  (cf. xref:section-requirement-management[xrefstyle=full]),
+  utile dans tous les cas pour manipuler les tests,
+* un *titre court* :
+  utile pour une présentation rapide dans des tableaux,
+* un *objectif* :
+  car le titre court est souvent trop court pour décrire l'intention du test,
+* une *traçabilité* :
+  si on s'inscrit dans un cadre de gestion des exigences
+  (cf. xref:section-requirement-management[xrefstyle=full]),
+  chaque test trace une ou des exigences qu'il vérifie, tout ou partie.
+
+Dans le plan de test détaillé,
+chaque test est ensuite rédigé
+sous la forme d'une succession d'*actions* et de *résultats attendus*,
+tel qu'un opérateur manuel pourrait suivre une procédure
+pour constater le bon fonctionnement ou non du SUT.
 
 
 [#section-test-report-document]

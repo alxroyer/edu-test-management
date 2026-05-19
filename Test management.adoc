@@ -389,7 +389,31 @@ A l'issue de l'exécution d'une campagne de test :
 [#section-lifecycle-fix-verification]
 ==== Vérification des corrections
 
-TODO
+Une fois les défauts du SUT corrigés,
+l'équipe de test reprend la main pour vérifier que le problème a bien été corrigé.
+
+[#figure-test-fix]
+.Vérification des corrections
+image::schemas/manual-test.fix.png[]
+
+Dans le cas nominal,
+dans l'outil de gestion des tickets (cf. xref:section-issue-management[xrefstyle=full]),
+le rapport d'anomalie passe généralement d'un état _corrigé_ à un état _vérifié_,
+et pourra ensuite être _clos_.
+
+Si la vérification de la correction échoue,
+il repassera de l'état _corrigé_ à _réouvert_,
+et l'équipe de développement devra reprendre le travail.
+
+Cette activité de vérification des corrections
+ne sert pas uniquement à contrôler la qualité du travail de l'équipe de développement,
+mais également à mettre à jour l'état des tests pour le prochain rapport de test
+(cf. xref:section-test-report-document[xrefstyle=full]).
+
+Cela sert également à vérifier que le problème corrigé
+n'en cachait pas éventuellement un autre dans la suite du scénario de test,
+auquel cas un nouveau rapport d'anomalie sera généré
+(cf. xref:section-issue-management[xrefstyle=full]).
 
 
 [#section-lifecycle-req-modification]

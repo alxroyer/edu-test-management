@@ -224,6 +224,7 @@ dans ces cas de décomposition en sous-systèmes.
 ====
 
 
+[#section-requirement-management]
 === Gestion des exigences _(requirement management)_
 
 ==== Exigences formelles
@@ -292,6 +293,7 @@ les tests constituent le support le plus précis
 décrivant les attendus du SUT.
 
 
+[#section-issue-management]
 === Gestion des tickets _(issue management)_
 
 Le deuxième élément d'entrée important pour une activité de test
@@ -341,7 +343,47 @@ Ce cycle de vie évolue quelque peu à la marge en tests automatiques
 
 ==== Constitution des tests
 
-TODO
+Le schéma ci-après décrit la constitution initiale des tests.
+
+[#figure-test-setup]
+.Constitution des tests
+image::schemas/manual-test.setup.png[]
+
+Comme indiqué en xref:section-requirement-management[xrefstyle=full],
+les *exigences* constituent un élément d'entrée pour les tests,
+mais également pour les développements naturellement.
+
+Une des premières activités à mener pour la constitution des tests
+consiste à préparer le *plan* de test préliminaire.
+On entend à ce niveau l'identification de tests,
+avec certaines informations minimales comme un titre et un objectif de test,
+et traçant les exigences à vérifier.
+
+L'établissement du plan de test donne lieu à une analyse approfondie des exigences,
+pour en assurer une bonne couverture par les tests
+(question de la complétude des tests,
+discutée en xref:section-requirement-management[xrefstyle=full]).
+C'est également un moment privilégié pour challenger les spécifications d'entrée
+(cf. xref:section-issue-management[xrefstyle=full]).
+
+Vient ensuite le temps de l'*écriture* des tests.
+Chacun des tests, avec titre et objectif,
+va être détaillé en une série d'actions et de résultats attendus.
+Cette étape aboutit à la constitution d'un plan de test détaillé
+(cf. xref:section-test-plan-document[xrefstyle=full]).
+
+Une fois le plan de test détaillé constitué,
+et un SUT disponible à l'issue des développements,
+on peut dérouler l'*exécution* des tests.
+
+A l'issue de l'exécution d'une campagne de test :
+
+* On enregistre les défauts du SUT sous forme de *tickets d'anomalies*
+  (cf. xref:section-issue-management[xrefstyle=full]).
+* On produit un *rapport* pour la version de SUT testée,
+  consignant les résultats de chaque test,
+  et pour chaque test KO la référence du/des ticket(s) d'anomalie décrivant le problème
+  (cf. xref:section-test-report-document[xrefstyle=full]).
 
 
 [#section-lifecycle-fix-verification]
@@ -356,14 +398,17 @@ TODO
 TODO
 
 
+[#section-documents]
 === Documents
 
+[#section-test-plan-document]
 ==== Plan de test
 
 TODO
 
 
-==== Résultat de test
+[#section-test-report-document]
+==== Rapport de test
 
 TODO
 

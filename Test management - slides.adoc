@@ -125,7 +125,7 @@ _(tests manuels)_
 
 === Constitution des tests
 
-image::schemas/manual-test.start.png[]
+image::schemas/manual-test.setup.png[]
 
 
 === Vérification des corrections

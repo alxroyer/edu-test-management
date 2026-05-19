@@ -264,7 +264,9 @@ couvrent-ils tous les aspects de l'exigence ?
 
 Un point souvent difficile à assurer, et coûteux à vérifier
 
+[#tip-track-completeness-justification]
 [TIP]
+.Tracer les justifications de complétude des tests
 ====
 Tracer les justifications de complétude des tests :
 pour en assurer la maîtrise d'une part,
@@ -273,7 +275,7 @@ et faciliter la maintenance de la traçabilité par la même occasion.
 
 *Modification des exigences*
 
-Cf. xref:section-lifecycle-req-modification[xrefstyle=full]
+Cf. xref:section-lifecycle-req-change[xrefstyle=full]
 pour une discussion sur le cycle de vie des tests
 en cas de modification des exigences.
 
@@ -321,7 +323,7 @@ Ces tickets permettent également de tracer le *travail planifié*.
 On parlera notamment en développement agile de _User Stories_, de _Technical Stories_, ...
 
 Enfin, ces tickets permettent de tracer les *modifications d'exigences*
-(cf. xref:section-lifecycle-req-modification[xrefstyle=full]).
+(cf. xref:section-lifecycle-req-change[xrefstyle=full]).
 
 [NOTE]
 ====
@@ -341,11 +343,12 @@ Ce cycle de vie évolue quelque peu à la marge en tests automatiques
 (cf. xref:section-lifecycle-test-automation[xrefstyle=full]).
 
 
+[#section-lifecycle-test-setup]
 ==== Constitution des tests
 
 Le schéma ci-après décrit la constitution initiale des tests.
 
-[#figure-test-setup]
+[#figure-lifecycle-test-setup]
 .Constitution des tests
 image::schemas/manual-test.setup.png[]
 
@@ -392,7 +395,7 @@ A l'issue de l'exécution d'une campagne de test :
 Une fois les défauts du SUT corrigés,
 l'équipe de test reprend la main pour vérifier que le problème a bien été corrigé.
 
-[#figure-test-fix]
+[#figure-lifecycle-fix-verification]
 .Vérification des corrections
 image::schemas/manual-test.fix.png[]
 
@@ -416,13 +419,71 @@ auquel cas un nouveau rapport d'anomalie sera généré
 (cf. xref:section-issue-management[xrefstyle=full]).
 
 
-[#section-lifecycle-req-modification]
+[#section-lifecycle-req-change]
 ==== Modifications des exigences
 
-TODO
+En cas de modification des exigences,
+le schéma suivant illustre la complexité du processus,
+avec la mise en jeu des différentes activités :
+
+* gestion des tickets (cf. xref:section-issue-management[xrefstyle=full]),
+* gestion des exigences (cf. xref:section-requirement-management[xrefstyle=full])),
+* activités de développement,
+* activités de test.
+
+[#figure-lifecycle-req-change]
+.Modification des exigences
+image::schemas/manual-test.change.png[]
+
+Ce qui permet de tout déclencher de manière cohérente,
+et de tracer la raison des modifications
+dans les spécifications, dans les développement et dans les tests,
+c'est l'existence d'un ticket d'évolution
+(cf. xref:section-issue-management[xrefstyle=full]).
+
+Ce ticket est traité en premier lieu par les équipes en charge des spécifications.
+
+Les modifications d'exigences font ensuite l'objet d'analyses d'impact,
+pour les équipes de développement d'une part,
+et pour les équipes de test d'autre part.
+
+Côté tests,
+les modifications d'exigences peuvent impacter en premier lieu
+l'identification des tests du *plan* de test
+(i.e. plan de test préliminaire).
+
+En résultat, on identifie donc potentiellement une série de tests ajoutés
+à *écrire* entièrement (i.e. plan de test détaillé).
+D'autres tests restent avec leur titre et objectif inchangés,
+mais la traçabilité ayant évolué,
+ou les exigences tracées ayant été modifiées,
+leurs actions et résultats attendus doivent être ajustés.
+
+Enfin, une fois le plan de test détaillé ajusté,
+et un SUT mis à jour par l'équipe de développement,
+on peut redérouler l'*exécution* des tests
+avec les mêmes sorties qu'en xref:section-lifecycle-test-setup[xrefstyle=full].
+
+[CAUTION]
+.Coût des modifications d'exigences
+====
+Les modifications d'exigences s'avèrent souvent coûteuses
+pour les activités de test,
+en raison notamment de la complétude des tests qu'il faut continuer d'assurer.
+
+Cela passe en premier lieu par la modification de la traçabilité déjà établie.
+Pour ce faire, penser à xref:tip-track-completeness-justification[]
+(cf. xref:section-requirement-management[xrefstyle=full]).
+
+Mais la question de la complétude des tests se cache aussi souvent
+dans le détail des actions et résultats attendus au sein des tests.
+
+C'est donc une vigilance accrue qu'il faut maintenir
+sur toute la chaîne de reprise des travaux.
+====
 
 
-[#section-documents]
+[#section-test-documents]
 === Documents
 
 [#section-test-plan-document]

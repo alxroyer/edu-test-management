@@ -628,7 +628,51 @@ En en cas de régressions, l'indicateur peut se dégrader rapidement.
 
 === L'esprit du testeur
 
-TODO
+Enfin, pour clôturer ce chapitre sur les activités de test,
+il est opportun de dire un mot sur le profil type du testeur.
+
+Dans les offres d'emploi,
+les métiers du test sont souvent intitulés sous le terme QA
+pour _Quality Assurance_.
+
+En effet, c'est bien la posture qu'on attend du testeur :
+se faire le dernier rempart pour assurer le niveau de qualité du SUT.
+
+C'est un véritable état d'esprit qui s'oppose en de nombreux points
+aux qualités usuelles des développeurs :
+
+[cols="1,1"]
+|===
+| Développeur | Testeur
+
+| Le développeur construit le logiciel.
+| Le testeur dissecte les exigences sous tous ses aspects,
+  pour ne rien laisser passer par rapport au contrat du SUT.
+
+| Le développeur intégre les couches logicielles du bas vers le haut.
+| Le testeur adopte une démarche descendante, à partir des exigences.
+
+| Le développeur raisonne d'abord en conception, boîte blanche.
+| Le testeur raisonne d'abord en exigences, boîte noire.
+
+| L'objectif du développeur est de montrer que le SUT marche a minima.
+| L'objectif du testeur est de rechercher les défauts.
+
+| Une des qualités premières du développeur est d'aller vite.
+| On apprécie le testeur pour sa rigueur.
+|===
+
+Le métier du testeur est finalement assez complet
+dans le sens où il requiert la capacité à embrasser de nombreuses activités connexes
+telles que la gestion des exigences ou la gestion de configuration.
+Il requiert également la capacité à comprendre le besoin client
+pour s'en faire le porte parole dans les activités de développement.
+
+Par ailleurs, si les tests sont automatisés,
+le testeur doit en plus avoir des aptitudes de développeur,
+car il doit également mener une activité de développement pour les tests.
+
+La transition est toute trouvée avec le chapitre suivant.
 
 
 == Tests automatiques

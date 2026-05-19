@@ -556,7 +556,74 @@ et en colonnes :
 [#section-fca]
 ==== FCA _(Functional Configuration Audit)_
 
-TODO
+Un FCA consiste principalement en un tableau de synthèse des résultats de test
+par exigence d'entrée.
+
+// TODO:
+//   Factoriser avec `Test management - slides.adoc`.
+//   Problème : la directive `include::` est bridée dans le rendu AsciiDoc par GitHub.
+[#table-fca]
+.Tableau de synthèse FCA
+|===
+| Req id | Req title | Test id | Test title | Test result | Issue
+
+// Memo: `.2+` spans cells one row below.
+.2+| REQ_010
+.2+| Startup
+| TEST_100
+| Startup data
+| ✅ OK
+|
+
+| TEST_110
+| Startup sequence
+| ✅ OK
+|
+
+| REQ_020
+| Shutdown
+| TEST_200
+| Shutdown sequence
+| ❌ NOK
+| #42: Major: The SW freezes on shutdown.
+
+| ...
+|
+|
+|
+|
+|
+|===
+
+Ce genre de tableau permet de visualiser les bugs résiduels,
+avec leur criticité, et l'impact sur les exigences mises en défaut.
+
+En ce sens, il constitue un support permettant de se prononcer
+sur une acceptation du niveau de qualité du SUT testé :
+GO / NO GO pour livraison.
+
+[TIP]
+.Vue indicateur de résultat
+====
+Cette vue des exigences tel que le propose un tableau de FCA
+permet de construire un indicateur de résultat.
+
+Les indicateurs de résultat,
+par opposition aux indicateurs d'avancement (exemple : nombre de ligne de code)
+permettent de juger de l'avancement du projet par rapport à une cible finale fixe.
+
+En effet, sur la base d'un objectif de couverture des exigences d'entrée,
+dont le nombre est normalement connu en début de projet est stable jusqu'à la fin,
+on peut compter celles qui sont effectivement OK,
+et donc un pourcentage d'avancement fiable.
+
+D'expérience, cet indicateur reste un indicateur pessimiste,
+car il est souvent difficile d'atteinde un état OK pour chaque exigence,
+en raison du nombre de tests pouvant couvrir une même exigence.
+Il suffit d'avoir un bug mineur sur l'une de ces exigences
+pour faire tomber l'exigence en KO.
+En en cas de régressions, l'indicateur peut se dégrader rapidement.
+====
 
 
 === L'esprit du testeur

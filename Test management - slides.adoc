@@ -164,6 +164,7 @@ Résultats de tests::
 
 === FCA
 
+// TODO: Factoriser avec `Test management.adoc`.
 |===
 | Req id | Req title | Test id | Test title | Test result | Issue
 

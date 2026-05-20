@@ -704,7 +704,45 @@ et une vigilance accrue aux problématiques de stabilité des tests
 [#section-auto-lifecycle]
 === Cycle de vie des tests auto
 
-TODO (tip: known-issues notamment)
+Le schéma ci-après ajuste le cycle de vie présenté avant
+pour les constitution tests manuels
+(cf. xref:figure-lifecycle-test-setup[xrefstyle=full]) :
+
+[#figure-lifecycle-test-auto]
+.Constitution des tests
+image::schemas/lifecycle-auto-setup.png[]
+
+On peut observer deux différences principales sur ce schéma
+par rapport à la version pour les tests manuels.
+
+Premièrement,
+comme indiqué en xref:section-timing-test-setup[],
+en matière de tests auto,
+il est compliqué d'écrire les tests avant de disposer du SUT.
+C'est pourquoi, contrairement aux tests manuels,
+on préfèrera disposer du SUT dès cette phase,
+pour pouvoir écrire et débugguer les tests auto,
+plutôt que les rédiger à l'aveugle.
+
+La deuxième différence majeure réside dans l'exécution des tests.
+En tests manuels, l'opérateur humain effectue naturellement
+l'exécution et l'analyse des résultats de façon simultanée.
+En tests auto, on peut distinguer l'exécution des tests, généralement dans la CI,
+et l'analyse (ou dépouillement) des résultats dans un second temps.
+
+Ce deuxième point est une différence impactante,
+car elle véhicule son lot de difficultés :
+
+* Nécessité de faciliter les investigations en cas de problèmes en post-mortem
+  (cf. xref:section-auto-ease-investigations[xrefstyle=full]).
+* Stabilité des tests
+  (cf. xref:section-auto-stability-performance[xrefstyle=full]
+  et xref:section-auto-refuse-instabilities[xrefstyle=full]).
+* Gestion des problèmes connus
+  (cf. xref:section-auto-known-issues[xrefstyle=full]).
+* Risques de faux positifs
+  (enregistrement de preuves de test).
+* ...
 
 
 [#section-auto-skills]
@@ -734,6 +772,7 @@ TODO
 TODO
 
 
+[#section-auto-ease-investigations]
 ===== Faciliter les investigations
 
 TODO
@@ -761,11 +800,13 @@ TODO
 TODO
 
 
+[#section-auto-refuse-instabilities]
 ===== Faire la chasse aux instabilités
 
 TODO
 
 
+[#section-auto-known-issues]
 ===== Outiller la gestion des problèmes connus
 
 TODO
@@ -789,6 +830,7 @@ TODO
 TODO
 
 
+[#section-timing-test-setup]
 === Timing pour la constitution des tests
 
 TODO

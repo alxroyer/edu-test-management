@@ -340,7 +340,7 @@ La description du cycle de vie des tests ci-après
 correspond en premier lieu à un contexte de tests manuels.
 
 Ce cycle de vie évolue quelque peu à la marge en tests automatiques
-(cf. xref:section-lifecycle-test-automation[xrefstyle=full]).
+(cf. xref:section-auto-lifecycle[xrefstyle=full]).
 
 
 [#section-lifecycle-test-setup]
@@ -670,7 +670,8 @@ pour s'en faire le porte parole dans les activités de développement.
 
 Par ailleurs, si les tests sont automatisés,
 le testeur doit en plus avoir des aptitudes de développeur,
-car il doit également mener une activité de développement pour les tests.
+car il doit également mener une activité de développement pour les tests
+(cf. xref:section-auto-skills[xrefstyle=full]).
 
 La transition est toute trouvée avec le chapitre suivant.
 
@@ -679,20 +680,98 @@ La transition est toute trouvée avec le chapitre suivant.
 
 === Besoin d'automatiser les tests
 
-TODO
+Une grande place est accordée aujourd'hui aux tests automatisés
+dans les *développements logiciels*.
+
+C'est en partie lié aux méthodes agiles
+qui définissent l'automatisation des tests comme un prérequis indispensable
+au bon fonctionnement de la méthode.
+
+Un des principes de base
+consiste à assurer une branche d'intégration toujours stable et livrable.
+
+Pour ce faire, le déroulement de tests de non-régression de manière automatique,
+idéalement lancés automatiquement par la chaîne de CI _(Continuous Integration)_,
+est un incontournable.
+
+On constate également la possibilité d'automatiser les *tests système*.
+Cela requiert généralement la mise en oeuvre de moyens matériels spécifiques :
+routeurs, sondes, câbles, drivers dédiés, ...
+et une vigilance accrue aux problématiques de stabilité des tests
+(cf. xref:section-auto-stability-performance[xrefstyle=full]).
 
 
-[#section-lifecycle-test-automation]
+[#section-auto-lifecycle]
 === Cycle de vie des tests auto
 
 TODO (tip: known-issues notamment)
 
 
-=== Architecture
+[#section-auto-skills]
+=== Tests auto & compétences d'architecture logicielle
 
 TODO
 
 
+=== Principes d'architecture
+
+Avant de choisir un framework du marché (cf. xref:section-auto-test-frameworks[xrefstyle=full]),
+cette section liste quelques élements à considérer au préalable.
+
+
+==== Langage
+
+TODO
+
+
+==== Framework de test
+
+TODO
+
+
+===== Textes humainement lisibles
+
+TODO
+
+
+===== Faciliter les investigations
+
+TODO
+
+
+===== Faciliter la programmation
+
+TODO:
+
+* Reuse code
+* OO-Design
+* Singleton
+
+
+[#section-auto-stability-performance]
+===== Performance & stabilité
+
+TODO
+
+
+==== Retours d'expérience
+
+===== 10 minutes max pour les non-régressions
+
+TODO
+
+
+===== Faire la chasse aux instabilités
+
+TODO
+
+
+===== Outiller la gestion des problèmes connus
+
+TODO
+
+
+[#section-auto-test-frameworks]
 === Outils / frameworks
 
 TODO

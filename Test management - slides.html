@@ -941,46 +941,20 @@
       <section id="_2_tests_automatiques" data-state="topic">
         <h2>2. Tests automatiques</h2>
       </section>
-      <section id="slide-need-test-automation">
+      <section id="_besoin_dautomatisation">
         <h2>Besoin d&#8217;automatisation</h2>
         <div class="slide-content">
-          <div class="admonitionblock important">
-            <table>
-              <tr>
-                <td class="icon"><i class="fa fa-exclamation-circle" title="Important"></i></td>
-                <td class="content">
-                  <div class="title">Importance d&#8217;automatiser les tests</div>
-                  <div class="paragraph">
-                    <p>Prérequis agilité itérative (time-boxé)</p>
-                  </div>
-                  <div class="paragraph">
-                    <p>Branche d&#8217;intégration stable / livrable</p>
-                  </div>
-                  <div class="paragraph">
-                    <p>Intégration Continue / non-régressions</p>
-                  </div>
-                </td>
-              </tr>
-            </table>
+          <div class="paragraph">
+            <p>Prérequis agilité itérative (time-boxé)</p>
           </div>
-          <div class="admonitionblock tip">
-            <table>
-              <tr>
-                <td class="icon"><i class="fa fa-lightbulb-o" title="Tip"></i></td>
-                <td class="content">
-                  <div class="title">Intérêt des tests manuels</div>
-                  <div class="paragraph">
-                    <p><em>Là où l&#8217;humain apporte une plus-value</em></p>
-                  </div>
-                  <div class="paragraph">
-                    <p>Intégrations</p>
-                  </div>
-                  <div class="paragraph">
-                    <p>Validation expression du besoin</p>
-                  </div>
-                </td>
-              </tr>
-            </table>
+          <div class="paragraph">
+            <p>Branche d&#8217;intégration stable / livrable</p>
+          </div>
+          <div class="paragraph">
+            <p>Intégration Continue / non-régressions</p>
+          </div>
+          <div class="paragraph">
+            <p>Tests logiciels &amp; tests système</p>
           </div>
         </div>
       </section>
@@ -998,28 +972,28 @@
           </div>
         </div>
       </section>
-      <section id="_architecture_compétence_développement">
-        <h2>Architecture - Compétence développement</h2>
+      <section id="_compétence_développement">
+        <h2>Compétence développement</h2>
         <div class="slide-content">
           <div class="paragraph">
-            <p>Code test ~= Code appli</p>
+            <p>Volume code : test ~= SUT</p>
           </div>
           <div class="paragraph">
-            <p>Langage : JS, Python, Gherkin</p>
+            <p>Problématiques : perfs, stabilité</p>
           </div>
           <div class="admonitionblock tip">
             <table>
               <tr>
                 <td class="icon"><i class="fa fa-lightbulb-o" title="Tip"></i></td>
-                <td class="content">Typage</td>
+                <td class="content">Besoin d&#8217;un architecte</td>
               </tr>
             </table>
           </div>
         </div>
       </section>
       <section>
-        <section id="_architecture_framework">
-          <h2>Architecture - Framework</h2>
+        <section id="_principes_darchitecture">
+          <h2>Principes d&#8217;architecture</h2>
           <div class="slide-content">
             <div class="ulist">
               <ul>
@@ -1030,7 +1004,13 @@
                   <p>Faciliter les investigations</p>
                 </li>
                 <li>
-                  <p>Interactions SUT</p>
+                  <p>Faciliter la programmation</p>
+                </li>
+                <li>
+                  <p>Perfs &amp; stabilité</p>
+                </li>
+                <li>
+                  <p>Problèmes connus</p>
                 </li>
               </ul>
             </div>
@@ -1080,15 +1060,57 @@
                   </div>
                 </li>
                 <li>
+                  <p>Preuves de test</p>
+                </li>
+                <li>
                   <p>Post-mortem</p>
                 </li>
               </ul>
             </div>
           </div>
         </section>
-        <section id="_interactions_sut">
-          <h2>Interactions SUT</h2>
+        <section id="_faciliter_la_programmation">
+          <h2>Faciliter la programmation</h2>
           <div class="slide-content">
+            <div class="ulist">
+              <ul>
+                <li>
+                  <p>OO-Design</p>
+                </li>
+                <li>
+                  <p>Singleton</p>
+                </li>
+                <li>
+                  <p>Frame / packets</p>
+                  <div class="ulist">
+                    <ul>
+                      <li>
+                        <p>Scapy</p>
+                      </li>
+                      <li>
+                        <p>Interface management</p>
+                      </li>
+                      <li>
+                        <p>Versioning</p>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section id="_perfs_stabilité">
+          <h2>Perfs &amp; stabilité</h2>
+          <div class="slide-content">
+            <div class="admonitionblock warning">
+              <table>
+                <tr>
+                  <td class="icon"><i class="fa fa-warning" title="Warning"></i></td>
+                  <td class="content">Risque encore plus fort pour les tests système</td>
+                </tr>
+              </table>
+            </div>
             <div class="admonitionblock tip">
               <table>
                 <tr>
@@ -1116,8 +1138,8 @@
           </div>
         </section>
       </section>
-      <section id="_architecture_performances">
-        <h2>Architecture - Performances</h2>
+      <section id="_retours_dexpérience_performances">
+        <h2>Retours d&#8217;expérience - Performances</h2>
         <div class="slide-content">
           <div class="admonitionblock tip">
             <table>
@@ -1132,8 +1154,8 @@
           </div>
         </div>
       </section>
-      <section id="_architecture_stabilité">
-        <h2>Architecture - Stabilité</h2>
+      <section id="_retours_dexpérience_stabilité">
+        <h2>Retours d&#8217;expérience - Stabilité</h2>
         <div class="slide-content">
           <div class="admonitionblock tip">
             <table>
@@ -1158,8 +1180,8 @@
           </div>
         </div>
       </section>
-      <section id="_architecture_problèmes_connus">
-        <h2>Architecture - Problèmes connus</h2>
+      <section id="_retours_dexpérience_problèmes_connus">
+        <h2>Retours d&#8217;expérience - Problèmes connus</h2>
         <div class="slide-content">
           <div class="admonitionblock tip">
             <table>
@@ -1612,14 +1634,30 @@
             </div>
           </div>
         </section>
-        <section id="_gestion_de_risques">
+        <section id="slide-risk-management">
           <h2>Gestion de risques</h2>
           <div class="slide-content">
             <div class="paragraph">
               <p>TU seuls ?</p>
             </div>
-            <div class="paragraph">
-              <p>Tests manuels // tests auto ?</p>
+            <div class="admonitionblock tip">
+              <table>
+                <tr>
+                  <td class="icon"><i class="fa fa-lightbulb-o" title="Tip"></i></td>
+                  <td class="content">
+                    <div class="title">Tests manuels // tests auto ?</div>
+                    <div class="paragraph">
+                      <p><em>Là où l&#8217;humain apporte une plus-value</em></p>
+                    </div>
+                    <div class="paragraph">
+                      <p>Intégrations</p>
+                    </div>
+                    <div class="paragraph">
+                      <p>Validation expression du besoin</p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
             </div>
             <div class="admonitionblock tip">
               <table>

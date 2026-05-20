@@ -222,28 +222,15 @@ _"Dernier rempart"_
 == 2. Tests automatiques
 
 
-[#slide-need-test-automation]
 == Besoin d'automatisation
 
-[IMPORTANT]
-.Importance d'automatiser les tests
-====
 Prérequis agilité itérative (time-boxé)
 
 Branche d'intégration stable / livrable
 
 Intégration Continue / non-régressions
-====
 
-[TIP]
-.Intérêt des tests manuels
-====
-_Là où l'humain apporte une plus-value_
-
-Intégrations
-
-Validation expression du besoin
-====
+Tests logiciels & tests système
 
 
 == Cycle de vie des tests auto
@@ -253,20 +240,22 @@ image::schemas/auto-test.start.png[]
 CAUTION: Problèmes connus ?
 
 
-== Architecture - Compétence développement
+== Compétence développement
 
-Code test ~= Code appli
+Volume code : test ~= SUT
 
-Langage : JS, Python, Gherkin
+Problématiques : perfs, stabilité
 
-TIP: Typage
+TIP: Besoin d'un architecte
 
 
-== Architecture - Framework
+== Principes d'architecture
 
 * Textes humainement lisibles
 * Faciliter les investigations
-* Interactions SUT
+* Faciliter la programmation
+* Perfs & stabilité
+* Problèmes connus
 
 
 === Textes humainement lisibles
@@ -286,10 +275,24 @@ TIP: Proximité texte / code de test
 ** Stratégie (intégrations)
 ** Human readable
 
+* Preuves de test
 * Post-mortem
 
 
-=== Interactions SUT
+=== Faciliter la programmation
+
+* OO-Design
+* Singleton
+* Frame / packets
+
+** Scapy
+** Interface management
+** Versioning
+
+
+=== Perfs & stabilité
+
+WARNING: Risque encore plus fort pour les tests système
 
 TIP: Pattern _wait-for / query_
 
@@ -299,14 +302,14 @@ TIP: Pattern _wait-for / query_
 * Wait for what? => _query_ (OO Design)
 
 
-== Architecture - Performances
+== Retours d'expérience - Performances
 
 TIP: Target 10 minutes max pour les non-régressions
 
 Effet psychologique au détriment de la qualité
 
 
-== Architecture - Stabilité
+== Retours d'expérience - Stabilité
 
 TIP: Refuser les instabilités
 
@@ -316,7 +319,7 @@ TIP: Refuser les instabilités
 Analyses post-mortem / collecter les traces
 
 
-== Architecture - Problèmes connus
+== Retours d'expérience - Problèmes connus
 
 TIP: Statut auto // type de campagne
 
@@ -519,11 +522,21 @@ ROI // non qualité
 ====
 
 
+[#slide-risk-management]
 === Gestion de risques
 
 TU seuls ?
 
-Tests manuels // tests auto ?
+[TIP]
+.Tests manuels // tests auto ?
+====
+_Là où l'humain apporte une plus-value_
+
+Intégrations
+
+Validation expression du besoin
+====
+
 
 [TIP]
 .Cône de test

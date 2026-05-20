@@ -748,7 +748,25 @@ car elle véhicule son lot de difficultés :
 [#section-auto-skills]
 === Tests auto & compétences d'architecture logicielle
 
-TODO
+Le code de tests auto couvrant les mêmes exigences que le SUT,
+le volume de code de tests auto s'apparente au volume de code d'un SUT
+(dans le cas d'un développement logiciel).
+
+Les tests auto tirent ainsi des problématiques similaires
+à celles d'un développement logiciel :
+
+* maintenabilité,
+* performances,
+* stabilité,
+* ...
+
+Ce sont des problématiques complexes
+qui requièrent des compétences d'architecture logicielle.
+
+Il s'agit là d'un besoin de staffing à ne pas sous-estimer.
+En effet, lorsque les bons profils ne sont pas mobilisés en temps et en heure,
+cela peut conduire à des surcoûts conséquents sur les activités de test,
+voire des échecs.
 
 
 === Principes d'architecture

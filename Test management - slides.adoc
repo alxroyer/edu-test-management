@@ -244,7 +244,7 @@ CAUTION: Problèmes connus ?
 
 Volume code : test ~= SUT
 
-Problématiques : perfs, stabilité
+Problématiques : maintenabilité, perfs, stabilité
 
 TIP: Besoin d'un architecte
 

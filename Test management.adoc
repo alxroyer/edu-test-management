@@ -350,7 +350,7 @@ Le schéma ci-après décrit la constitution initiale des tests.
 
 [#figure-lifecycle-test-setup]
 .Constitution des tests
-image::schemas/manual-test.setup.png[]
+image::schemas/lifecycle-manual-setup.png[]
 
 Comme indiqué en xref:section-requirement-management[xrefstyle=full],
 les *exigences* constituent un élément d'entrée pour les tests,
@@ -397,7 +397,7 @@ l'équipe de test reprend la main pour vérifier que le problème a bien été c
 
 [#figure-lifecycle-fix-verification]
 .Vérification des corrections
-image::schemas/manual-test.fix.png[]
+image::schemas/lifecycle-manual-fix.png[]
 
 Dans le cas nominal,
 dans l'outil de gestion des tickets (cf. xref:section-issue-management[xrefstyle=full]),
@@ -433,7 +433,7 @@ avec la mise en jeu des différentes activités :
 
 [#figure-lifecycle-req-change]
 .Modification des exigences
-image::schemas/manual-test.change.png[]
+image::schemas/lifecycle-manual-change.png[]
 
 Ce qui permet de tout déclencher de manière cohérente,
 et de tracer la raison des modifications

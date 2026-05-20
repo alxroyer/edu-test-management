@@ -125,17 +125,17 @@ _(tests manuels)_
 
 === Constitution des tests
 
-image::schemas/manual-test.setup.png[]
+image::schemas/lifecycle-manual-setup.png[]
 
 
 === Vérification des corrections
 
-image::schemas/manual-test.fix.png[]
+image::schemas/lifecycle-manual-fix.png[]
 
 
 === Modifications des exigences
 
-image::schemas/manual-test.change.png[]
+image::schemas/lifecycle-manual-change.png[]
 
 
 [.columns]
@@ -235,7 +235,7 @@ Tests logiciels & tests système
 
 == Cycle de vie des tests auto
 
-image::schemas/auto-test.start.png[]
+image::schemas/lifecycle-auto-setup.png[]
 
 CAUTION: Problèmes connus ?
 

@@ -262,7 +262,9 @@ TIP: Besoin d'un architecte
 
 Production documentaire plan de test
 
-TIP: Proximité texte / code de test
+Actions / résultats attendus / preuves de test
+
+TIP: Proximité textes / code de test
 
 
 === Faciliter les investigations

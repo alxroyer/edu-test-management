@@ -776,7 +776,45 @@ cette section liste quelques principes d'architecture à considérer au préalab
 
 ==== Textes humainement lisibles
 
-TODO
+Cette question s'impose lorsqu'on doit produire
+des plans de test et rapports de tests en bonne et due forme.
+Le fait d'avoir à produire des documents et du code de test cohérents
+amène la question de savoir comment maintenir cette cohérence dans le temps.
+
+[TIP]
+.Proximité textes / code de test
+====
+Une stratégie qui a fait ses preuves consiste à :
+
+* Rédiger les actions et résultats attendus *dans le code de test*,
+  au moyen d'une structuration du code permettant de positionner le rédactionnel
+  au *plus près du code de test* associé :
+  idéalement le texte de l'action juste avant le code de test dédié,
+  de même pour un résultat attendu.
+* Puis *générer* les documents, plans de test et rapports de test,
+  à partir du code de test.
+  Cela passe généralement par un outillage à mettre en place.
+====
+
+D'expérience, même si ce n'est pas un exercice imposé,
+le fait de disposer du texte intentionnel en toutes lettres dans le code de test
+aide à la relecture du code,
+ainsi que dans les logs de test pour les analyses en post-mortem
+(cf. xref:section-auto-ease-investigations[xrefstyle=full]).
+
+[TIP]
+.Outiller l'enregistrement des preuves de test
+====
+Comme suggéré en xref:section-test-report-document[xrefstyle=full],
+dans le code de test associé aux résultats attendus,
+et accessoirement aux actions également,
+on pourra enregistrer des preuves de test
+permettent d'attester a posteriori que le test auto a bien vérifié ce qu'il faut.
+
+Cela constitue également des informations facilement intelligibles,
+facilitant l'analyse des logs en post-mortem
+(cf. xref:section-auto-ease-investigations[xrefstyle=full] encore une fois).
+====
 
 
 [#section-auto-ease-investigations]

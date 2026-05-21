@@ -21,6 +21,7 @@
   "homepage": "https://github.com/alxroyer/edu-test-management#readme",
   "devDependencies": {
     "@asciidoctor/reveal.js": "^5.2.0",
-    "asciidoctor": "^3.0.4"
+    "asciidoctor": "^3.0.4",
+    "js-beautify": "^1.15.4"
   }
 }

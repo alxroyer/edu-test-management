@@ -75,7 +75,7 @@ Pour la production HTML des slides,
 
 [source, bash]
 $ npm ci
-$ npx asciidoctor-revealjs "Test management - slides.adoc"
+$ ./scripts/generate-slides.sh
 
 Pour l'export PDF des slides :
 

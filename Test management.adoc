@@ -4,6 +4,9 @@
 :sectnums:
 // Generate TOC after the preamble (see https://docs.asciidoctor.org/asciidoc/latest/toc/position/#beneath-preamble).
 :toc: preamble
+// TOC depths (see https://docs.asciidoctor.org/asciidoc/latest/toc/levels/).
+// Use 5 (maximum value accepted).
+:toclevels: 5
 // TOC title (see https://docs.asciidoctor.org/asciidoc/latest/toc/title/).
 :toc-title: Sommaire
 // Makes admonitions display nicely (see https://docs.asciidoctor.org/asciidoc/latest/blocks/admonitions/#enable-admonition-icons).

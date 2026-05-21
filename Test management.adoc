@@ -268,9 +268,19 @@ Un point souvent difficile à assurer, et coûteux à vérifier
 [TIP]
 .Tracer les justifications de complétude des tests
 ====
-Tracer les justifications de complétude des tests :
-pour en assurer la maîtrise d'une part,
-et faciliter la maintenance de la traçabilité par la même occasion.
+Au moment d'identifier les tests nécessaires et suffisants
+permettant de couvrir les exigences,
+il peut être utile de tracer le raisonnement
+ayant permis de construire cette couverture.
+
+C'est une information fugace qui se perd sinon,
+et est très difficile à retrouver a posteriori.
+
+Ainsi, il est utile de capitaliser cette information,
+pour en faciliter la maintenance avant tout.
+
+Cela sert au passage de justification
+permettant d'assurer la maîtrise de la complétude des tests.
 ====
 
 *Modification des exigences*

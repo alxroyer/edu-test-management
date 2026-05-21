@@ -185,7 +185,7 @@ Résultats de tests::
 | Shutdown
 | TEST_200
 | Shutdown sequence
-| ❌ NOK
+| ❌ KO
 | #42: Major: The SW freezes on shutdown.
 
 | ...

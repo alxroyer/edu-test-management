@@ -267,18 +267,30 @@ Actions / résultats attendus / preuves de test
 TIP: Proximité textes / code de test
 
 
+[.columns]
 === Faciliter les investigations
 
+[.column]
+--
+Travail sur les logs
+
+WARNING: Analyses en _post-mortem_
+--
+
+[.column]
+--
+* Niveaux de logs
+* Couleurs
 * Tracebacks
 * Assertions
-* Logging
+--
 
-** Couleur / indentation
-** Stratégie (intégrations)
-** Human readable
-
-* Preuves de test
-* Post-mortem
+[.column]
+--
+* Indentation
+* Humainement lisible (textes & libs)
+* Correlation de logs
+--
 
 
 === Faciliter la programmation

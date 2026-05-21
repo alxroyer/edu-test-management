@@ -731,8 +731,7 @@ en matière de tests auto,
 il est compliqué d'écrire les tests avant de disposer du SUT.
 C'est pourquoi, contrairement aux tests manuels,
 on préfèrera disposer du SUT dès cette phase,
-pour pouvoir écrire et débugguer les tests auto,
-plutôt que les rédiger à l'aveugle.
+pour pouvoir écrire et débugguer les tests auto en même temps.
 
 La deuxième différence majeure réside dans l'exécution des tests.
 En tests manuels, l'opérateur humain effectue naturellement
@@ -743,14 +742,12 @@ et l'analyse (ou dépouillement) des résultats dans un second temps.
 Ce deuxième point est une différence impactante,
 car elle véhicule son lot de difficultés :
 
-* Nécessité de faciliter les investigations en cas de problèmes en post-mortem
-  (cf. xref:section-auto-ease-investigations[xrefstyle=full]).
-* Stabilité des tests
-  (cf. xref:section-auto-stability-performance[xrefstyle=full]).
-* Gestion des problèmes connus
-  (cf. xref:section-auto-known-issues[xrefstyle=full]).
-* Risques de faux positifs
-  (enregistrement de preuves de test).
+* besoin de faciliter les investigations en post-mortem
+  (cf. xref:section-auto-ease-investigations[xrefstyle=full]),
+* incertitudes en cas d'instabilité des tests
+  (cf. xref:section-auto-stability-performance[xrefstyle=full]),
+* problématique de gestion des problèmes connus
+  (cf. xref:section-auto-known-issues[xrefstyle=full]),
 * ...
 
 
@@ -835,6 +832,49 @@ facilitant l'analyse des logs en post-mortem
 
 [#section-auto-ease-investigations]
 ==== Faciliter les investigations
+
+Comme évoqué en xref:section-auto-lifecycle[],
+une des grandes difficultés des tests automatiques
+réside dans le fait de dépouiller les résultats après exécution.
+
+Dans ces conditions, pour l'analyse des tests KO,
+on parle d'analyses _post-mortem_.
+
+Pour ce faire, la meilleure source d'information reste les logs,
+et notamment les logs de test en premier lieu.
+
+
+===== Niveaux de logs
+
+TODO
+
+
+===== Colorisation des logs
+
+TODO
+
+
+===== Logguer les tracebacks
+
+TODO
+
+
+===== Richesse des routines d'assertions
+
+TODO
+
+
+===== Indentation des logs
+
+TODO
+
+
+===== Logging d'informations humainement lisibles
+
+TODO
+
+
+===== Corrélation de logs
 
 TODO
 

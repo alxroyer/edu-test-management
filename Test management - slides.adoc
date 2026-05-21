@@ -44,19 +44,20 @@ Vérification exigences => boîte noire
 
 Intégration sous-systèmes & interfaces => boîte blanche
 
-Test unitaires :
-boîte blanche
+Test unitaires => boîte blanche
 
 
-=== DO 178
+// DO 178 too specific => skip.
 
-Cas particulier, norme avionique
-
-Code = sous-système
-
-Conception détaillée = spécification code
-
-Classe / fonction = boîte noire
+// === DO 178
+//
+// Cas particulier, norme avionique
+//
+// Code = sous-système
+//
+// Conception détaillée = spécification code
+//
+// Classe / fonction = boîte noire
 
 
 == Système et sous-systèmes

@@ -919,7 +919,29 @@ TODO : Mettre un exemple d'affichage de logs avec classes de log.
 
 ===== Colorisation des logs
 
-TODO
+Une fois qu'on s'est doté d'une stratégie définissant l'usage des niveaux de logs,
+l'action qui suit consiste à coloriser les logs en fonction de ces niveaux,
+classiquement :
+
+|===
+| Niveau de log | Couleur
+
+| `ERREUR` | Rouge
+| `WARNING` | Orange
+| `INFO` | Blanc
+| `DEBUG` | Gris (par exemple)
+|===
+
+Cela peut paraître cosmétique à première vue,
+mais c'est en réalité une véritable mesure de productivité.
+En effet, grâce aux couleurs,
+l'oeil va directement à l'information essentielle.
+C'est donc un gain de temps précieux.
+
+Pour ce faire, lorsque le flux de logs est destiné à être affiché dans une console,
+on peut insérer des caractères de contrôle permettant d'ajouter la couleur.
+Ou on pourra utiliser un outil dédié à la visualisation de logs,
+avec des configurations permettant d'ajouter cette colorisation.
 
 
 ===== Logguer les tracebacks

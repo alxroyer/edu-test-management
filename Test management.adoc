@@ -773,6 +773,12 @@ voire des échecs.
 Avant de choisir un framework du marché (cf. xref:section-auto-test-frameworks[xrefstyle=full]),
 cette section liste quelques principes d'architecture à considérer au préalable.
 
+[NOTE]
+====
+Les frameworks de test n'apportent pas toujours une réponse native
+à l'ensemble des principes d'architecture énoncés dans ce chapitre.
+====
+
 
 ==== Textes humainement lisibles
 

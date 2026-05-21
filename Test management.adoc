@@ -849,7 +849,72 @@ et notamment les logs de test en premier lieu.
 
 ===== Niveaux de logs
 
-TODO
+On entend par _niveaux de logs_ la notion de sévérité
+au sens de la https://www.rfc-editor.org/info/rfc5424/#appendix-A.3[RFC 5424] (syslog),
+classiquement :
+
+* `DEBUG`,
+* `INFO`,
+* `WARNING`,
+* `ERREUR`.
+
+Il est fréquent de constater que ces niveaux de logs
+sont utilisés de manière disparate sur un même projet.
+
+C'est souvent révélateur d'un manque de stratégie en début du projet
+sur l'usage des différents niveaux de logs.
+
+[CAUTION]
+====
+En conséquence,
+les développeurs de tests auto
+risquent d'utiliser des niveaux de logs `WARNING` ou `ERREUR`
+pour mieux voir apparaître leurs nouveaux logs dans le flux
+pendant l'intégration de leurs tests.
+
+Et il est fréquent qu'ils oublient d'ajuster ces niveaux de logs
+avant de livrer le code de test...
+====
+
+Dans le domaine du test,
+on peut facilement adopter quelques règles
+permettant d'assurer une gestion rationnelle des niveaux de logs :
+
+* Réserver la classe `ERREUR` aux erreurs de test
+  (et non les erreurs du SUT,
+  car on peut légitimement tester des scénarios d'erreur).
+* Réserver la classe `WARNING` aux alertes adressées au testeur.
+* Utiliser la classe `INFO` pour les événements notables,
+  permettant notamment d'analyser les logs en post-mortem :
+
+** Démarrages et arrêts du SUT.
+** Messages envoyés au SUT et reçus du SUT.
+** Modifications d'états,
+   pour les états fonctionnels identifiés au titre des spécifications.
+** Modifications de configuration.
+** ...
+
+* Sinon utiliser la classe `DEBUG` pour tout le reste.
+* Masquage des logs de `DEBUG` par défaut.
+
+[TIP]
+.`DEBUG` et classes de logs
+====
+A ce stade,
+selon la complexité fonctionnelle du SUT testé,
+et donc du code de test en regard,
+l'activation des logs de `DEBUG` risque de générer un volume de logs conséquent.
+
+Il peut donc être utile de prévoir une notion de _classe de log_.
+Cette _classe de log_ peut être apparentée à la notion
+d'https://www.rfc-editor.org/info/rfc5424/#section-6.2.5[`APP-NAME`]
+au sens de la https://www.rfc-editor.org/info/rfc5424/[RFC 5424].
+
+Dès lors, on peut activer les logs de `DEBUG`
+pour une sélection de classes de log au besoin.
+
+TODO : Mettre un exemple d'affichage de logs avec classes de log.
+====
 
 
 ===== Colorisation des logs

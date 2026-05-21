@@ -294,37 +294,46 @@ TIP: Proximité texte / code de test
 
 WARNING: Risque encore plus fort pour les tests système
 
-TIP: Pattern _wait-for / query_
-
+[TIP]
+.Pattern _wait-for / query_
+====
 * Aux interfaces du SUT
-* Eviter les `sleep()` arbitraires de X secondes
+* Eviter les `sleep()` arbitraires de N secondes
 * Préférer une gestion d'événements => _wait-for_
 * Wait for what? => _query_ (OO Design)
+====
 
 
-== Retours d'expérience - Performances
+=== Perfs & stabilité (suite)
 
-TIP: Target 10 minutes max pour les non-régressions
-
-Effet psychologique au détriment de la qualité
-
-
-== Retours d'expérience - Stabilité
-
-TIP: Refuser les instabilités
-
+[TIP]
+.Refuser les instabilités
+====
 * Perte de temps au quotidien
 * Risque qualité
 
-Analyses post-mortem / collecter les traces
+=> Analyses post-mortem / collecter les traces
+====
 
 
-== Retours d'expérience - Problèmes connus
+=== Perfs & stabilité (suite)
 
-TIP: Statut auto // type de campagne
+[TIP]
+.Cible 10 minutes max pour les non-régressions
+====
+Effet psychologique au détriment de la qualité au-delà
+====
 
-* Non-régression : OK avec contournement
+
+=== Outiller la gestion des problèmes connus
+
+[TIP]
+====
+Statut auto // type de campagne :
+
+* Non-régression : contournement => OK
 * Vérification : KO, rapport
+====
 
 
 == Outils

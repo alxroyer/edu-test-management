@@ -736,8 +736,7 @@ car elle véhicule son lot de difficultés :
 * Nécessité de faciliter les investigations en cas de problèmes en post-mortem
   (cf. xref:section-auto-ease-investigations[xrefstyle=full]).
 * Stabilité des tests
-  (cf. xref:section-auto-stability-performance[xrefstyle=full]
-  et xref:section-auto-refuse-instabilities[xrefstyle=full]).
+  (cf. xref:section-auto-stability-performance[xrefstyle=full]).
 * Gestion des problèmes connus
   (cf. xref:section-auto-known-issues[xrefstyle=full]).
 * Risques de faux positifs
@@ -772,31 +771,21 @@ voire des échecs.
 === Principes d'architecture
 
 Avant de choisir un framework du marché (cf. xref:section-auto-test-frameworks[xrefstyle=full]),
-cette section liste quelques élements à considérer au préalable.
+cette section liste quelques principes d'architecture à considérer au préalable.
 
 
-==== Langage
-
-TODO
-
-
-==== Framework de test
-
-TODO
-
-
-===== Textes humainement lisibles
+==== Textes humainement lisibles
 
 TODO
 
 
 [#section-auto-ease-investigations]
-===== Faciliter les investigations
+==== Faciliter les investigations
 
 TODO
 
 
-===== Faciliter la programmation
+==== Faciliter la programmation
 
 TODO:
 
@@ -806,26 +795,25 @@ TODO:
 
 
 [#section-auto-stability-performance]
-===== Performance & stabilité
+==== Performance & stabilité
 
 TODO
 
-
-==== Retours d'expérience
-
-===== 10 minutes max pour les non-régressions
-
+[TIP]
+.Faire la chasse aux instabilités
+====
 TODO
+====
 
-
-[#section-auto-refuse-instabilities]
-===== Faire la chasse aux instabilités
-
+[TIP]
+.Cible 10 minutes max pour les non-régressions
+====
 TODO
+====
 
 
 [#section-auto-known-issues]
-===== Outiller la gestion des problèmes connus
+==== Outiller la gestion des problèmes connus
 
 TODO
 

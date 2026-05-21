@@ -1115,93 +1115,103 @@
               <table>
                 <tr>
                   <td class="icon"><i class="fa fa-lightbulb-o" title="Tip"></i></td>
-                  <td class="content">Pattern <em>wait-for / query</em></td>
+                  <td class="content">
+                    <div class="title">Pattern <em>wait-for / query</em></div>
+                    <div class="ulist">
+                      <ul>
+                        <li>
+                          <p>Aux interfaces du SUT</p>
+                        </li>
+                        <li>
+                          <p>Eviter les <code>sleep()</code> arbitraires de N secondes</p>
+                        </li>
+                        <li>
+                          <p>Préférer une gestion d&#8217;événements &#8658; <em>wait-for</em></p>
+                        </li>
+                        <li>
+                          <p>Wait for what? &#8658; <em>query</em> (OO Design)</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
                 </tr>
               </table>
             </div>
-            <div class="ulist">
-              <ul>
-                <li>
-                  <p>Aux interfaces du SUT</p>
-                </li>
-                <li>
-                  <p>Eviter les <code>sleep()</code> arbitraires de X secondes</p>
-                </li>
-                <li>
-                  <p>Préférer une gestion d&#8217;événements &#8658; <em>wait-for</em></p>
-                </li>
-                <li>
-                  <p>Wait for what? &#8658; <em>query</em> (OO Design)</p>
-                </li>
-              </ul>
+          </div>
+        </section>
+        <section id="_perfs_stabilité_suite">
+          <h2>Perfs &amp; stabilité (suite)</h2>
+          <div class="slide-content">
+            <div class="admonitionblock tip">
+              <table>
+                <tr>
+                  <td class="icon"><i class="fa fa-lightbulb-o" title="Tip"></i></td>
+                  <td class="content">
+                    <div class="title">Refuser les instabilités</div>
+                    <div class="ulist">
+                      <ul>
+                        <li>
+                          <p>Perte de temps au quotidien</p>
+                        </li>
+                        <li>
+                          <p>Risque qualité</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="paragraph">
+                      <p>&#8658; Analyses post-mortem / collecter les traces</p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
             </div>
           </div>
         </section>
-      </section>
-      <section id="_retours_dexpérience_performances">
-        <h2>Retours d&#8217;expérience - Performances</h2>
-        <div class="slide-content">
-          <div class="admonitionblock tip">
-            <table>
-              <tr>
-                <td class="icon"><i class="fa fa-lightbulb-o" title="Tip"></i></td>
-                <td class="content">Target 10 minutes max pour les non-régressions</td>
-              </tr>
-            </table>
+        <section id="_perfs_stabilité_suite_2">
+          <h2>Perfs &amp; stabilité (suite)</h2>
+          <div class="slide-content">
+            <div class="admonitionblock tip">
+              <table>
+                <tr>
+                  <td class="icon"><i class="fa fa-lightbulb-o" title="Tip"></i></td>
+                  <td class="content">
+                    <div class="title">Cible 10 minutes max pour les non-régressions</div>
+                    <div class="paragraph">
+                      <p>Effet psychologique au détriment de la qualité au-delà</p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
-          <div class="paragraph">
-            <p>Effet psychologique au détriment de la qualité</p>
+        </section>
+        <section id="_outiller_la_gestion_des_problèmes_connus">
+          <h2>Outiller la gestion des problèmes connus</h2>
+          <div class="slide-content">
+            <div class="admonitionblock tip">
+              <table>
+                <tr>
+                  <td class="icon"><i class="fa fa-lightbulb-o" title="Tip"></i></td>
+                  <td class="content">
+                    <div class="paragraph">
+                      <p>Statut auto // type de campagne :</p>
+                    </div>
+                    <div class="ulist">
+                      <ul>
+                        <li>
+                          <p>Non-régression : contournement &#8658; OK</p>
+                        </li>
+                        <li>
+                          <p>Vérification : KO, rapport</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-      </section>
-      <section id="_retours_dexpérience_stabilité">
-        <h2>Retours d&#8217;expérience - Stabilité</h2>
-        <div class="slide-content">
-          <div class="admonitionblock tip">
-            <table>
-              <tr>
-                <td class="icon"><i class="fa fa-lightbulb-o" title="Tip"></i></td>
-                <td class="content">Refuser les instabilités</td>
-              </tr>
-            </table>
-          </div>
-          <div class="ulist">
-            <ul>
-              <li>
-                <p>Perte de temps au quotidien</p>
-              </li>
-              <li>
-                <p>Risque qualité</p>
-              </li>
-            </ul>
-          </div>
-          <div class="paragraph">
-            <p>Analyses post-mortem / collecter les traces</p>
-          </div>
-        </div>
-      </section>
-      <section id="_retours_dexpérience_problèmes_connus">
-        <h2>Retours d&#8217;expérience - Problèmes connus</h2>
-        <div class="slide-content">
-          <div class="admonitionblock tip">
-            <table>
-              <tr>
-                <td class="icon"><i class="fa fa-lightbulb-o" title="Tip"></i></td>
-                <td class="content">Statut auto // type de campagne</td>
-              </tr>
-            </table>
-          </div>
-          <div class="ulist">
-            <ul>
-              <li>
-                <p>Non-régression : OK avec contournement</p>
-              </li>
-              <li>
-                <p>Vérification : KO, rapport</p>
-              </li>
-            </ul>
-          </div>
-        </div>
+        </section>
       </section>
       <section>
         <section id="_outils">

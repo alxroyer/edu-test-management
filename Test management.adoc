@@ -39,7 +39,7 @@ Source : https://github.com/alxroyer/edu-test-management
 
 Cours mis à disposition sous licence Creative Common.
 
-Voir xref:section-license[xrefstyle=full].
+Voir xref:appendix-license[xrefstyle=full].
 
 
 // Footnote declarations (see https://docs.asciidoctor.org/asciidoc/latest/macros/footnote/#externalizing-a-footnote).
@@ -135,7 +135,7 @@ Lorsqu'on mène une activité de test,
 il est important de maîtriser le périmètre de ce que l'on teste.
 
 On parle de SUT pour _System_ ou _Software Under Test_
-(cf. xref:section-glossary[xrefstyle=full]).
+(cf. xref:appendix-glossary[xrefstyle=full]).
 
 
 ==== Tests boîte noire / boîte blanche
@@ -974,11 +974,9 @@ TODO
 TODO
 
 
-[#section-appendix]
-== Annexes
-
-[#section-glossary]
-=== Glossaire
+[#appendix-glossary]
+[appendix]
+== Glossaire
 
 [cols="1,4"]
 |===
@@ -991,8 +989,9 @@ Système ou logiciel à tester.
 |===
 
 
-[#section-license]
-=== Licence
+[#appendix-license]
+[appendix]
+== Licence
 
 Cours mis à disposition sous licence CC BY-NC-SA 4.0.
 
@@ -1039,8 +1038,9 @@ Voir le link:LICENSE.txt[contrat de licence].
 endif::[]
 
 
-[#section-resources]
-=== Ressources
+[#appendix-resources]
+[appendix]
+== Ressources
 
 Images :
 

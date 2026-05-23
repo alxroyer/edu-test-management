@@ -915,7 +915,21 @@ au sens de la https://www.rfc-editor.org/info/rfc5424/[RFC 5424].
 Dès lors, on peut activer les logs de `DEBUG`
 pour une sélection de classes de log au besoin.
 
-TODO : Mettre un exemple d'affichage de logs avec classes de log.
+.Classes de logs
+=====
+----
+STEP#2: Logging with the scenario instance (demo/loggingdemo.py:33:LoggingScenario.step020)
+------------------------------------------------
+    ACTION: Log messages of different log levels with the scenario itself.
+              ERROR    [demo/loggingdemo.py] This is an error!!!
+              WARNING  [demo/loggingdemo.py] This is a warning!
+              INFO     [demo/loggingdemo.py] This is information.
+----
+
+L'exemple ci-dessus présente une classe de test `demo/loggingdemo.py`
+pour laquelle les niveaux de log `ERROR`, `WARNING`, `INFO` sont affichés par défaut,
+l'affichage des logs de `DEBUG` est désactivé.
+=====
 ====
 
 

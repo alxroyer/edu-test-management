@@ -294,6 +294,18 @@ WARNING: Analyses en _post-mortem_
 --
 
 
+=== Faciliter les investigations (suite)
+
+----
+STEP#2: Logging with the scenario instance (demo/loggingdemo.py:33:LoggingScenario.step020)
+------------------------------------------------
+    ACTION: Log messages of different log levels with the scenario itself.
+              ERROR    [demo/loggingdemo.py] This is an error!!!
+              WARNING  [demo/loggingdemo.py] This is a warning!
+              INFO     [demo/loggingdemo.py] This is information.
+----
+
+
 === Faciliter la programmation
 
 * OO-Design

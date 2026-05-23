@@ -790,10 +790,12 @@ Les frameworks de test n'apportent pas toujours une réponse native
 ====
 
 
-==== Textes humainement lisibles
+==== Gestion du rédactionnel
 
 Cette question s'impose lorsqu'on doit produire
-des plans de test et rapports de tests en bonne et due forme.
+des plans de test et rapports de tests en bonne et due forme,
+et qu'on s'inscrit dans une stratégie de tests automatiques à la fois.
+
 Le fait d'avoir à produire des documents et du code de test cohérents
 amène la question de savoir comment maintenir cette cohérence dans le temps.
 

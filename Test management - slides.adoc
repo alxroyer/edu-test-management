@@ -252,14 +252,14 @@ TIP: Besoin d'un architecte
 
 == Principes d'architecture
 
-* Textes humainement lisibles
+* Gestion du rédactionnel
 * Faciliter les investigations
 * Faciliter la programmation
 * Perfs & stabilité
 * Problèmes connus
 
 
-=== Textes humainement lisibles
+=== Gestion du rédactionnel
 
 Production documentaire plan de test
 

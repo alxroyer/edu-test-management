@@ -948,7 +948,28 @@ avec des configurations permettant d'ajouter cette colorisation.
 
 ===== Logguer les tracebacks
 
-TODO
+Autre point à assurer pour faciliter les investigations à partir des logs :
+l'affichage des tracebacks en cas d'erreur de test.
+
+TODO : Mettre un exemple d'affichage de traceback.
+
+L'affichage d'une simple trace d'erreur ne suffit généralement pas.
+
+En effet, il arrive que cette trace présente des informations partielles,
+et plus fréquent encore, qu'elle soit non représentative du problème réel,
+mais d'un effet de bord seulement.
+
+En conséquence, cela impose que la personne qui réalise l'analyse
+ait une connaissance fine du fonctionnel du SUT testé,
+et de la manière dont les tests automatiques ont été développés.
+
+Avec l'affichage d'une traceback,
+même un nouvel entrant dans le projet
+a une chance de comprendre le cheminement du test
+pour qualifier le problème,
+et le corriger s'il s'agit du problème de test,
+ou d'enregistrer un rapport d'anomalie s'il s'agit d'un problème du SUT
+(cf. xref:section-issue-management[xref-style=full]).
 
 
 ===== Richesse des routines d'assertions

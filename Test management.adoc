@@ -871,7 +871,11 @@ classiquement :
 * `WARNING`,
 * `ERREUR`.
 
-Il est fréquent de constater que ces niveaux de logs
+Avoir une bonne utilisation des niveaux de logs
+permet de faciliter la lecture des logs,
+car l'importance de l'information est ainsi directement indiquée.
+
+Il est pourtant fréquent de constater que ces niveaux de logs
 sont utilisés de manière disparate sur un même projet.
 
 C'est souvent révélateur d'un manque de stratégie en début du projet
@@ -947,7 +951,7 @@ l'affichage des logs de `DEBUG` est désactivé.
 ====== Colorisation des logs
 
 Une fois qu'on s'est doté d'une stratégie définissant l'usage des niveaux de logs,
-l'action qui suit consiste à coloriser les logs en fonction de ces niveaux,
+la suite logique consiste à coloriser les logs en fonction de ces niveaux,
 classiquement :
 
 |===

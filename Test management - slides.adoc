@@ -294,6 +294,8 @@ WARNING: Analyses en _post-mortem_
 --
 * Tracebacks
 * Assertions
+
+TIP: Assertions => preuves
 --
 
 

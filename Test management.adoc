@@ -790,6 +790,7 @@ Les frameworks de test n'apportent pas toujours une réponse native
 ====
 
 
+[#test-auto-texts]
 ==== Gestion du rédactionnel
 
 Cette question s'impose lorsqu'on doit produire
@@ -1020,7 +1021,89 @@ TODO : Mettre un exemple d'affichage de traceback.
 
 ====== Richesse des routines d'assertions
 
-TODO
+La disponibilité d'une richesse de routines d'assertions
+aide également à l'affichage d'informations utiles en cas d'erreur.
+
+.Assertions `assert` v/s `unittest`
+====
+Le code de test Python suivant affiche des informations d'erreur limitées :
+
+[source, python]
+----
+i=6
+l=[0, 1, 2, 3, 4, 5]
+assert i in l
+----
+
+----
+Traceback (most recent call last):
+  File ".../assertion1.py", line 3, in <module>
+    assert i in l
+           ^^^^^^
+AssertionError
+----
+
+[NOTE]
+=====
+On pourrait ajouter un champ texte optionnel à l'instruction `assert`,
+et apporter ainsi un message d'erreur plus explicite.
+
+Mais ce message d'erreur reste à écrire par le développeur de test auto.
+
+Dans les faits, ce message d'erreur est assez redondant
+avec la condition de l'assertion écrite dans la première partie de l'instruction `assert`,
+c'est donc fastidieux à écrire.
+
+De plus, comme cela requiert du code supplémentaire,
+c'est donc source d'erreur.
+=====
+
+Sur la base du framework link:https://docs.python.org/3/library/unittest.html[unittest],
+le code suivant affiche des informations d'erreur plus détaillées :
+
+[source, python]
+----
+import unittest
+
+i=6
+l=[0, 1, 2, 3, 4, 5]
+unittest.TestCase().assertIn(i, l)
+----
+
+----
+Traceback (most recent call last):
+  File ".../assertion2.py", line 5, in <module>
+    unittest.TestCase().assertIn(i, l)
+  File ".../unittest/case.py", line 1152, in assertIn
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/.../unittest/case.py", line 715, in fail
+    raise self.failureException(msg)
+AssertionError: 6 not found in [0, 1, 2, 3, 4, 5]
+----
+
+Plutôt que simplement afficher "i in l" dans la traceback,
+on dispose cette fois-ci d'un texte explicitant les valeurs en erreur.
+====
+
+Des routines d'assertions riches permettent d'assurer
+l'affichage d'informations plus précises
+lorsque l'assertion échoue.
+
+[TIP]
+.Routines d'assertions et preuves de test
+====
+Lorsque l'assertion est vérifiée avec succès,
+on peut envisager la possibilité de permettre la collecte de preuves de test
+au moyen des API d'assertions.
+
+C'est un moyen pratique d'écrire
+une test de vérification,
+et la collecte de preuves de test
+en un seul appel.
+
+Cf. xref:test-auto-texts[xrefstyle=full]
+pour une explication sur l'intérêt d'enregistrer des preuves de test.
+====
 
 
 ==== Faciliter la programmation

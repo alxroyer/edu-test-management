@@ -977,7 +977,46 @@ avec des configurations permettant d'ajouter cette colorisation.
 
 ====== Indentation des logs
 
-TODO
+La capacité à pouvoir indenter les logs
+constitue un fort levier d'accélération de la lecture des logs.
+
+[#example-log-indentation]
+.Indentation des logs
+====
+----
+STEP#1: Logging with the main logger (demo/loggingdemo.py:24:LoggingScenario.step010)
+------------------------------------------------
+    ACTION: Log messages of different log levels with the main logger.
+              ERROR    This is an error!!!
+              WARNING  This is a warning!
+              INFO     This is information.
+              DEBUG    This is debug.
+----
+====
+
+L'indentation des logs permet de structurer les informations de manière logique,
+permettant de mettre en évidence l'attachement des logs à un contexte donné :
+
+Etapes de test::
+Faire apparaître les actions et résultats attendus
+sous le texte de l'étape de test correspondante
+(cf. xref:example-log-indentation[xref-style=full]).
+
+Actions et résultats attendus::
+Faire apparaître les logs d'exécution du code de test
+sous le texte d'action ou de résultat attendu correspondant
+(cf. xref:example-log-indentation[xref-style=full]).
+
+Fonction produit::
+Capacité à utiliser l'indentation pour rattacher des logs
+à une fonctionnalité du SUT.
+
+Récursivité::
+Utile pour le debugging de fonctions récursives.
+Ajouter de l'indentation en entrée de fonction récursive,
+et retirer cette indentation à la sortie.
+L'identation des logs est alors directement représentative
+de l'arborescence des appels de la fonction récursive.
 
 
 ====== Logging d'informations humainement lisibles

@@ -746,7 +746,7 @@ Ce deuxième point est une différence impactante,
 car elle véhicule son lot de difficultés :
 
 * besoin de faciliter les investigations en post-mortem
-  (cf. xref:section-auto-ease-investigations[xrefstyle=full]),
+  (cf. xref:section-auto-facilitate-investigations[xrefstyle=full]),
 * incertitudes en cas d'instabilité des tests
   (cf. xref:section-auto-stability-performance[xrefstyle=full]),
 * problématique de gestion des problèmes connus
@@ -818,7 +818,7 @@ D'expérience, même si ce n'est pas un exercice imposé,
 le fait de disposer du texte intentionnel en toutes lettres dans le code de test
 aide à la relecture du code,
 ainsi que dans les logs de test pour les analyses en post-mortem
-(cf. xref:section-auto-ease-investigations[xrefstyle=full]).
+(cf. xref:section-auto-facilitate-investigations[xrefstyle=full]).
 
 [TIP]
 .Outiller l'enregistrement des preuves de test
@@ -831,11 +831,11 @@ permettent d'attester a posteriori que le test auto a bien vérifié ce qu'il fa
 
 Cela constitue également des informations facilement intelligibles,
 facilitant l'analyse des logs en post-mortem
-(cf. xref:section-auto-ease-investigations[xrefstyle=full] encore une fois).
+(cf. xref:section-auto-facilitate-investigations[xrefstyle=full] encore une fois).
 ====
 
 
-[#section-auto-ease-investigations]
+[#section-auto-facilitate-investigations]
 ==== Faciliter les investigations
 
 Comme évoqué en xref:section-auto-lifecycle[],
@@ -848,8 +848,18 @@ on parle d'analyses _post-mortem_.
 Pour ce faire, la meilleure source d'information reste les logs,
 et notamment les logs de test en premier lieu.
 
+Cela passe par différents aspects :
 
-===== Niveaux de logs
+* travailler la lisibilité des logs,
+* donner le maximum de contexte en cas d'erreur de test.
+
+
+===== Travailler la lisibilité des logs
+
+Travailler la lisibilité des logs permet d'en accélérer les analyses.
+
+
+====== Niveaux de logs
 
 On entend par _niveaux de logs_ la notion de sévérité
 au sens de la https://www.rfc-editor.org/info/rfc5424/#appendix-A.3[RFC 5424] (syslog),
@@ -933,7 +943,7 @@ l'affichage des logs de `DEBUG` est désactivé.
 ====
 
 
-===== Colorisation des logs
+====== Colorisation des logs
 
 Une fois qu'on s'est doté d'une stratégie définissant l'usage des niveaux de logs,
 l'action qui suit consiste à coloriser les logs en fonction de ces niveaux,
@@ -960,12 +970,32 @@ Ou on pourra utiliser un outil dédié à la visualisation de logs,
 avec des configurations permettant d'ajouter cette colorisation.
 
 
-===== Logguer les tracebacks
+====== Indentation des logs
 
-Autre point à assurer pour faciliter les investigations à partir des logs :
-l'affichage des tracebacks en cas d'erreur de test.
+TODO
 
-TODO : Mettre un exemple d'affichage de traceback.
+
+====== Logging d'informations humainement lisibles
+
+TODO
+
+
+====== Corrélation de logs
+
+TODO
+
+
+===== Donner le maximum de contexte en cas d'erreur
+
+En cas d'erreur de test,
+assurer les mécanismes qui permettent de tracer un maximum d'information
+permettant de décrire le contexte dans lequel l'erreur est survenue.
+
+Plus on dispose d'information,
+pour on a de chances de pouvoir expliquer la cause de l'erreur en post-mortem.
+
+
+====== Logguer les tracebacks
 
 L'affichage d'une simple trace d'erreur ne suffit généralement pas.
 
@@ -985,23 +1015,10 @@ et le corriger s'il s'agit du problème de test,
 ou d'enregistrer un rapport d'anomalie s'il s'agit d'un problème du SUT
 (cf. xref:section-issue-management[xref-style=full]).
 
-
-===== Richesse des routines d'assertions
-
-TODO
+TODO : Mettre un exemple d'affichage de traceback.
 
 
-===== Indentation des logs
-
-TODO
-
-
-===== Logging d'informations humainement lisibles
-
-TODO
-
-
-===== Corrélation de logs
+====== Richesse des routines d'assertions
 
 TODO
 

@@ -268,6 +268,7 @@ Actions / résultats attendus / preuves de test
 TIP: Proximité textes / code de test
 
 
+[#slide-facilitate-investigations]
 [.columns]
 === Faciliter les investigations
 
@@ -279,18 +280,20 @@ WARNING: Analyses en _post-mortem_
 --
 
 [.column]
+.Lisibilité des logs
 --
 * Niveaux de logs
 * Couleurs
-* Tracebacks
-* Assertions
+* Indentation
+* Humainement lisible
+* Corrélation de logs
 --
 
 [.column]
+.Contexte d'erreur
 --
-* Indentation
-* Humainement lisible (textes & libs)
-* Correlation de logs
+* Tracebacks
+* Assertions
 --
 
 

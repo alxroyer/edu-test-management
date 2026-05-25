@@ -1326,6 +1326,38 @@ TODO
 TODO
 
 
+==== Langages
+
+TODO
+
+
+==== Librairies et outils réseau
+
+TODO
+
+
+==== Frameworks
+
+===== Frameworks de tests unitaires logiciels
+
+TODO: Unité testées = classe ou fonction, même langage que SUT, boîte blanche
+
+
+===== Frameworks de tests d'intégration
+
+TODO
+
+
+===== Frameworks de tests fonctionnels
+
+TODO
+
+
+===== Frameworks de tests de performances
+
+TODO
+
+
 === Couverture de code
 
 TODO

@@ -1339,7 +1339,15 @@ alors on peut envisager la factorisation du rédactionnel également.
 
 ===== OO-Design
 
-TODO
+Compte tenu du volume de code de test à produire,
+l'adoption d'une architecture en bonne et due forme,
+reposant sur un *design orienté objet*,
+est un gage de maintenabilité.
+
+Comme évoqué en xref:section-auto-skills[xrefstyle=full],
+cela milite encore une fois pour le staffing
+d'un architecte logiciel pour les besoins du test
+dès le début du projet.
 
 
 ===== Singleton

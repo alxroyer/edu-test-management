@@ -329,13 +329,11 @@ TIP: Diagrammes de séquence automatiques
 
 === Faciliter la programmation
 
+* Vérification de typage
+* Reuse
 * OO-Design
 * Singleton
-* Frame / packets
-
-** Scapy
-** Interface management
-** Versioning
+* Interfaces
 
 
 === Perfs & stabilité

@@ -1266,11 +1266,34 @@ pour une explication sur l'intérêt d'enregistrer des preuves de test.
 
 ==== Faciliter la programmation
 
-TODO:
+Si l'analyse des résultats de tests prend du temps,
+il ne faut pas négliger non plus le temps passé
+à développer les tests automatiques.
 
-* Reuse code
-* OO-Design
-* Singleton
+
+===== Vérification de typage
+
+TODO
+
+
+===== Réutilisation de code de test
+
+TODO
+
+
+===== OO-Design
+
+TODO
+
+
+===== Singleton
+
+TODO
+
+
+===== Gestion des interfaces
+
+TODO
 
 
 [#section-auto-stability-performance]

@@ -1100,7 +1100,48 @@ INFO [eth0] Message received: <Ether  dst=ff:ff:ff:ff:ff:ff src=12:34:56:ab:cd:e
 
 ====== Corrélation de logs
 
-TODO
+Une difficulté lors de l'analyse des logs réside souvent
+dans le fait de rechercher les informations en transverse
+entre différentes sources de logs :
+
+* log de test,
+* log(s) du SUT,
+* logs d'outils,
+* ...
+
+[NOTE]
+====
+Le SUT peut potentiellement logguer différents fichiers de logs,
+notamment s'il s'agit d'un système complexe, composé de plusieurs sous-systèmes.
+====
+
+Une des premières solutions consiste à injecter tous ces logs
+dans un *puits de log unique*,
+tel un ELK (_Elasticsearch_ + _Logstash_ + _Kibana_).
+
+Merger différents logs dans un même puits de log
+peut toutefois présenter quelques difficultés :
+
+* Cela crée un volume de logs énorme, dans laquelle il faut savoir naviguer.
++
+Pour ce faire, Kibana propose des fonctions de recherche,
+qui nécessitent toutefois l'écriture de filtres qui peuvent s'avérer complexes.
+
+* Quelques problèmes d'ordre entre les logs peuvent arriver
+en raison de l'imprécision de la date/heure entre les différents éléments
+desquels les logs sont issus.
+
+[TIP]
+.Diagrammes de séquence automatiques à partir des logs
+====
+Pour rendre les choses plus visuelles et plus immédiates,
+on pourra chercher à représentaer graphiquement les échanges dans un système complexe
+à l'aide d'un diagramme de séquence.
+
+Il semble qu'il n'existe pas de solution évidente permettant cela.
+
+Pour autant, c'est une piste d'accélération sérieuse pour l'analyse des logs.
+====
 
 
 ===== Donner le maximum de contexte en cas d'erreur

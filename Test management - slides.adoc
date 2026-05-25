@@ -316,6 +316,17 @@ STEP#2: Logging with the scenario instance (demo/loggingdemo.py:33:LoggingScenar
 --
 
 
+=== Faciliter les investigations (suite)
+
+WARNING: N logs => corrélation ?
+
+Puits de logs (ELK)
+
+WARNING: Volume, erreurs timestamps
+
+TIP: Diagrammes de séquence automatiques
+
+
 === Faciliter la programmation
 
 * OO-Design

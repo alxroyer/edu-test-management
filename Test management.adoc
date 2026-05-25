@@ -1312,7 +1312,29 @@ Pour Javascript, Typescript est la solution à privilégier.
 
 ===== Réutilisation de code de test
 
-TODO
+Avec l'expérience,
+on se rend compte que certaines étapes de test seront très ressemblantes
+entre les différents tests.
+
+[CAUTION]
+====
+Si on ne met pas en place de mesures dédiées,
+les développeurs de tests auto risquent de faire des copies / coller entre les tests,
+ce qui crée du code redondant,
+et donc des problématiques de maintenance.
+====
+
+Aussi le code de test doit faire l'objet de *factorisation*.
+
+Cette factorisation peut se faire au niveau du code de test,
+avec la constitution de librairies dédiées.
+
+[TIP]
+====
+Si le code de test embarque la partie rédactionnelle
+(cf. xref:test-auto-texts[xrefstyle=full]),
+alors on peut envisager la factorisation du rédactionnel également.
+====
 
 
 ===== OO-Design

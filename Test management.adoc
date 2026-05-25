@@ -1273,7 +1273,41 @@ il ne faut pas négliger non plus le temps passé
 
 ===== Vérification de typage
 
-TODO
+Comme évoqué en xref:section-auto-skills[xrefstyle=full],
+le volume de code de test peut s'avérer conséquent.
+De fait, cela pose la question de sa *maintenabilité*.
+
+D'autant plus que l'un des défauts des langages de scripting généralement utilisés
+pour la constitution des tests auto
+(Javascript, Python, cf. xref:section-auto-languages[xrefstyle=full])
+est leur absence de vérification de typage par défaut :
+
+* La base de code grossissant,
+  il devient impossible humainement d'anticiper tous les impacts d'une modification
+  dans l'ensemble du code.
+* Ainsi, sans vérification de typage,
+  les *refactorings*, nécessaires, sont extrêmement coûteux,
+  car ils nécessitent l'exécution de plusieurs campagnes de test KO,
+  avec des analyses post-mortem à chaque fois.
+
+C'est pourquoi, il faut prendre soin de mettre en place la vérification de typage,
+et ce même si le langage retenu n'est pas typé par défaut.
+
+[TIP]
+====
+La vérification de typage étant optionnelles dans les langages de scripting,
+elle peut se mettre en oeuvre dans un second temps.
+
+En pratique, il est préférable de la mettre en place dès le début du projet,
+sinon le rattrapage a posteriori, pour autant que nécessaire, s'avère coûteux.
+====
+
+Pour ce faire en Python,
+l'outil historique est link:https://www.mypy-lang.org/[`mypy`].
+Mais il existe aujourd'hui d'autres link:https://www.danilchenko.dev/posts/ty-vs-mypy-vs-pyright/[alternatives]
+qui méritent d'être observées.
+
+Pour Javascript, Typescript est la solution à privilégier.
 
 
 ===== Réutilisation de code de test
@@ -1326,6 +1360,7 @@ TODO
 TODO
 
 
+[#section-auto-languages]
 ==== Langages
 
 TODO

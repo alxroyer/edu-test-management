@@ -117,6 +117,24 @@ Pour l'export PDF des slides :
 * File > Print > "Save to PDF"
 
 
+=== Conventions
+
+==== Lien vers un TP
+
+[source, asciidoc]
+----
+[sidebar]
+--
+👷🛠️ TP : link:TP%20-%20Nom%20fichier.ext[Titre du TP]
+--
+----
+
+[sidebar]
+--
+👷🛠️ TP : link:TP%20-%20Nom%20fichier.ext[Titre du TP]
+--
+
+
 === Tips
 
 [TIP]

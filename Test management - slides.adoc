@@ -310,6 +310,11 @@ STEP#2: Logging with the scenario instance (demo/loggingdemo.py:33:LoggingScenar
               INFO     [demo/loggingdemo.py] This is information.
 ----
 
+[sidebar]
+--
+👷🛠️ TP : link:TP%20-%20Scapy.adoc[Sérialisation / désérialisation de protocoles propriétaires avec Scapy]
+--
+
 
 === Faciliter la programmation
 

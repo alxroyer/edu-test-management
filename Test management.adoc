@@ -975,6 +975,7 @@ Ou on pourra utiliser un outil dédié à la visualisation de logs,
 avec des configurations permettant d'ajouter cette colorisation.
 
 
+[#section-log-indentation]
 ====== Indentation des logs
 
 La capacité à pouvoir indenter les logs
@@ -1021,7 +1022,80 @@ de l'arborescence des appels de la fonction récursive.
 
 ====== Logging d'informations humainement lisibles
 
-TODO
+Faire en sorte que les informations soient humainement lisibles
+simplifie grandement la lecture des logs de test.
+
+Comme suggéré en xref:test-auto-texts[xrefstyle=full],
+le fait de disposer de *textes d'actions*, de *résultats attendus*,
+voire de *preuves de test*
+dans le code de test automatique
+permet de logguer ces informations.
+
+Cela contribue à apporter dans les logs
+des éléments directement compréhensibles par l'humain
+sans besoin d'analyses supplémentaires.
+
+[TIP]
+.Rappel : indentation liée au rédactionnel
+====
+Cela permet même d'en tirer partie avec l'ajout d'indentation associée
+(cf. xref:section-log-indentation[xrefstyle=full]).
+====
+
+Mais il reste utile de prolonger l'effort sur les valeurs de test
+ayant un *sens fonctionnel* :
+
+* valeurs d'états : valeur entière agissant comme un énuméré en C,
+* données sérialisées : messages échangés sur les interfaces, données de configuration,
+* ...
+
+Afficher l'information en utilisant le vocabulaire fonctionnel
+s'avère beaucoup plus efficace que sous la forme de donnée brute.
+
+.Affichage de paquets déformatés avec Scapy
+====
+Sur réception d'une trame Ethernet reçue sur une interface réseau `eth0`,
+on pourrait logguer une trace comme ceci :
+
+[source, python]
+----
+# Message reception simulation.
+buf = bytes.fromhex("ffffffffffff123456abcdef08004500002100010000401176c601020304ffffffff6d242694000d444448656c6c6f")
+
+# Trace display.
+logging.info(f"[eth0] Message received: {buf.hex()}")
+----
+
+----
+INFO [eth0] Message received: ffffffffffff123456abcdef08004500002100010000401176c601020304ffffffff6d242694000d444448656c6c6f
+----
+
+En déformattant le message entrant avec Scapy,
+on peut facilement proposer un affichage plus compréhensible :
+
+[source, python]
+----
+from scapy.layers.l2 import Ether
+
+# Message reception simulation.
+buf = bytes.fromhex("ffffffffffff123456abcdef08004500002100010000401176c601020304ffffffff6d242694000d444448656c6c6f")
+
+# Trace display:
+# 1. Parse `buf` with Scapy.
+pkt = Ether(buf)
+# 2. Display `repr(pkt)` (memo: the `!r` format specification stands for that).
+logging.info(f"[eth0] Message received: {pkt!r}")
+----
+
+----
+INFO [eth0] Message received: <Ether  dst=ff:ff:ff:ff:ff:ff src=12:34:56:ab:cd:ef type=IPv4 |<IP  frag=0 proto=udp src=1.2.3.4 dst=255.255.255.255 |<UDP  sport=27940 dport=9876 |<Raw  load=b'Hello' |>>>>
+----
+====
+
+[sidebar]
+--
+👷🛠️ TP : link:TP%20-%20Scapy.adoc[Sérialisation / désérialisation de protocoles propriétaires avec Scapy]
+--
 
 
 ====== Corrélation de logs

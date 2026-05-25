@@ -1352,7 +1352,20 @@ dès le début du projet.
 
 ===== Singleton
 
-TODO
+Parmi les patterns de design utiles dans les architectures de test,
+penser au *singleton* pour représenter le SUT dans le code.
+
+En déclarant chacune des interfaces du SUT comme une donnée membre du singleton,
+cela constitue en effet une présentation du code satisfaisante.
+
+.Représentation du SUT par un singleton
+====
+[source, python]
+----
+# Expected result: The SUT sends an IP packet on eth0.
+pkt = SUT.eth0.wait_for_packet(IP)
+----
+====
 
 
 ===== Gestion des interfaces

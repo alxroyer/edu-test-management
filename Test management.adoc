@@ -2053,7 +2053,40 @@ en mode boîte blanche
 [#section-frameworks-api-testing]
 ==== Tests d'API
 
+Le tableau ci-après liste des frameworks
+permettant de réaliser des tests d'API :
+
+[cols="1,2,5"]
+.Frameworks de tests d'API
+|===
+| Outils | URL | Description
+
+| Spring Boot Test | https://docs.spring.io/spring-boot/reference/testing/spring-boot-applications.html
+a|
 TODO
+
+| RestAssured | https://rest-assured.io/
+a|
+TODO
+
+| SoapUI | https://www.soapui.org/
+a|
+TODO
+
+| Postman | https://www.postman.com/
+a|
+TODO
+|===
+
+[sidebar]
+--
+👷🛠️ TP : link:TP%20-%20Postman%20Newman%20Jest.adoc[Test d'API avec Postman, Newman et Jest]
+--
+
+[sidebar]
+--
+👷🛠️ TP : Test d'API avec SoapUI (TODO)
+--
 
 
 ==== Tests fonctionnels

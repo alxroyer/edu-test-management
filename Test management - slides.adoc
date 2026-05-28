@@ -231,7 +231,7 @@ Prérequis agilité itérative (time-boxé)
 
 Branche d'intégration stable / livrable
 
-Intégration Continue / non-régressions
+Intégration Continue / non-régression
 
 Tests logiciels & tests système
 
@@ -362,7 +362,7 @@ Gestion des interfaces :
 * Gestion événementielle
 * Conditions initiales
 * Refuser les instabilités
-* Temps de non-régressions
+* Temps de non-régression
 
 
 === 2.4.4.1. Gestion événementielle
@@ -453,12 +453,20 @@ WARNING: Complexe
 ====
 
 
-=== 2.4.4.4. Temps de non-régressions
+=== 2.4.4.4. Temps de non-régression
+
+[CAUTION]
+.Temps de non-régression important
+====
+Phénomène dissuasif
+
+Risques non-qualité / perte productivité
+====
 
 [TIP]
 .Cible 10 minutes max pour les non-régressions
 ====
-Effet psychologique au détriment de la qualité au-delà
+Temps d'une pause café
 ====
 
 

@@ -1237,7 +1237,7 @@ AssertionError
 On pourrait ajouter un champ texte optionnel à l'instruction `assert`,
 et apporter ainsi un message d'erreur plus explicite.
 
-Mais ce message d'erreur reste à écrire par le développeur de test auto.
+Mais ce message d'erreur reste à écrire par le testeur.
 
 Dans les faits, ce message d'erreur est assez redondant
 avec la condition de l'assertion écrite dans la première partie de l'instruction `assert`,
@@ -1466,6 +1466,7 @@ Les questions de performance et de stabilité des tests
 sont des problématiques essentielles en matière de test automatique.
 
 
+[#section-event-management]
 ===== Gestion événementielle
 
 Une des raisons classiques expliquant l'instabilité des tests auto
@@ -1484,7 +1485,7 @@ il est fréquent de trouver dans le code de test des appels `sleep()`
 avec un temps d'attente empirique.
 
 Pour s'assurer d'une certaine stabilité,
-le développeur de test aura tendance
+le testeur aura tendance
 à mettre une marge sur ce temps d'attente,
 ce qui aura pour premier effet négatif
 de ralentir considérablement l'exécution du test.
@@ -1596,6 +1597,7 @@ mais également *souple et évolutif*.
 ====
 
 
+[#section-initial-conditions]
 ===== Gestion des conditions initiales
 
 On entend par conditions initiales l'état de configuration
@@ -1614,7 +1616,7 @@ Ces problèmes de performances pénalisent :
 
 * les exécutions de campagnes,
   et notamment les campagnes de non-régression
-  (cf. xref:section-nonreg-times[xrefstyle=full]).
+  (cf. xref:section-non-regression-time[xrefstyle=full]).
 * mais également toutes les exécutions de tests au quotidien,
   ce qui grève fortement la productivité de rédaction des tests auto.
 
@@ -1645,7 +1647,7 @@ On pourra les combiner en utilisant :
   pour les campagnes de vérification officielles,
   dans le but d'assurer la fiabilité des résultats,
 * la stratégie de persistance des configurations
-  pour les campagnes de non-régressions
+  pour les campagnes de non-régression
   et les exécutions de tests au quotidien,
   dans le but de privilégier la performance.
 ====
@@ -1708,16 +1710,75 @@ pour :
 ====
 
 
-[#section-nonreg-times]
-===== Temps des non-régressions
+[#section-non-regression-time]
+===== Temps de non-régression
 
-TODO
+Lorsqu'on a des campagnes de non-régression
+qui durent longtemps,
+cela amène un *phénomène dissuasif* sur le fait de les lancer.
+
+On pourrait considérer que,
+les campagnes de non-régression s'exécutant en parallèle,
+sur un serveur Jenkins par exemple,
+cela n'empêche pas le testeur
+de travailler sur un autre sujet pendant ce temps.
+
+Mais cela ne fonctionne pas vraiment,
+car cela impose au testeur de switcher régulièrement de sujet,
+ce qui requiert une énergie supplémentaire :
+
+* gestion de configuration : plusieurs branches ou clones en parallèle,
+* effort mental,
+* ...
+
+et est source d'erreurs qui plus est :
+
+* oublis,
+* mauvaises manipulations,
+* confusions dans les analyses,
+* ...
+
+Par conséquent, ce phénomène dissuasif relève les *risques de non-qualité*,
+sur le code de test automatique en premier lieu,
+et donc amène une *perte de productivité* des activités de test.
+
+C'est pourquoi il convient de veiller
+à ce que le temps d'exécution des campagnes de non-régression
+reste dans des bornes raisonnables.
 
 [TIP]
 .Cible 10 minutes max pour les non-régressions
 ====
-TODO
+D'expérience personnelle,
+il semble que la target de 10 minutes max
+pour les campagnes de non-régression
+apparaisse comme une limite raisonnable.
+
+Cela correspond en effet plus ou moins au temps d'une pause café,
+qu'on peut mettre à profit pour allier l'utile à l'agréable
+en échangeant des informations avec les collègues.
+
+Cela ne coupe pas le testeur dans son élan,
+qui peut envisager la livraison de ses travaux dans la foulée
+si les résultats de non-régression sont satisfaisants.
 ====
+
+Pour ce faire, plusieurs leviers à disposition,
+dans l'ordre de préférence :
+
+1. Disposer d'une architecture de test performante
+   (cf. xref:section-event-management[xrefstyle=full] notamment),
+2. Travailler la gestion des conditions initiales
+   (cf. xref:section-initial-conditions[xrefstyle=full]),
+3. Sélectioner un sous-ensemble de tests réduit,
+   représentatif des fonctions principales du SUT
+   ou les plus risquées.
+
+Ce dernier levier doit être considéré
+comme une voie de recours,
+après que les pistes précédentes ont déjà été explorées.
+En effet, sélectionner un sous-ensemble des tests seulement,
+c'est prendre le risque de moins tester certaines fonctions.
 
 
 [#section-auto-known-issues]

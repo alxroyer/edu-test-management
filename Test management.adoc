@@ -809,6 +809,7 @@ cela peut conduire à des surcoûts conséquents sur les activités de test,
 voire des échecs.
 
 
+[#section-auto-architecture]
 === Principes d'architecture
 
 Avant de choisir un framework du marché (cf. xref:section-auto-test-frameworks[xrefstyle=full]),
@@ -1904,7 +1905,14 @@ au besoin du projet.
 [#section-auto-test-frameworks]
 === Outils / frameworks
 
-TODO
+Cette section propose un inventaire
+des technologies du marché
+en matière d'outils et frameworks de test.
+
+Ces technologies peuvent répondre
+à tout ou partie des attentes d'architecture
+détaillées dans le chapitre précédent
+xref:section-auto-architecture[xrefstyle=full].
 
 
 [#section-auto-languages]

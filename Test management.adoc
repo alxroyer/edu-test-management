@@ -1653,7 +1653,59 @@ On pourra les combiner en utilisant :
 
 ===== Refuser les instabilités
 
-TODO
+Lorsqu'on constate des instabilités sur un test,
+la tentation est grande de simplement rejouer le test
+pour obtenir un résultat OK.
+Pour autant, il faut entendre que cela revient
+à fermer les yeux sur des problèmes importants.
+
+En premier lieu, c'est *prendre un risque sur la qualité du SUT*.
+
+En effet, on peut soupçonner une instabilité de test,
+mais la cause racine de l'instabilité
+réside peut-être dans un défaut du SUT lui-même :
+
+* mauvaise réponse sur des données particulières,
+  ou des timings particuliers,
+* instabilité interne (problème de gestion de threads, ...),
+* ...
+
+C'est également traîner sur le long terme
+une source de *perte de productivité*
+sur nos propres activités de test.
+
+En effet, vivre avec des incertitudes récurrentes
+sur les résultats de certains tests
+implique des pertes de temps :
+
+* dans les dépouillements de résultats de campagnes,
+* à relancer des campagnes et en attendre les résultats,
+* à relancer des tests au quotidien,
+* ...
+
+[TIP]
+.Refuser les instabilités
+====
+Il convient donc d'avoir la rigueur
+de refuser les instabilités :
+traiter le sujet au plus tôt,
+chercher la cause racine des ces échecs aléatoires,
+notamment en post-mortem.
+
+Et à défaut,
+s'il n'est pas possible de trouver la cause racine immédiatement :
+
+* compléter les logs et les traces d'erreurs,
+* collecter les données
+  (logs, configurations, ...,
+  cf. xref:section-auto-facilitate-investigations[xrefstyle=full])
+
+pour :
+
+* mieux qualifier la fréquence de l'instabilité,
+* constituer une base de données
+  donnant une chance de trouver la cause racine dans le futur.
+====
 
 
 [#section-nonreg-times]

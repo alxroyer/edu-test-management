@@ -444,10 +444,12 @@ WARNING: Complexe
 [TIP]
 .Refuser les instabilités
 ====
-* Perte de temps au quotidien
-* Risque qualité
+* Risque qualité du SUT
+* Perte de productivité des test
 
-=> Analyses post-mortem / collecter les traces
+=> Analyses post-mortem
+
+=> A défaut : compléter / collecter les traces
 ====
 
 

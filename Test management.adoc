@@ -1051,6 +1051,7 @@ L'identation des logs est alors directement représentative
 de l'arborescence des appels de la fonction récursive.
 
 
+[#section-human-readable-logs]
 ====== Logging d'informations humainement lisibles
 
 Faire en sorte que les informations soient humainement lisibles
@@ -1061,6 +1062,10 @@ le fait de disposer de *textes d'actions*, de *résultats attendus*,
 voire de *preuves de test*
 dans le code de test automatique
 permet de logguer ces informations.
+
+La gestion des *problèmes connus*
+(cf. xref:section-auto-known-issues[xrefstyle=full])
+permet également d'apporter des informations utiles dans les logs.
 
 Cela contribue à apporter dans les logs
 des éléments directement compréhensibles par l'humain
@@ -1784,7 +1789,116 @@ c'est prendre le risque de moins tester certaines fonctions.
 [#section-auto-known-issues]
 ==== Outiller la gestion des problèmes connus
 
-TODO
+[CAUTION]
+.Dilemme des problèmes connus en test auto
+====
+En tests automatiques,
+dans le cas d'un problème connu du SUT,
+la question se pose de savoir quoi faire.
+
+Le premier réflexe est généralement
+de faire tomber le test en KO.
+Dans la mesure où il y a bug dans le SUT,
+c'est assez légitime.
+
+Mais très rapidement,
+on se rend compte que cela affiche du rouge au quotidien
+dans le suivi des non-régressions,
+ce qui amène à :
+
+* un manque de lisibilité des résultats de non-régression,
+  puisqu'il faut dès lors les lire en connaissance des problèmes connus,
+  pour discerner les vraies régressions des problèmes connus,
+* un risque sur l'occurrence de non-regressions masquées :
+  un test KO pour un problème connu peut toujours faire l'objet d'une régression
+  qu'on ne verrait pas apparaître,
+  puisque le test est déjà KO.
+
+On peut alors être tenté de contourner le problème
+dans le code de test auto,
+de sorte à ce que les tests affichent OK en non-régression,
+et se déroulent intégralement.
+
+Mais ce faisant,
+l'exécution des campagnes de test de vérification
+risquent de remonter des OK
+quand bien même un problème existe dans le SUT,
+ce qui serait désastreux.
+
+Alors que faire ?
+====
+
+La proposition de ce chapitre
+est d'outiller la gestion des problèmes connus
+dans l'environnement de test.
+
+Un outillage de problèmes connus permet de :
+
+* tracer l'existence du problème :
+
+** dans les résultats de test
+   (cf. xref:section-test-report-document[xrefstyle=full]
+   et xref:section-fca[xrefstyle=full]),
+** dans les logs,
+   ce qui peut s'avérer utile lors des analyses en post-mortem
+   (cf. xref:section-human-readable-logs[xrefstyle=full]),
+
+* ajuster le statut du test en lien avec ce problème connu,
+  en fonction du mode d'exécution du test,
+  typiquement :
+
+** campagne de vérification,
+   i.e. exécution stricte :
+   enregistrement d'une erreur, le statut du test tombe à KO,
+** campagne de non-régression, rédaction de test auto,
+   i.e. exécution permissive :
+   enregistrement d'un warning, le statut du test reste OK.
+
+Suite à l'enregistrement d'un problème connu,
+le code de test à suivre fait normalement l'objet d'un contournement :
+
+* code de vérification commenté,
+* valeur attendue modifiée pour celle renvoyée en erreur par le SUT,
+* ...
+
+.Enregistrement d'un problème connu dans le code de test auto
+====
+[source, python]
+----
+# Track issue #10 in the test code.
+self.known_issue(
+    id="#10",
+    message="SUT does not send message A",
+)
+
+# Due to issue #10, the code below is commented as a workaround.
+# SUT.eth0.wait_for_packet(
+#     PacketQuery(...),  # <- Specifications for message A.
+# )
+----
+====
+
+[TIP]
+.Gestion des problèmes connus - fonctions avancées
+====
+Pour l'avoir expérimenté,
+ce mécanisme de gestion des problèmes connus
+peut s'avérer structurant pour la conduite d'une activité de test.
+
+On peut sentir le besoin de rajouter des informations complémentaires
+aux problèmes connus tracés,
+telles que :
+
+* un niveau de criticité du problème,
+* la source du problème : spécifications, SUT, code de test, environnement, ...
+* des informations de dates, en lien avec des livraisons attendues de certaines fonctionnalités,
+* ...
+
+Ces informations complémentaires,
+avec des configurations associées,
+peuvent permettre de moduler le statut des tests
+au besoin du projet.
+====
 
 
 [#section-auto-test-frameworks]

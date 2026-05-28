@@ -1308,6 +1308,7 @@ il ne faut pas négliger non plus le temps passé
 à développer les tests automatiques.
 
 
+[#section-type-checking]
 ===== Vérification de typage
 
 Comme évoqué en xref:section-auto-skills[xrefstyle=full],
@@ -1918,7 +1919,45 @@ xref:section-auto-architecture[xrefstyle=full].
 [#section-auto-languages]
 ==== Langages
 
-TODO
+Les langages communément utilisés
+pour développer des tests automatiques
+sont des *langages de scripting* :
+
+* Javascript, notamment dans le monde des développements Web,
+* Python.
+
+[TIP]
+.Rappel utilité vérification de typage
+====
+Pour mémo, si les langages utilisés pour les tests automatiques
+sont des langages de scripting,
+a priori non typés,
+le fait de mettre en place de la vérification de typage
+reste une bonne pratique
+(cf. xref:section-type-checking[xrefstyle=full]).
+====
+
+Une autre option de langage existe également : *Gherkin*
+(cf. https://cucumber.io/docs/gherkin/reference).
+
+La philosophie de ce langage est d'approcher le langage naturel
+pour la description de tests fonctionnels
+(approche _Behaviour Driven Development - BDD_).
+
+L'intérêt principal de ce langage
+est de constituer un langage compréhensible
+par les différentes parties prenantes,
+qu'elles soient techniques ou non,
+telles que les _Product Owners_ notamment.
+
+La traduction en tests automatiques exécutable
+se fait ensuite au moyen de _step definitions_
+(en terminologie Gherkin, cf. https://cucumber.io/docs/gherkin/step-organization).
+
+[sidebar]
+--
+👷🛠️ TP : link:TP%20-%20Cucumber%20Gherkin.md[Cucumber & Gherkin]
+--
 
 
 [#section-auto-lib-tools]
@@ -2012,6 +2051,11 @@ TODO
 [cols="1,4"]
 |===
 | Terme | Description
+
+| PO |
+_Product Owner_.
+
+Rôle dans les méthodes agiles.
 
 | SUT |
 _System_ ou _Software Under Test_.

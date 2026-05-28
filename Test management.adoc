@@ -1468,12 +1468,131 @@ sont des problématiques essentielles en matière de test automatique.
 
 ===== Gestion événementielle
 
-TODO
+Une des raisons classiques expliquant l'instabilité des tests auto
+est la gestion des événements asynchrones :
+
+1. J'exécute une action sur le SUT (stimulus).
+2. J'attends un résultat en retour du SUT.
+
+Le résultat attendu peut mettre quelques temps à arriver.
+
+[CAUTION]
+.Eviter de mettre des `sleep()` empiriques dans le code de test
+====
+Lorsqu'un événement peut mettre du temps à arriver,
+il est fréquent de trouver dans le code de test des appels `sleep()`
+avec un temps d'attente empirique.
+
+Pour s'assurer d'une certaine stabilité,
+le développeur de test aura tendance
+à mettre une marge sur ce temps d'attente,
+ce qui aura pour premier effet négatif
+de ralentir considérablement l'exécution du test.
+
+Par ailleurs, il arrive fréquemment que la marge positionnée
+ne soit pas suffisante dans certains cas
+(timings aléatoires du SUT, autre taches prenant du temps processur, antivirus, ...).
+C'est donc également un motif d'instabilité des tests.
+====
+
+De sorte à éviter ces problèmes d'instabilité des tests,
+et éviter de dégrader les performances des test par la même occasion,
+on veillera à disposer d'une gestion événementielle efficace
+aux interfaces du SUT.
 
 [TIP]
 .Pattern _wait-for / query_
 ====
-TODO
+Le pattern _wait-for / query_ décrit ici
+est un retour d'expérience personnel
+ayant fait ses preuves sur des projets de test auto.
+
+---
+
+Le principe est de concevoir les API de tests
+selon un principe *_wait-for_*.
+Cela se matérialise généralement par la définition de fonctions
+commençant par "wait_for"
+(exemples : `wait_for_text()`, `wait_for_packet()`, ...),
+associées à une notion de timeout.
+
+L'implémentation de ces fonctions correspond alors schématiquement
+à une boucle :
+
+----
+fonction wait_for_xxx(timeout)
+{
+  tant que timeout n'est pas atteint
+  {
+    si l'événement est présent
+    alors retourner l'événement
+    sinon temporisation minimale
+  }
+  erreur de timeout
+}
+----
+
+Dès lors, la conception de la fonction permet de répondre
+sur les deux aspects tout à la fois :
+
+performances::
+La fonction retourne rapidement
+si l'événement est présent rapidement.
+
+stabilité::
+Pour les cas aux limites,
+la fonction peut attendre un timeout donné
+intégrant une marge conséquente.
+
+---
+
+Le corollaire à ce principe _wait-for_
+est qu'il faut savoir décrire ce qu'on attend.
+
+Pour ce faire, un peu de conception orientée objet
+(cf. xref:section-oo-design[xrefstyle=full])
+amène un plus :
+l'idée est de définir un objet générique *_query_*
+dont le but est de donner les critères de recherche d'un événement.
+
+L'implémentation type de la méthode précédente devient alors :
+
+----
+fonction wait_for_xxx(query)
+{
+  tant que query.timeout n'est pas atteint
+  {
+    si evt = query.rechercher_evenement()
+    alors retourner evt
+    sinon query.temporiser()
+  }
+  query.gerer_erreur_timeout()
+}
+----
+
+Dans le pseudo-code ci-dessus :
+
+* C'est l'objet `query` porte la notion de timeout cette fois.
+* C'est également l'objet `query` qui permet de vérifier la présence de l'événement,
+  au travers d'une méthode abstraite `rechercher_evenement()`.
+* L'objet `query` peut égalemeent porter nombre de configurations comme :
+
+** le comportement à adopter lorsque le timeout est atteint (`gerer_erreur_timeout()`) :
+   exception ou retour `null`,
+** les aspects logging,
+** les temporisations dans la boucle de polling,
+** ...
+
+L'objet `query` peut être spécialisé à loisir
+pour exprimer des critères de recherche très fins
+dans la surcharge de `rechercher_evenement()`,
+voire spécifiques pour les besoins uniques d'un test.
+
+---
+
+Ce pattern _wait-for / query_ est donc un pattern
+qui s'avère *fiable et performant*,
+mais également *souple et évolutif*.
 ====
 
 

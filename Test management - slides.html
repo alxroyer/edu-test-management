@@ -1194,6 +1194,14 @@
                 </tr>
               </table>
             </div>
+            <div class="paragraph">
+              <p>Aux interfaces du SUT</p>
+            </div>
+          </div>
+        </section>
+        <section id="_2_4_4_1_wait_for_query">
+          <h2>2.4.4.1. <em>wait-for / query</em></h2>
+          <div class="slide-content">
             <div class="admonitionblock tip">
               <table>
                 <tr>
@@ -1203,10 +1211,7 @@
                     <div class="ulist">
                       <ul>
                         <li>
-                          <p>Aux interfaces du SUT</p>
-                        </li>
-                        <li>
-                          <p><em>wait-for</em> un événement</p>
+                          <p><em>wait-for</em> événement</p>
                         </li>
                         <li>
                           <p>Quel événement ? &#8658; <em>query</em> (OO Design)</p>
@@ -1216,6 +1221,20 @@
                   </td>
                 </tr>
               </table>
+            </div>
+            <div class="listingblock">
+              <div class="content">
+                <pre>fonction wait_for_xxx(query)
+{
+  tant que query.timeout n'est pas atteint
+  {
+    si evt = query.rechercher_evenement()
+    alors retourner evt
+    sinon query.temporiser()
+  }
+  query.gerer_erreur_timeout()
+}</pre>
+              </div>
             </div>
           </div>
         </section>

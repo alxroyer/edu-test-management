@@ -369,13 +369,30 @@ Gestion des interfaces :
 
 CAUTION: Eviter les `sleep()` arbitraires de N secondes
 
+Aux interfaces du SUT
+
+
+=== 2.4.4.1. _wait-for / query_
+
 [TIP]
 .Pattern _wait-for / query_
 ====
-* Aux interfaces du SUT
-* _wait-for_ un événement
+* _wait-for_ événement
 * Quel événement ? => _query_ (OO Design)
 ====
+
+----
+fonction wait_for_xxx(query)
+{
+  tant que query.timeout n'est pas atteint
+  {
+    si evt = query.rechercher_evenement()
+    alors retourner evt
+    sinon query.temporiser()
+  }
+  query.gerer_erreur_timeout()
+}
+----
 
 
 === 2.4.4.2. Conditions initiales

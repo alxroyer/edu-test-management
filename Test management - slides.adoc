@@ -299,7 +299,7 @@ TIP: Assertions => preuves
 --
 
 
-=== Faciliter les investigations (suite)
+=== Faciliter les investigations - Exemple
 
 ----
 STEP#2: Logging with the scenario instance (demo/loggingdemo.py:33:LoggingScenario.step020)
@@ -316,7 +316,7 @@ STEP#2: Logging with the scenario instance (demo/loggingdemo.py:33:LoggingScenar
 --
 
 
-=== Faciliter les investigations (suite)
+=== Faciliter les investigations - Corrélation de logs
 
 WARNING: N logs => corrélation ?
 
@@ -336,7 +336,7 @@ TIP: Diagrammes de séquence automatiques
 * Interfaces
 
 
-=== Faciliter la programmation (suite)
+=== Faciliter la programmation - Gestion des interfaces
 
 Gestion des interfaces :
 
@@ -357,19 +357,27 @@ Gestion des interfaces :
 
 === Perfs & stabilité
 
-WARNING: Risque encore plus fort pour les tests système
+CAUTION: Eviter les `sleep()` arbitraires de N secondes
+
+Gestion événementielle
 
 [TIP]
 .Pattern _wait-for / query_
 ====
 * Aux interfaces du SUT
-* Eviter les `sleep()` arbitraires de N secondes
-* Préférer une gestion d'événements => _wait-for_
-* Wait for what? => _query_ (OO Design)
+* _wait-for_ un événement
+* Quel événement ? => _query_ (OO Design)
 ====
 
 
-=== Perfs & stabilité (suite)
+=== Perfs & stabilité - Conditions initiales
+
+Impact perfs (tests système)
+
+WARNING: Coûts de mise en place
+
+
+=== Perfs & stabilité - Refuser les instabilités
 
 [TIP]
 .Refuser les instabilités
@@ -381,7 +389,7 @@ WARNING: Risque encore plus fort pour les tests système
 ====
 
 
-=== Perfs & stabilité (suite)
+=== Perfs & stabilité - Non-régressions
 
 [TIP]
 .Cible 10 minutes max pour les non-régressions

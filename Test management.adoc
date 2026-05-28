@@ -1431,13 +1431,34 @@ permettant au test de gérer finement la configuration selon ses besoins.
 [#section-auto-stability-performance]
 ==== Performance & stabilité
 
+Les questions de performance et de stabilité des tests
+sont des problématiques essentielles en matière de test automatique.
+
+
+===== Gestion événementielle
+
 TODO
 
 [TIP]
-.Faire la chasse aux instabilités
+.Pattern _wait-for / query_
 ====
 TODO
 ====
+
+
+===== Gestion des conditions initiales
+
+TODO
+
+
+===== Faire la guerre aux instabilités
+
+TODO
+
+
+===== Gestion des non-régressions
+
+TODO
 
 [TIP]
 .Cible 10 minutes max pour les non-régressions

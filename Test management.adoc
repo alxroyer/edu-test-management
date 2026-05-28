@@ -1451,12 +1451,12 @@ TODO
 TODO
 
 
-===== Faire la guerre aux instabilités
+===== Refuser les instabilités
 
 TODO
 
 
-===== Gestion des non-régressions
+===== Temps des non-régressions
 
 TODO
 
@@ -1498,7 +1498,7 @@ TODO
 TODO: Unité testées = classe ou fonction, même langage que SUT, boîte blanche
 
 
-===== Frameworks de tests d'intégration
+===== Frameworks de tests d'API
 
 TODO
 

@@ -23,22 +23,22 @@ Alexis ROYER - https://www.linkedin.com/in/alexis-royer/
 == 1. L'activité de test
 
 
-== Cycle en V et activités de test
+== 1.1. Cycle en V et activités de test
 
 image::schemas/waterfall-test-activities.drawio.png[]
 
 
-=== Normes
+// === Normes
+//
+// ISO 9126:: Critères de qualité d'un logiciel
+// ISO 12207:: Processus du cycle de vie du logiciel
+//     * Intégration
+//     * Vérification
+//     * Audit
+//     * Qualification
 
-ISO 9126:: Critères de qualité d'un logiciel
-ISO 12207:: Processus du cycle de vie du logiciel
-    * Intégration
-    * Vérification
-    * Audit
-    * Qualification
 
-
-== Boîte noire / boîte blanche
+== 1.2.1. Boîte noire / boîte blanche
 
 Vérification exigences => boîte noire
 
@@ -60,24 +60,25 @@ Test unitaires => boîte blanche
 // Classe / fonction = boîte noire
 
 
-== Système et sous-systèmes
+[#slide-subsystems]
+== 1.2.2. Système et sous-systèmes
 
 image::schemas/system-breakdown.drawio.png[]
 
 NOTE: SUT = System / Software Under Test
 
 
-== Imbrications de cycles en V
+== 1.2.2. Imbrications de cycles en V
 
 image::schemas/system-breakdown-activities.drawio.png[]
 
 
-== Requirement Management
+== 1.3.1. Requirement Management
 
 image::schemas/system-breakdown-reqmgt.drawio.png[]
 
 
-=== Complétude
+=== 1.3.1. Complétude de test
 
 // Mémo: Idem raffinements de spécifications,
 //       mais on ne fait pas apparaître dans les slides.
@@ -88,12 +89,7 @@ CAUTION: Difficulté de garantir l'exhaustivité
 TIP: Tracer les justifications de la tracabilité établie
 
 
-=== Tests spécifiants
-
-Quand on n'a pas de spécifications...
-
-
-=== Changements d'exigences
+=== 1.3.1. Modification des exigences
 
 Versioning des spécifications
 
@@ -105,7 +101,12 @@ Agilité ?
 Issue management
 
 
-== Issue Management
+=== 1.3.2. Tests spécifiants
+
+Quand on n'a pas de spécifications...
+
+
+== 1.4. Issue Management
 
 [IMPORTANT]
 ====
@@ -119,28 +120,28 @@ Défauts du SUT, des exigences, ...
 Change management / CCB
 
 
-== Cycle de vie des tests
+== 1.5. Cycle de vie des tests
 
 _(tests manuels)_
 
 
-=== Constitution des tests
+=== 1.5.1. Constitution des tests
 
 image::schemas/lifecycle-manual-setup.png[]
 
 
-=== Vérification des corrections
+=== 1.5.2. Vérification des corrections
 
 image::schemas/lifecycle-manual-fix.png[]
 
 
-=== Modifications des exigences
+=== 1.5.3. Modifications des exigences
 
 image::schemas/lifecycle-manual-change.png[]
 
 
 [.columns]
-== Les documents de test
+== 1.6. Les documents de test
 
 [.column]
 --
@@ -163,7 +164,7 @@ Résultats de tests::
 --
 
 
-=== FCA
+=== 1.6.3. FCA
 
 // TODO: Factoriser avec `Test management.adoc`.
 |===
@@ -200,7 +201,7 @@ Résultats de tests::
 TIP: Indicateur de résultat
 
 
-== L'esprit du testeur
+== 1.7. L'esprit du testeur
 
 QA (= Quality Assurance)
 
@@ -223,7 +224,7 @@ _"Dernier rempart"_
 == 2. Tests automatiques
 
 
-== Besoin d'automatisation
+== 2.1. Besoin d'automatisation
 
 Prérequis agilité itérative (time-boxé)
 
@@ -234,14 +235,15 @@ Intégration Continue / non-régressions
 Tests logiciels & tests système
 
 
-== Cycle de vie des tests auto
+[#slide-auto-lifecycle]
+== 2.2. Cycle de vie des tests auto
 
 image::schemas/lifecycle-auto-setup.png[]
 
 CAUTION: Problèmes connus ?
 
 
-== Compétence développement
+== 2.3. Compétence développement
 
 Volume code : test ~= SUT
 
@@ -250,7 +252,7 @@ Problématiques : maintenabilité, perfs, stabilité
 TIP: Besoin d'un architecte
 
 
-== Principes d'architecture
+== 2.4. Principes d'architecture
 
 * Gestion du rédactionnel
 * Faciliter les investigations
@@ -259,7 +261,7 @@ TIP: Besoin d'un architecte
 * Problèmes connus
 
 
-=== Gestion du rédactionnel
+== 2.4.1. Gestion du rédactionnel
 
 Production documentaire plan de test
 
@@ -270,7 +272,7 @@ TIP: Proximité textes / code de test
 
 [#slide-facilitate-investigations]
 [.columns]
-=== Faciliter les investigations
+== 2.4.2. Faciliter les investigations
 
 [.column]
 --
@@ -299,7 +301,7 @@ TIP: Assertions => preuves
 --
 
 
-=== Faciliter les investigations - Exemple
+=== 2.4.2. Exemple
 
 ----
 STEP#2: Logging with the scenario instance (demo/loggingdemo.py:33:LoggingScenario.step020)
@@ -316,7 +318,7 @@ STEP#2: Logging with the scenario instance (demo/loggingdemo.py:33:LoggingScenar
 --
 
 
-=== Faciliter les investigations - Corrélation de logs
+=== 2.4.2. Corrélation de logs
 
 WARNING: N logs => corrélation ?
 
@@ -327,7 +329,7 @@ WARNING: Volume, erreurs timestamps
 TIP: Diagrammes de séquence automatiques
 
 
-=== Faciliter la programmation
+== 2.4.3. Faciliter la programmation
 
 * Vérification de typage
 * Reuse
@@ -336,7 +338,7 @@ TIP: Diagrammes de séquence automatiques
 * Interfaces
 
 
-=== Faciliter la programmation - Gestion des interfaces
+=== 2.4.3.5. Gestion des interfaces
 
 Gestion des interfaces :
 
@@ -354,12 +356,17 @@ Gestion des interfaces :
 👷🛠️ TP : Versioning des interfaces (TODO)
 --
 
+== 2.4.4. Perfs & stabilité
 
-=== Perfs & stabilité
+* Gestion événementielle
+* Conditions initiales
+* Refuser les instabilités
+* Temps de non-régressions
+
+
+=== 2.4.4.1. Gestion événementielle
 
 CAUTION: Eviter les `sleep()` arbitraires de N secondes
-
-Gestion événementielle
 
 [TIP]
 .Pattern _wait-for / query_
@@ -370,14 +377,14 @@ Gestion événementielle
 ====
 
 
-=== Perfs & stabilité - Conditions initiales
+=== 2.4.4.2. Conditions initiales
 
 Impact perfs (tests système)
 
 WARNING: Coûts de mise en place
 
 
-=== Perfs & stabilité - Refuser les instabilités
+=== 2.4.4.3. Refuser les instabilités
 
 [TIP]
 .Refuser les instabilités
@@ -389,7 +396,7 @@ WARNING: Coûts de mise en place
 ====
 
 
-=== Perfs & stabilité - Non-régressions
+=== 2.4.4.4. Temps de non-régressions
 
 [TIP]
 .Cible 10 minutes max pour les non-régressions
@@ -398,7 +405,7 @@ Effet psychologique au détriment de la qualité au-delà
 ====
 
 
-=== Outiller la gestion des problèmes connus
+== 2.4.5. Outiller la gestion des problèmes connus
 
 [TIP]
 ====
@@ -409,7 +416,7 @@ Statut auto // type de campagne :
 ====
 
 
-== Outils
+== 2.5. Outils / frameworks
 
 * Langages de test
 * Librairies / outils réseau
@@ -419,7 +426,7 @@ Statut auto // type de campagne :
 * Tests de performance
 
 
-=== Langages de test
+=== 2.5.1. Langages de test
 
 * Javascript
 * Python
@@ -431,7 +438,7 @@ Statut auto // type de campagne :
 --
 
 
-=== Librairies / outils réseau
+=== 2.5.2. Librairies / outils réseau
 
 * curl
 * iperf
@@ -443,7 +450,7 @@ Statut auto // type de campagne :
 --
 
 
-=== Tests unitaires
+=== 2.5.3.1. Tests unitaires
 
 * JUnit (Java)
 * TestNG (Java)
@@ -454,7 +461,7 @@ Statut auto // type de campagne :
 * PyTest (Python)
 
 
-=== Tests d'API
+=== 2.5.3.2. Tests d'API
 
 * Spring Boot Test
 * RestAssured
@@ -467,7 +474,7 @@ Statut auto // type de campagne :
 --
 
 
-=== Tests fonctionnels
+=== 2.5.3.3. Tests fonctionnels
 
 * Selenium
 * Cypress
@@ -480,7 +487,7 @@ Statut auto // type de campagne :
 --
 
 
-=== Tests de performance
+=== 2.5.3.4. Tests de performance
 
 * JMeter
 * LoadRunner
@@ -489,7 +496,7 @@ Statut auto // type de campagne :
 * NeoLoad
 
 
-== Couverture de code
+== 2.6. Couverture de code
 
 * Représentativité des tests
 * Code mort // code défensif
@@ -500,14 +507,14 @@ Statut auto // type de campagne :
 == 3. Management des tests
 
 
-== Jeux de données
+== 3.1. Jeux de données
 
 CAUTION: Applications web (données datées)
 
 
 [#slide-test-timing]
 [.columns]
-== Timing activités de test
+== 3.2. Timing activités de test
 
 [.column]
 .Tests avant
@@ -538,7 +545,7 @@ CAUTION: Détection erreurs tardives
 
 [#slide-waterfall-vs-agile]
 [.columns]
-== Cycle en V // Agilité
+== 3.3. Cycle en V // Agilité
 
 // Use `====` syntax for all admonitions in this slide
 // to ensure the generation of texts in `<p></p>` items,
@@ -584,7 +591,7 @@ Application logicielle simple
 --
 
 
-== Planification constitution des tests
+== 3.4. Planification constitution des tests
 
 Dans quel ordre constituer les tests ?
 
@@ -593,7 +600,7 @@ Cycle en V ? Méthodes agiles ?
 TIP: Dépendance stratégie d'intégration
 
 
-== Exhaustivité // gestion de risque
+== 3.5. Exhaustivité // gestion de risque
 
 Tout tester ?
 
@@ -605,7 +612,7 @@ ROI // non qualité
 
 
 [#slide-risk-management]
-=== Gestion de risques
+=== 3.5. Gestion de risques
 
 TU seuls ?
 

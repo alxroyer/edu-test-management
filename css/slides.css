@@ -1,3 +1,5 @@
+/* === General === */
+
 /* Title slide - i.e. very first slide. */
     section.title h1 { font-size: 1.6em; }
     section.title img { width: 100%; height: 300px; }
@@ -16,18 +18,29 @@
     /* Ensure space before and after each admonition. */
     div.admonitionblock { margin-top: 1em; margin-bottom: 1em; }
 
-/* #slide-test-timing */
+
+/* === Slides === */
+
+/* 1.2.2. #slide-subsystems */
+    /* Reduce image size so that the note below does not get out of the page. */
+    #slide-subsystems img { width: 70%; }
+
+/* 2.2. #slide-auto-lifecycle */
+    /* Reduce image size so that the note below does not get out of the page. */
+    #slide-auto-lifecycle img { width: 80%; }
+
+/* 2.4.2. #slide-facilitate-investigations */
+    /* Reduce `p` font size a bit so that the content remain in the page. */
+    #slide-facilitate-investigations p { font-size: 75%; }
+
+/* 3.2. #slide-test-timing */
     /* Reduce `p` font size a bit so that the two columns and admonitions remain in the page. */
     #slide-test-timing td { font-size: 85%; }
 
-/* #slide-waterfall-vs-agile */
+/* 3.3. #slide-waterfall-vs-agile */
     /* Reduce `p` font size a bit so that the two columns and admonitions remain in the page. */
     #slide-waterfall-vs-agile p { font-size: 70%; }
 
-/* #slide-risk-management */
+/* 3.5. #slide-risk-management */
     /* Reduce `p` font size a bit so that the content remain in the page. */
     #slide-risk-management p { font-size: 70%; }
-
-/* #slide-facilitate-investigations */
-    /* Reduce `p` font size a bit so that the content remain in the page. */
-    #slide-facilitate-investigations p { font-size: 85%; }

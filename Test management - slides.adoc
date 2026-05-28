@@ -395,11 +395,48 @@ fonction wait_for_xxx(query)
 ----
 
 
+[#slide-initial-conditions]
 === 2.4.4.2. Conditions initiales
 
-Impact perfs (tests système)
+// Memo: Table formatting
+// - https://docs.asciidoctor.org/asciidoc/latest/tables/align-by-column/
+// - https://docs.asciidoctor.org/asciidoc/latest/tables/format-column-content/
+// - https://docs.asciidoctor.org/asciidoc/latest/tables/align-by-cell/
+// - https://docs.asciidoctor.org/asciidoc/latest/tables/format-cell-content/
+// - In short:
+//     - `h`: header
+//     - `a`: AsciiDoc content
+//     - `>`: horizontal align right
+//     - `^`: horizontal align center
+//     - `.^`: vertical align center
+//     - `.>`: vertical align down
 
-WARNING: Coûts de mise en place
+[cols=">1,^2,^2"]
+|===
+h|
+.>h| Reset des confs
+.>h| Persistance des confs
+
+.^h| Performances
+.^a|
+CAUTION: Lent
+
+Tests système notamment
+.^a|
+TIP: Optimisé
+
+.^h| Stabilité
+.^a|
+TIP: Assurance
+.^a|
+Risques de bugs
+
+.^h| Mise en oeuvre
+.^a|
+Plus simple
+.^a|
+WARNING: Complexe
+|===
 
 
 === 2.4.4.3. Refuser les instabilités

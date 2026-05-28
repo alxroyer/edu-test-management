@@ -1598,7 +1598,57 @@ mais également *souple et évolutif*.
 
 ===== Gestion des conditions initiales
 
-TODO
+On entend par conditions initiales l'état de configuration
+dont doit disposer le SUT
+au démarrage d'un test.
+
+Une stratégie possible
+consiste à faire un *reset de configuration* à chaque début de test,
+et monter les configurations pour atteindre les conditions initiales requises.
+
+Si cette stratégie privilégie la stabilité,
+elle est en revanche pénalisante sur le plan des performances,
+plus particulièrement encore pour les tests systèmes.
+
+Ces problèmes de performances pénalisent :
+
+* les exécutions de campagnes,
+  et notamment les campagnes de non-régression
+  (cf. xref:section-nonreg-times[xrefstyle=full]).
+* mais également toutes les exécutions de tests au quotidien,
+  ce qui grève fortement la productivité de rédaction des tests auto.
+
+Pour pallier ce phénomène, on peut mettre en oeuvre
+un autre système de gestion des conditions initiales,
+considérant la *persistance des configurations*
+entre deux exécutions tests :
+
+1. Rollbacks de configurations
+   lorsque la configuration issue du test précédent
+   est plus avancée que les conditions initiales du test suivant.
+2. Applications des compléments de configurations,
+   sur la base de l'état issu des rollbacks précédents,
+   pour atteindre les configurations initiales.
+
+Ce principe accélère grandement le temps d'exécution des tests.
+Toutefois il nécessite de savoir tracer l'état de configuration du SUT entre les tests,
+ce qui est beaucoup plus complexe à mettre en place.
+
+[TIP]
+====
+Ces deux modes de gestion des conditions initiales
+présentent chacun des avantages et des inconvénients.
+
+On pourra les combiner en utilisant :
+
+* la stratégie de reset des configurations
+  pour les campagnes de vérification officielles,
+  dans le but d'assurer la fiabilité des résultats,
+* la stratégie de persistance des configurations
+  pour les campagnes de non-régressions
+  et les exécutions de tests au quotidien,
+  dans le but de privilégier la performance.
+====
 
 
 ===== Refuser les instabilités
@@ -1606,6 +1656,7 @@ TODO
 TODO
 
 
+[#section-nonreg-times]
 ===== Temps des non-régressions
 
 TODO

@@ -41,6 +41,12 @@
     /* Reduce `p` font size a bit so that the content remain in the page. */
     #slide-facilitate-investigations p { font-size: 75%; }
 
+/* 2.4.4.2. #slide-initial-conditions */
+    /* Reduce text sizes. */
+    #slide-initial-conditions th.tableblock p { font-size: 70%; }
+    #slide-initial-conditions div.admonitionblock td { font-size: 70%; }
+    #slide-initial-conditions div.paragraph p { font-size: 70%; }
+
 /* 3.2. #slide-test-timing */
     /* Reduce `p` font size a bit so that the two columns and admonitions remain in the page. */
     #slide-test-timing td { font-size: 85%; }

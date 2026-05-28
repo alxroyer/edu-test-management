@@ -515,7 +515,7 @@ Statut auto // type de campagne :
 --
 
 
-=== 2.5.3.1. Tests unitaires
+=== 2.5.3. Tests unitaires
 
 * JUnit (Java)
 * TestNG (Java)
@@ -526,7 +526,7 @@ Statut auto // type de campagne :
 * PyTest (Python)
 
 
-=== 2.5.3.2. Tests d'API
+=== 2.5.4. Tests d'API
 
 * Spring Boot Test
 * RestAssured
@@ -539,7 +539,7 @@ Statut auto // type de campagne :
 --
 
 
-=== 2.5.3.3. Tests fonctionnels
+=== 2.5.5. Tests fonctionnels
 
 * Selenium
 * Cypress
@@ -552,7 +552,7 @@ Statut auto // type de campagne :
 --
 
 
-=== 2.5.3.4. Tests de performances
+=== 2.5.6. Tests de charge et performances
 
 * JMeter
 * LoadRunner

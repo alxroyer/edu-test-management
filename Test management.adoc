@@ -2024,9 +2024,7 @@ toute donnée binaire
 --
 
 
-==== Frameworks
-
-===== Frameworks de tests unitaires logiciels
+==== Tests unitaires logiciels
 
 Dans le cadre des tests unitaires,
 l'unité testée est une classe ou une fonction.
@@ -2053,17 +2051,17 @@ en mode boîte blanche
 
 
 [#section-frameworks-api-testing]
-===== Frameworks de tests d'API
+==== Tests d'API
 
 TODO
 
 
-===== Frameworks de tests fonctionnels
+==== Tests fonctionnels
 
 TODO
 
 
-===== Frameworks de tests de performances
+==== Tests de charge et performances
 
 TODO
 

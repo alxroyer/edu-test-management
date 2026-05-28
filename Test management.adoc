@@ -1337,6 +1337,7 @@ alors on peut envisager la factorisation du rédactionnel également.
 ====
 
 
+[#section-oo-design]
 ===== OO-Design
 
 Compte tenu du volume de code de test à produire,
@@ -1370,7 +1371,61 @@ pkt = SUT.eth0.wait_for_packet(IP)
 
 ===== Gestion des interfaces
 
-TODO
+La gestion des interfaces est l'un des points
+où la *conception orientée objet* peut s'avérer utile
+(cf. xref:section-oo-design[xrefstyle=full]).
+On peut en effet disposer de classes génériques
+pour les gestion des aspects communs
+(instanciation, réception de message, envoi de message, pile de messages, ...),
+et raffiner ensuite pour chaque interface
+(protocole mis en jeu, ...)
+
+Penser à utiliser des *librairies* utiles pour la gestion des échanges réseau
+(cf. xref:section-auto-lib-tools[xrefstyle=full]).
+
+[TIP]
+.Scapy
+====
+En Python, on pense notamment à Scapy,
+qui permet d'écrire rapidement du code de sérialisation / désérialisation
+de protocoles spécifiques au projet.
+====
+
+[sidebar]
+--
+👷🛠️ TP : link:TP%20-%20Scapy.adoc[Sérialisation / désérialisation de protocoles propriétaires avec Scapy]
+--
+
+Dans les systèmes complexes (cf. xref:section-subsystems[xrefstyle=full]),
+avec notamment des cycles de développements incrémentaux,
+peut se poser la problématiques des *versions applicables* d'interfaces :
+
+* Un sous-sytème peut travailler sur une version N+1 d'une interface,
+* alors que son système client travaille toujours sur la version N,
+  en attente de livraison des sous-systèmes concernés.
+
+[TIP]
+.Versioning des interfaces
+====
+Utiliser la gestion de configuration `git`
+pour gérer les versions d'interfaces peut s'avérer contre-productif.
+
+En effet, si on a le besoin de rester sur une version antérieure d'une interface donnée,
+il est contraignant de :
+
+* ne pas profiter des derniers correctifs et évolutions de l'environnement de test,
+* tirer une surcharge de création de branches, de cherry-picks et de merges
+  parce qu'on doit partir d'un commit plus ancien dans l'historique.
+
+Il s'avère plus efficace de mettre en place
+une mécanique de chargement des versions d'interfaces à la demande
+permettant au test de gérer finement la configuration selon ses besoins.
+====
+
+[sidebar]
+--
+👷🛠️ TP : Versioning des interfaces (TODO)
+--
 
 
 [#section-auto-stability-performance]
@@ -1409,6 +1464,7 @@ TODO
 TODO
 
 
+[#section-auto-lib-tools]
 ==== Librairies et outils réseau
 
 TODO

@@ -336,6 +336,25 @@ TIP: Diagrammes de séquence automatiques
 * Interfaces
 
 
+=== Faciliter la programmation (suite)
+
+Gestion des interfaces :
+
+** Design générique
+** Librairies outils
+** Versioning
+
+[sidebar]
+--
+👷🛠️ TP : link:TP%20-%20Scapy.adoc[Protocoles propriétaires avec Scapy]
+--
+
+[sidebar]
+--
+👷🛠️ TP : Versioning des interfaces (TODO)
+--
+
+
 === Perfs & stabilité
 
 WARNING: Risque encore plus fort pour les tests système

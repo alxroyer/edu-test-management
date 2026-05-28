@@ -1983,7 +1983,44 @@ se fait ensuite au moyen de _step definitions_
 [#section-auto-lib-tools]
 ==== Librairies et outils réseau
 
-TODO
+Le tableau ci-après liste quelques outils
+souvent utilisés pour les tests réseaux :
+
+[cols="1,2,5"]
+.Librairies et outils réseau
+|===
+| Outils | URL | Description
+
+| curl | https://curl.se/
+a|
+Outil en ligne de commandes
+permettant de forger des requêts HTTP.
+
+Peut être utilisé accessoirement pour des tests d'API
+(cf. xref:section-frameworks-api-testing[xrefstyle=full]).
+
+| iperf | https://iperf.fr/
+a|
+Permet la mesure de performances en bande passante
+sur des réseaux IP.
+
+| Scapy | https://scapy.net/
+a|
+Librairie Python
+permettant la sérialisation / désérialisation
+de paquet réseaux : Ethernet, IP, ...
+
+Possibilité de définir des formats spécifiques.
+
+Peut être utilisé pour sérialiser / désérialiser
+toute donnée binaire
+(fichier, zone mémoire, ...).
+|===
+
+[sidebar]
+--
+👷🛠️ TP : link:TP%20-%20Scapy.adoc[Sérialisation / désérialisation de protocoles propriétaires avec Scapy]
+--
 
 
 ==== Frameworks
@@ -1993,6 +2030,7 @@ TODO
 TODO: Unité testées = classe ou fonction, même langage que SUT, boîte blanche
 
 
+[#section-frameworks-api-testing]
 ===== Frameworks de tests d'API
 
 TODO

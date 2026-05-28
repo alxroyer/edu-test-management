@@ -153,6 +153,7 @@ On parle de SUT pour _System_ ou _Software Under Test_
 (cf. xref:appendix-glossary[xrefstyle=full]).
 
 
+[#section-black-box-white-box]
 ==== Tests boîte noire / boîte blanche
 
 Une des premières distinctions utiles
@@ -2027,7 +2028,28 @@ toute donnée binaire
 
 ===== Frameworks de tests unitaires logiciels
 
-TODO: Unité testées = classe ou fonction, même langage que SUT, boîte blanche
+Dans le cadre des tests unitaires,
+l'unité testée est une classe ou une fonction.
+
+Comme cette unité testée ne peut être lancée seule,
+les tests unitaires sont généralement écrits
+dans le même langage que le code testé,
+en mode boîte blanche
+(cf. xref:section-black-box-white-box[xrefstyle=full]).
+
+[cols="1,1,2"]
+.Frameworks de tests unitaires logiciels
+|===
+| Outils | Langage | URL
+
+| JUnit | Java | https://junit.org/
+| TestNG | Java | https://testng.org/
+| NUnit | .Net | https://nunit.org/
+| PHPUnit | PHP | https://phpunit.de/
+| Mocha | JS | https://mochajs.org/
+| PyUnit / unittest | Python | https://docs.python.org/3/library/unittest.html
+| PyTest | Python | https://docs.pytest.org/
+|===
 
 
 [#section-frameworks-api-testing]

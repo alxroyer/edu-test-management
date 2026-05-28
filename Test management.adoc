@@ -1466,9 +1466,9 @@ permettant au test de gérer finement la configuration selon ses besoins.
 
 
 [#section-auto-stability-performance]
-==== Performance & stabilité
+==== Performances & stabilité
 
-Les questions de performance et de stabilité des tests
+Les questions de performances et de stabilité des tests
 sont des problématiques essentielles en matière de test automatique.
 
 

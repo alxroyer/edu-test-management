@@ -488,7 +488,7 @@ Statut auto // type de campagne :
 * Tests unitaires
 * Tests d'API
 * Tests fonctionnels
-* Tests de performance
+* Tests de performances
 
 
 === 2.5.1. Langages de test
@@ -552,7 +552,7 @@ Statut auto // type de campagne :
 --
 
 
-=== 2.5.3.4. Tests de performance
+=== 2.5.3.4. Tests de performances
 
 * JMeter
 * LoadRunner

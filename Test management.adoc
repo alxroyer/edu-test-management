@@ -704,6 +704,7 @@ C'est un véritable état d'esprit qui s'oppose en de nombreux points
 aux qualités usuelles des développeurs :
 
 [cols="1,1"]
+.Testeur v/s développeur, comparaison des profils
 |===
 | Développeur | Testeur
 
@@ -1004,6 +1005,7 @@ Une fois qu'on s'est doté d'une stratégie définissant l'usage des niveaux de 
 la suite logique consiste à coloriser les logs en fonction de ces niveaux,
 classiquement :
 
+.Colorisation des logs
 |===
 | Niveau de log | Couleur
 
@@ -2067,6 +2069,7 @@ TODO
 == Glossaire
 
 [cols="1,4"]
+.Glossaire
 |===
 | Terme | Description
 

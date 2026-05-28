@@ -21,6 +21,14 @@
 
 /* === Slides === */
 
+/* Main slide */
+    /* Avoid the Linkedin line to be wrapped. */
+    section.title p { font-size: 85%; }
+    /* Size CC images. */
+    section.title .float-group .content img { width: 100px; height: 100px; }
+    /* Center CC images div. */
+    section.title .float-group .content { width: fit-content; margin: 0 auto; }
+
 /* 1.2.2. #slide-subsystems */
     /* Reduce image size so that the note below does not get out of the page. */
     #slide-subsystems img { width: 70%; }

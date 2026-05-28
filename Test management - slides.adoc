@@ -8,7 +8,13 @@ image::images/geralt-test-4092025_1920_cropped.jpg[role=banner]
 
 Alexis ROYER - https://www.linkedin.com/in/alexis-royer/
 
-2025-2026
+[.float-group]
+--
+image::https://mirrors.creativecommons.org/presskit/icons/cc.svg[CC, float="left"]
+image::https://mirrors.creativecommons.org/presskit/icons/by.svg[BY, float="left"]
+image::https://mirrors.creativecommons.org/presskit/icons/nc.svg[NC, float="left"]
+image::https://mirrors.creativecommons.org/presskit/icons/sa.svg[SA, float="left"]
+--
 
 
 [state=topic]

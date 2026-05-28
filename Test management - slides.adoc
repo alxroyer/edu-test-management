@@ -99,12 +99,7 @@ TIP: Tracer les justifications de la tracabilité établie
 
 Versioning des spécifications
 
-Analyses d'impact
-
-Agilité ?
-=> _latest_ / "crête de vague"
-
-Issue management
+Cf. cycle de vie des tests.
 
 
 === 1.3.2. Tests spécifiants

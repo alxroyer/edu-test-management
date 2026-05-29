@@ -2398,7 +2398,15 @@ Réduction de l'effort de versioning des exigences
 
 === Planification de la constitution des tests
 
-TODO
+Au moment de démarrer le projet,
+une question peut se poser :
+dans quel ordre constituer les tests ?
+
+En réalité, cela n'est pas dépendant
+du mode de développement : cycle en V ou méthodes agiles.
+
+La dépendance vient plutôt de la *stratégie d'intégration* :
+on ne pourra tester que ce qui sera livrer au file du temps.
 
 
 === Exhaustivité des tests v/s gestion de risque

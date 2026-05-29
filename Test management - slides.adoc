@@ -645,7 +645,7 @@ Dans quel ordre constituer les tests ?
 
 Cycle en V ? Méthodes agiles ?
 
-TIP: Dépendance stratégie d'intégration
+=> Stratégie d'intégration
 
 
 == 3.4. Exhaustivité // gestion de risque

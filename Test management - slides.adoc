@@ -581,12 +581,18 @@ NOTE: Attendu contractuel
 == 3. Management des tests
 
 
-[#slide-test-timing]
+[#slide-timing-test-auto]
 [.columns]
 == 3.1. Timing activités de test
 
 [.column]
-.Tests avant
+.Après le SUT
+--
+CAUTION: Détection erreurs tardives
+--
+
+[.column]
+.Avant le SUT
 --
 NOTE: _Test Driven Development_
 
@@ -596,19 +602,13 @@ CAUTION: Tests à l'aveugle, à reprendre
 --
 
 [.column]
-.Tests pendant
+.Avec le SUT
 --
-TIP: Timing intéressant
-
 TIP: Devs et tests s'alimentent
---
 
-[.column]
-.Tests après
---
-CAUTION: Integ. devs sans outils
+TIP: Focus
 
-CAUTION: Détection erreurs tardives
+TIP: 0 issue
 --
 
 

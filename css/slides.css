@@ -47,12 +47,12 @@
     #slide-initial-conditions div.admonitionblock td { font-size: 70%; }
     #slide-initial-conditions div.paragraph p { font-size: 70%; }
 
-/* 3.1. #slide-test-timing */
-    /* Reduce `p` font size a bit so that the two columns and admonitions remain in the page. */
-    #slide-test-timing td { font-size: 85%; }
+/* 3.1. #slide-timing-test-auto */
+    /* Reduce `td` font size a bit so that the two columns with admonitions remain in the page. */
+    #slide-timing-test-auto td { font-size: 85%; }
 
 /* 3.2. #slide-waterfall-vs-agile */
-    /* Reduce `p` font size a bit so that the two columns and admonitions remain in the page. */
+    /* Reduce `p` font size a bit so that the two columns with admonitions remain in the page. */
     #slide-waterfall-vs-agile p { font-size: 70%; }
 
 /* 3.4. #slide-risk-management */

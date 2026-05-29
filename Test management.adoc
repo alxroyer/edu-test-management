@@ -780,7 +780,7 @@ On peut observer deux différences principales sur ce schéma
 par rapport à la version pour les tests manuels.
 
 Premièrement,
-comme indiqué en xref:section-timing-test-setup[],
+comme indiqué en xref:section-timing-test-auto[],
 en matière de tests auto,
 il est compliqué d'écrire les tests avant de disposer du SUT.
 C'est pourquoi, contrairement aux tests manuels,
@@ -2249,10 +2249,85 @@ Cette section regroupe des conseils
 sur le pilotage d'une activité de test.
 
 
-[#section-timing-test-setup]
-=== Timing pour la constitution des tests
+[#section-timing-test-auto]
+=== Timing pour la constitution des tests auto
 
-TODO
+On a souvent pour habitude,
+de dérouler les activités de test majoritairement
+*après le développement du SUT*.
+
+Cela mène souvent à des détection d'erreurs tardives.
+Or, plus la détection d'une erreur est tardive,
+plus elle coûte cher à corriger.
+
+[NOTE]
+====
+Dans le cas des systèmes complexes
+(cf. xref:section-subsystems[xrefstyle=full]),
+pour les niveaux de systèmes intégrant des sous-systèmes,
+on n'a pas trop le choix de la formule :
+on devra attendre la livraison des sous-systèmes
+avant de démarrer efficacement les activités de test.
+====
+
+---
+
+Dans le but de pallier ces coûts de détection tardive des erreurs,
+sont nées les approches *_Test Driven Development_ (TDD)*,
+notamment pour les développements logiciels.
+
+Le principe des TDD est d'écrire les tests,
+et notamment les tests automatiques,
+*avant le développement du SUT*.
+
+En pratiquant le TDD quelque peu,
+on peut observer le confort que cela apporte aux développeurs :
+
+* ils disposent directement d'un moyen d'exécution de leur travail,
+* ils savent identifier clairement l'objectif à atteindre,
+  et peuvent se concentrer sur leur développement
+  jusqu'à ce que les tests donnent un statut OK.
+
+Dans les faits, les tests nécessitent beaucoup de reprise,
+car cela impose au départ de rédiger les tests auto à l'aveugle,
+puis du temps doit être consacré au moment de l'intégration avec le SUT.
+
+Par ailleurs, le fait de mener cette activité en deux temps
+crée des changements de contextes coûteux
+(idem xref:section-non-regression-time[xrefstyle=full]).
+
+---
+
+Après expérimentations,
+le meilleur compromis qui s'impose
+est de mener l'activité de test
+*conjointement avec le développement du SUT*.
+
+En procédant ainsi,
+le testeur évite les changements de contexte,
+et reste sur son élan du début à la fin
+du développement et du test d'une fonction donnée.
+
+Par ailleurs, le développeur et le testeur,
+travaillant en binôme,
+s'alimentent l'un l'autre :
+
+* le testeur fournit
+  un moyen de test et intégration,
+  ainsi qu'un objectif à atteindre
+  au développeur pour ses travaux en cours,
+* le développeur fournit des premières versions de SUT au testeur
+  qui peut avancer sans être à l'aveugle.
+
+Enfin, dès qu'une erreur est détectée par le testeur,
+elle est immédiatement traitée et intégrée par le développeur,
+sans même perdre de temps à créer de rapport d'erreur
+(cf. xref:section-issue-management[xrefstyle=full]).
+
+On garde ainsi le confort apporté aux développeurs par les tests,
+et on répond à la fois
+aux problèmes de détections tardives des erreurs,
+et aux problèmes de changements de contexte coûteux pour le testeur.
 
 
 === Cycle en V v/s agilité

@@ -1670,11 +1670,24 @@
       <section id="_3_management_des_tests" data-state="topic">
         <h2>3. Management des tests</h2>
       </section>
-      <section id="slide-test-timing" class="columns">
+      <section id="slide-timing-test-auto" class="columns">
         <h2>3.1. Timing activités de test</h2>
         <div class="slide-content">
           <div class="openblock column">
-            <div class="title">Tests avant</div>
+            <div class="title">Après le SUT</div>
+            <div class="content">
+              <div class="admonitionblock caution">
+                <table>
+                  <tr>
+                    <td class="icon"><i class="fa fa-fire" title="Caution"></i></td>
+                    <td class="content">Détection erreurs tardives</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="openblock column">
+            <div class="title">Avant le SUT</div>
             <div class="content">
               <div class="admonitionblock note">
                 <table>
@@ -1703,16 +1716,8 @@
             </div>
           </div>
           <div class="openblock column">
-            <div class="title">Tests pendant</div>
+            <div class="title">Avec le SUT</div>
             <div class="content">
-              <div class="admonitionblock tip">
-                <table>
-                  <tr>
-                    <td class="icon"><i class="fa fa-lightbulb-o" title="Tip"></i></td>
-                    <td class="content">Timing intéressant</td>
-                  </tr>
-                </table>
-              </div>
               <div class="admonitionblock tip">
                 <table>
                   <tr>
@@ -1721,24 +1726,19 @@
                   </tr>
                 </table>
               </div>
-            </div>
-          </div>
-          <div class="openblock column">
-            <div class="title">Tests après</div>
-            <div class="content">
-              <div class="admonitionblock caution">
+              <div class="admonitionblock tip">
                 <table>
                   <tr>
-                    <td class="icon"><i class="fa fa-fire" title="Caution"></i></td>
-                    <td class="content">Integ. devs sans outils</td>
+                    <td class="icon"><i class="fa fa-lightbulb-o" title="Tip"></i></td>
+                    <td class="content">Focus</td>
                   </tr>
                 </table>
               </div>
-              <div class="admonitionblock caution">
+              <div class="admonitionblock tip">
                 <table>
                   <tr>
-                    <td class="icon"><i class="fa fa-fire" title="Caution"></i></td>
-                    <td class="content">Détection erreurs tardives</td>
+                    <td class="icon"><i class="fa fa-lightbulb-o" title="Tip"></i></td>
+                    <td class="content">0 issue</td>
                   </tr>
                 </table>
               </div>

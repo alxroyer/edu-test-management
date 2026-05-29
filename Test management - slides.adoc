@@ -563,9 +563,11 @@ Statut auto // type de campagne :
 
 == 2.6. Couverture de code
 
-* Représentativité des tests
-* Code mort // code défensif
-* Attendu contractuel
+Représentativité des tests
+
+WARNING: Code défensif // code mort
+
+NOTE: Attendu contractuel
 
 
 [state=topic]

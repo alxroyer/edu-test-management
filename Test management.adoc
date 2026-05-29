@@ -2159,7 +2159,61 @@ TODO
 
 === Couverture de code
 
-TODO
+L'exécution de tests auto
+donne l'opportunité de mesurer une couverture de code
+associée à une campagne de tests.
+
+Cela permet d'identifier les zones de code
+par lesquelles le SUT est passé
+alors qu'il était testé,
+et inversement, les zones par lesquelles il n'est pas passé.
+
+Cette mesure permet d'avoir une estimation
+de la profondeur des tests :
+les tests sont-ils suffisamment couvrant ou non ?
+
+Dans le cas de logiciels de sécurité,
+cette mesure de couverture cherche également
+à mettre en évidence l'existence de code mort,
+qu'on souhaite éviter.
+
+[WARNING]
+.Code défensif, code mort et couverture de code
+====
+Il arrive régulièrement qu'on écrive
+un certain nombre de tests sur la validité des données
+en entrée d'une fonction bas niveau.
+
+A priori, les appels à la fonction dans le logiciel
+ne sont pas censés passer des données invalides.
+Mais sait-on jamais :
+c'est le principe du code défensif.
+
+Dans le cadre d'une mesure de couverture de code,
+avec des tests fonctionnels,
+ce code défensif ne devrait jamais être appelé
+(ou alors cela signifie qu'un appel à la fonction
+avec des données invalides
+est fait quelque part dans le code).
+
+L'existence de code défensif est une bonne chose en soit
+pour la sécurité,
+mais elle génère des faux positifs en termes de détection de code mort,
+et une dégradation des mesures de couverture de code.
+====
+
+[NOTE]
+====
+D'expérience personnelle,
+les mesures de couverture de code
+sont généralement une demande du management
+ou un attendu contractuel.
+====
+
+[sidebar]
+--
+👷🛠️ TP : Couverture de code (TODO)
+--
 
 
 == Management des tests

@@ -1258,7 +1258,7 @@
                   </th>
                 </tr>
                 <tr>
-                  <th class="tableblock halign-right valign-middle">
+                  <th class="tableblock halign-right valign-top">
                     <p class="tableblock header">Performances</p>
                   </th>
                   <td class="tableblock halign-center valign-middle">
@@ -1290,7 +1290,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <th class="tableblock halign-right valign-middle">
+                  <th class="tableblock halign-right valign-top">
                     <p class="tableblock header">Stabilité</p>
                   </th>
                   <td class="tableblock halign-center valign-middle">
@@ -1314,7 +1314,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <th class="tableblock halign-right valign-middle">
+                  <th class="tableblock halign-right valign-top">
                     <p class="tableblock header">Mise en oeuvre</p>
                   </th>
                   <td class="tableblock halign-center valign-middle">
@@ -1746,95 +1746,143 @@
           </div>
         </div>
       </section>
-      <section id="slide-waterfall-vs-agile" class="columns">
-        <h2>3.2. Cycle en V // Agilité</h2>
+      <section id="slide-impact-analyses-strategy" class="columns">
+        <h2>3.2. Stratégie d&#8217;analyses d&#8217;impact</h2>
         <div class="slide-content">
-          <div class="openblock column">
-            <div class="title">Cycle en V</div>
-            <div class="content">
-              <div class="ulist">
-                <ul>
-                  <li>
-                    <p>Baselines fixes</p>
-                  </li>
-                  <li>
-                    <p>Gconf mieux contrôlée</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="admonitionblock caution">
-                <table>
-                  <tr>
-                    <td class="icon"><i class="fa fa-fire" title="Caution"></i></td>
-                    <td class="content">
-                      <div class="paragraph">
-                        <p>Analyses d&#8217;impact</p>
-                      </div>
-                      <div class="paragraph">
-                        <p>Réactivité</p>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <div class="admonitionblock tip">
-                <table>
-                  <tr>
-                    <td class="icon"><i class="fa fa-lightbulb-o" title="Tip"></i></td>
-                    <td class="content">
-                      <div class="paragraph">
-                        <p>Integ. sous-systèmes,
-                          plannings dédiésTIP</p>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="openblock column">
-            <div class="title">Agilité</div>
-            <div class="content">
-              <div class="ulist">
-                <ul>
-                  <li>
-                    <p>Time boxé</p>
-                  </li>
-                  <li>
-                    <p>Dev &amp; test ensemble</p>
-                  </li>
-                  <li>
-                    <p>Gconf : <em>latest</em> / "crête de vague"</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="admonitionblock caution">
-                <table>
-                  <tr>
-                    <td class="icon"><i class="fa fa-fire" title="Caution"></i></td>
-                    <td class="content">
-                      <div class="paragraph">
-                        <p>Gconf,
-                          maîtrise baseline</p>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <div class="admonitionblock tip">
-                <table>
-                  <tr>
-                    <td class="icon"><i class="fa fa-lightbulb-o" title="Tip"></i></td>
-                    <td class="content">
-                      <div class="paragraph">
-                        <p>Application logicielle simple</p>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
+          <table class="tableblock frame-all grid-all" style="width:100%">
+            <colgroup>
+              <col style="width:20%">
+              <col style="width:40%">
+              <col style="width:40%">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th class="tableblock halign-right valign-top"></th>
+                <th class="tableblock halign-center valign-bottom">
+                  <p class="tableblock header">Cycle en V</p>
+                </th>
+                <th class="tableblock halign-center valign-bottom">
+                  <p class="tableblock header"><em>latest</em> / "crête de vague"</p>
+                </th>
+              </tr>
+              <tr>
+                <th class="tableblock halign-right valign-top">
+                  <p class="tableblock header">Projet type</p>
+                </th>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="paragraph">
+                      <p>Intégration de sous-systèmes</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="paragraph">
+                      <p>Logiciel simple</p>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="tableblock halign-right valign-top">
+                  <p class="tableblock header">Temps</p>
+                </th>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="paragraph">
+                      <p>Long</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="paragraph">
+                      <p>Court, Kanban ou Sprints agiles</p>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="tableblock halign-right valign-top">
+                  <p class="tableblock header">Spécifications</p>
+                </th>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="paragraph">
+                      <p>Baselines fixes</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="paragraph">
+                      <p>Fenêtre glissante</p>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="tableblock halign-right valign-top">
+                  <p class="tableblock header">Analyses d&#8217;impact</p>
+                </th>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="paragraph">
+                      <p>Exercice lourd</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="paragraph">
+                      <p>Unitaire</p>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="tableblock halign-right valign-top">
+                  <p class="tableblock header">Granularité</p>
+                </th>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="paragraph">
+                      <p>Document</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="paragraph">
+                      <p>Ticket d&#8217;évolution</p>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="tableblock halign-right valign-top">
+                  <p class="tableblock header">Avantages</p>
+                </th>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="paragraph">
+                      <p>Maîtrise de la baseline fonctionnelle</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="tableblock halign-center valign-middle">
+                  <div>
+                    <div class="paragraph">
+                      <p>Fuidité</p>
+                    </div>
+                    <div class="paragraph">
+                      <p>Réduction de l&#8217;effort de versioning des exigences</p>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+          </table>
         </div>
       </section>
       <section id="_3_3_planification_constitution_des_tests">

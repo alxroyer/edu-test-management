@@ -319,8 +319,8 @@ ce qui permet de mieux suivre quelle exigence a bougé
 entre deux versions des mêmes spécifications.
 
 Cf. xref:section-lifecycle-req-change[xrefstyle=full]
-pour une discussion sur le cycle de vie des tests
-en cas de modification des exigences.
+et xref:section-impact-analyses-strategy[xrefstyle=full]
+pour des compléments sur la gestion des modifications des exigences.
 
 
 ==== Test spécifiants
@@ -488,27 +488,9 @@ Ce ticket est traité en premier lieu par les équipes en charge des spécificat
 
 Les modifications d'exigences font ensuite l'objet d'*analyses d'impact*,
 pour les équipes de développement d'une part,
-et pour les équipes de test d'autre part.
-
-[TIP]
-. Stratégie _latest_ ou "crête de vague"
-====
-De sorte à fluidifier ces analyses d'impact,
-on pourra adopter une stratégie en _latest_ (ou "crête de vague").
-
-L'idée est de faire avancer les spécifications, code et test en même temps
-pour chaque ticket d'évolution (cf. xref:section-issue-management[xrefstyle=full])).
-
-A noter que, pour des raisons de gestion du planning,
-cette stratégie n'est possible que sur sur un développement de petite taille,
-ou un développement de sous-système final
-dans un projet complexe (cf. xref:section-subsystems[xrefstyle=full]),
-généralement un développement logiciel.
-
-Une telle stratégie ne réduit vraiment le coût des analyses d'impact,
-mais permet essentiellement d'alléger l'effort de versioning des exigences
-(cf. xref:section-requirement-management[xrefstyle=full]).
-====
+et pour les équipes de test d'autre part
+(cf. xref:[xrefstyle=full] pour une discussion
+sur les stratégies possibles d'analyses d'impact).
 
 Côté tests,
 les modifications d'exigences peuvent impacter en premier lieu
@@ -2330,9 +2312,88 @@ aux problèmes de détections tardives des erreurs,
 et aux problèmes de changements de contexte coûteux pour le testeur.
 
 
-=== Cycle en V v/s agilité
+[#section-impact-analyses-strategy]
+=== Stratégie d'analyses d'impact
 
-TODO
+En cas de modification des exigences
+(cf. xref:section-lifecycle-req-change[xrefstyle=full]),
+on distingue deux stratégies possibles
+pour les analyses d'impact :
+une stratégie dite _cycle en V_,
+et une stratégie dite _latest_ ou "crête de vague".
+
+---
+
+La stratégie *_cycle en V_*
+consiste à considérer des baselines arrêtées des spécifications,
+avec des numéros de version
+identifiant des publications des documents.
+
+Par conséquent les analyses d'impact s'opèrent
+sur l'intégralité des modifications
+entre deux versions des documents de spécifications.
+
+---
+
+De sorte à fluidifier ces analyses d'impact,
+on pourra adopter une stratégie en *_latest_ ou "crête de vague"*.
+
+L'idée est de faire avancer les spécifications,
+le code et les tests en même temps
+pour chaque ticket d'évolution
+(cf. xref:section-issue-management[xrefstyle=full])).
+
+A noter que, pour des raisons de gestion du planning,
+cette stratégie n'est possible
+que sur sur un développement de petite taille,
+ou un développement de sous-système final
+dans un projet complexe (cf. xref:section-subsystems[xrefstyle=full]),
+généralement un développement logiciel.
+
+Une telle stratégie ne réduit vraiment le coût des analyses d'impact,
+mais permet essentiellement d'alléger l'effort de versioning des exigences
+(cf. xref:section-requirement-management[xrefstyle=full]).
+
+---
+
+Le tableau comparatif ci-après
+résume les différences majeures entre ces deux stratégies :
+
+.Stratégies d'analyses d'impact
+[cols=">.<1,^.^2,^.^2"]
+|===
+h|
+.>h| Cycle en V
+.>h| _latest_ / "crête de vague"
+
+h| Projet type
+a| Intégration de sous-systèmes
+a| Logiciel simple
+
+h| Temps
+a| Long
+a| Court, Kanban ou Sprints agiles
+
+h| Spécifications
+a| Baselines fixes
+a| Fenêtre glissante
+
+h| Analyses d'impact
+a| Exercice lourd
+a| Unitaire
+
+h| Granularité
+a| Document
+a| Ticket d'évolution
+
+h| Avantages
+a|
+Maîtrise de la baseline fonctionnelle
+a|
+Fuidité
+
+Réduction de l'effort de versioning des exigences
+|===
 
 
 === Planification de la constitution des tests

@@ -398,43 +398,30 @@ fonction wait_for_xxx(query)
 [#slide-initial-conditions]
 === 2.4.4.2. Conditions initiales
 
-// Memo: Table formatting
-// - https://docs.asciidoctor.org/asciidoc/latest/tables/align-by-column/
-// - https://docs.asciidoctor.org/asciidoc/latest/tables/format-column-content/
-// - https://docs.asciidoctor.org/asciidoc/latest/tables/align-by-cell/
-// - https://docs.asciidoctor.org/asciidoc/latest/tables/format-cell-content/
-// - In short:
-//     - `h`: header
-//     - `a`: AsciiDoc content
-//     - `>`: horizontal align right
-//     - `^`: horizontal align center
-//     - `.^`: vertical align center
-//     - `.>`: vertical align down
-
-[cols=">1,^2,^2"]
+[cols=">.<1,^.^2,^.^2"]
 |===
 h|
 .>h| Reset des confs
 .>h| Persistance des confs
 
-.^h| Performances
-.^a|
+h| Performances
+a|
 CAUTION: Lent
 
 Tests système notamment
-.^a|
+a|
 TIP: Optimisé
 
-.^h| Stabilité
-.^a|
+h| Stabilité
+a|
 TIP: Assurance
-.^a|
+a|
 Risques de bugs
 
-.^h| Mise en oeuvre
-.^a|
+h| Mise en oeuvre
+a|
 Plus simple
-.^a|
+a|
 WARNING: Complexe
 |===
 
@@ -612,52 +599,44 @@ TIP: 0 issue
 --
 
 
-[#slide-waterfall-vs-agile]
+[#slide-impact-analyses-strategy]
 [.columns]
-== 3.2. Cycle en V // Agilité
+== 3.2. Stratégie d'analyses d'impact
 
-// Use `====` syntax for all admonitions in this slide
-// to ensure the generation of texts in `<p></p>` items,
-// in order to make it easier to define css rules by the way.
+[cols=">.<1,^.^2,^.^2"]
+|===
+h|
+.>h| Cycle en V
+.>h| _latest_ / "crête de vague"
 
-[.column]
-.Cycle en V
---
-* Baselines fixes
-* Gconf mieux contrôlée
+h| Projet type
+a| Intégration de sous-systèmes
+a| Logiciel simple
 
-[CAUTION]
-====
-Analyses d'impact
+h| Temps
+a| Long
+a| Court, Kanban ou Sprints agiles
 
-Réactivité
-====
+h| Spécifications
+a| Baselines fixes
+a| Fenêtre glissante
 
-[TIP]
-====
-Integ. sous-systèmes,
-plannings dédiésTIP
-====
---
+h| Analyses d'impact
+a| Exercice lourd
+a| Unitaire
 
-[.column]
-.Agilité
---
-* Time boxé
-* Dev & test ensemble
-* Gconf : _latest_ / "crête de vague"
+h| Granularité
+a| Document
+a| Ticket d'évolution
 
-[CAUTION]
-====
-Gconf,
-maîtrise baseline
-====
+h| Avantages
+a|
+Maîtrise de la baseline fonctionnelle
+a|
+Fuidité
 
-[TIP]
-====
-Application logicielle simple
-====
---
+Réduction de l'effort de versioning des exigences
+|===
 
 
 == 3.3. Planification constitution des tests

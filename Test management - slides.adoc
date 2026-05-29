@@ -481,6 +481,13 @@ Statut auto // type de campagne :
 ====
 
 
+== 2.4.6. Jeux de données
+
+CAUTION: Applications web (données évolutives)
+
+TIP: Recherches sur critères
+
+
 == 2.5. Outils / frameworks
 
 * Langages de test
@@ -574,14 +581,9 @@ NOTE: Attendu contractuel
 == 3. Management des tests
 
 
-== 3.1. Jeux de données
-
-CAUTION: Applications web (données datées)
-
-
 [#slide-test-timing]
 [.columns]
-== 3.2. Timing activités de test
+== 3.1. Timing activités de test
 
 [.column]
 .Tests avant
@@ -612,7 +614,7 @@ CAUTION: Détection erreurs tardives
 
 [#slide-waterfall-vs-agile]
 [.columns]
-== 3.3. Cycle en V // Agilité
+== 3.2. Cycle en V // Agilité
 
 // Use `====` syntax for all admonitions in this slide
 // to ensure the generation of texts in `<p></p>` items,
@@ -658,7 +660,7 @@ Application logicielle simple
 --
 
 
-== 3.4. Planification constitution des tests
+== 3.3. Planification constitution des tests
 
 Dans quel ordre constituer les tests ?
 
@@ -667,7 +669,7 @@ Cycle en V ? Méthodes agiles ?
 TIP: Dépendance stratégie d'intégration
 
 
-== 3.5. Exhaustivité // gestion de risque
+== 3.4. Exhaustivité // gestion de risque
 
 Tout tester ?
 
@@ -679,7 +681,7 @@ ROI // non qualité
 
 
 [#slide-risk-management]
-=== 3.5. Gestion de risques
+=== 3.4. Gestion de risques
 
 TU seuls ?
 

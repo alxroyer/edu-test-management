@@ -1924,6 +1924,33 @@ au besoin du projet.
 ====
 
 
+==== Jeux de données
+
+Dans le cas d'une application
+utilisant une ou plusieurs base de données
+(typiquement les applications Web),
+se pose une problématique de gestion des données.
+
+En effet, le test est dépendant des données existantes dans la base.
+Or ces données peuvent être amenées à vivre dans le temps.
+
+[NOTE]
+====
+Pour les autres types d'applications,
+la problématique est souvent plus simple voire inexistante,
+car les données sont peu volumineuses,
+et peuvent être constituées programmatiquement.
+====
+
+[TIP]
+====
+Pour pallier les risques de disparition
+ou d'altération d'une donnée de référence utilisée dans un test,
+on peut mettre en place un mécanisme de recherche dynamique d'une donnée
+sur la base de critères requis pour un test donné.
+====
+
+
 [#section-auto-test-frameworks]
 === Outils / frameworks
 
@@ -2218,9 +2245,8 @@ ou un attendu contractuel.
 
 == Management des tests
 
-=== Jeux de données
-
-TODO
+Cette section regroupe des conseils
+sur le pilotage d'une activité de test.
 
 
 [#section-timing-test-setup]

@@ -2124,7 +2124,37 @@ TODO
 
 ==== Tests de charge et performances
 
+Le tableau ci-après liste des outils
+permettant de réaliser des tests de charge et de performances :
+
+[cols="1,2,5"]
+.Outils de tests de charge et performances
+|===
+| Outils | URL | Description
+
+| Apache JMeter | https://jmeter.apache.org/
+a|
 TODO
+
+| OpenText Enterprise Performance Engineering
+| https://www.opentext.com/products/enterprise-performance-engineering
+a|
+Anciennement HP LoadRunner.
+
+TODO
+
+| Gatling | https://gatling.io/
+a|
+TODO
+
+| Locust | https://locust.io/
+a|
+TODO
+
+| NeoLoad | https://www.tricentis.com/fr/produits/test-de-performance-neoload
+a|
+TODO
+|===
 
 
 === Couverture de code

@@ -2091,7 +2091,35 @@ TODO
 
 ==== Tests fonctionnels
 
+Le tableau ci-après liste des frameworks
+permettant de réaliser des tests fonctionnels :
+
+[cols="1,2,5"]
+.Frameworks de tests fonctionnels
+|===
+| Outils | URL | Description
+
+| Selenium | https://www.selenium.dev/
+a|
 TODO
+
+| Cypress | https://www.cypress.io/
+a|
+TODO
+
+| Appium | https://appium.io/
+a|
+TODO
+
+| Cucumber | https://cucumber.io/
+a|
+TODO
+|===
+
+[sidebar]
+--
+👷🛠️ TP : link:TP%20-%20Selenium.md[Test d'IHM avec Selenium]
+--
 
 
 ==== Tests de charge et performances

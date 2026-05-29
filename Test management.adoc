@@ -724,6 +724,7 @@ La transition est toute trouvée avec le chapitre suivant.
 
 == Tests automatiques
 
+[#section-test-auto-mandatory]
 === Besoin d'automatiser les tests
 
 Une grande place est accordée aujourd'hui aux tests automatisés
@@ -2166,6 +2167,7 @@ TODO
 |===
 
 
+[#section-code-coverage]
 === Couverture de code
 
 L'exécution de tests auto
@@ -2413,28 +2415,85 @@ on ne pourra tester que ce qui sera livrer au file du temps.
 
 ==== Coût des tests
 
-TODO
+On a évoqué en xref:section-requirement-management[xrefstyle=full]
+le besoin d'assurer une complétude des tests
+par rapport aux exigences
+et à tous les aspects de chaque exigence.
+
+En pratique, l'exhaustivité parfaite des tests n'existe pas :
+c'est un exercice infini
+dans la mesure où on peut toujours rentrer dans des détails
+de plus en plus fins.
+
+Cela implique des coûts non négligeables.
+Or les projets ne fonctionnent pas à budget illimité.
 
 
 ==== Stratégie de test par les risques
 
-TODO
+C'est pourquoi il est utile de considérer la stratégie
+en regard des risques de non-qualité du SUT.
+
+On rentre alors dans une démarche d'investissement et de ROI :
+quel effort de test mettre,
+pour couvrir quels risques de non-qualité ?
 
 
 ==== Tests unitaires v/s tests fonctionnels
 
-TODO
+En matière de gestion de risque,
+une question peut se poser sur l'effort à mettre
+entre tests unitaires d'un part,
+et tests fonctionnels d'autre part.
+
+Les tests unitaires permettent d'atteindre
+des couvertures de code plus importantes
+(cf. xref:section-code-coverage[xrefstyle=full]).
+
+Toutefois, les tests unitaires ne couvrent pas l'intégration
+des différentes parties du logiciel,
+et donc ne garantissent pas le fonctionnel final attendu.
+Aussi on pourra privilégier les tests fonctionnels
+pour ces raisons.
+
+Toutefois encore, quelques actions de tests unitaires ciblées
+pourront réduire les risques de difficultés en intégration.
 
 
 ==== Tests manuels v/s tests auto
 
-TODO
+Toujours en matière de gestion de risque,
+une question peut se poser sur l'effort à mettre
+entre tests automatiques d'une part,
+et tests manuels d'autre part.
+
+On a évoqué en xref:section-test-auto-mandatory[xrefstyle=full]
+l'obligation d'automatiser les tests pour l'agilité.
+
+Pour autant, l'humain garde une plus-value
+sur certaines activités de test,
+notamment :
+
+* les activités d'intégration,
+  car beaucoup de problèmes peuvent survenir,
+  et il convient de savoir réagir,
+* les activités de validation du besoin utilisateur,
+  pour les capacités d'empathie requises dans cet exercice.
 
 
 [#section-subsystems-test-redundancy]
 ==== Sous-systèmes et redondance des tests
 
-TODO
+Dans le cas de systèmes complexes
+(cf. xref:section-subsystems[xrefstyle=full]),
+une autre marge d'ajustement de l'effort de test peut être envisagé :
+les différentes couches de tests à chaque niveau du système
+peuvent présenter un certain nombre de redondances.
+
+On pourra donc, par exemple, identifier les exigences qui redescendent en 1 pour 1
+entre un système et un des ses sous-systèmes seulement.
+Dans cette situation, on pourra décider de faire l'effort de test
+sur le sous-système ou sur le système intégré.
 
 
 [#appendix-glossary]
@@ -2450,6 +2509,11 @@ TODO
 _Product Owner_.
 
 Rôle dans les méthodes agiles.
+
+| ROI |
+_Return On Investment_.
+
+Retour sur investissement.
 
 | SUT |
 _System_ ou _Software Under Test_.
